@@ -1,99 +1,99 @@
 # fcc-JavaScript-Algorithms-and-Data-Structures
-# Comment Your JavaScript Code
+# 1. Comment Your JavaScript Code
 Passed
-# Declare JavaScript Variables
+# 2. Declare JavaScript Variables
 Passed
-# Storing Values with the Assignment Operator
+# 3. Storing Values with the Assignment Operator
 Passed
-# Assigning the Value of One Variable to Another
+# 4. Assigning the Value of One Variable to Another
 Passed
-Initializing Variables with the Assignment Operator
+# 5. Initializing Variables with the Assignment Operator
 Passed
-Understanding Uninitialized Variables
+# 6. Understanding Uninitialized Variables
 Passed
-Understanding Case Sensitivity in Variables
+# Understanding Case Sensitivity in Variables
 Passed
-Add Two Numbers with JavaScript
+# Add Two Numbers with JavaScript
 Passed
-Subtract One Number from Another with JavaScript
+# Subtract One Number from Another with JavaScript
 Passed
-Multiply Two Numbers with JavaScript
+# Multiply Two Numbers with JavaScript
 Passed
-Divide One Number by Another with JavaScript
+# Divide One Number by Another with JavaScript
 Passed
-Increment a Number with JavaScript
+# Increment a Number with JavaScript
 Passed
-Decrement a Number with JavaScript
+# Decrement a Number with JavaScript
 Passed
-Create Decimal Numbers with JavaScript
+# Create Decimal Numbers with JavaScript
 Passed
-Multiply Two Decimals with JavaScript
+# Multiply Two Decimals with JavaScript
 Passed
-Divide One Decimal by Another with JavaScript
+# Divide One Decimal by Another with JavaScript
 Passed
-Finding a Remainder in JavaScript
+# Finding a Remainder in JavaScript
 Passed
-Compound Assignment With Augmented Addition
+# Compound Assignment With Augmented Addition
 Passed
-Compound Assignment With Augmented Subtraction
+# Compound Assignment With Augmented Subtraction
 Passed
-Compound Assignment With Augmented Multiplication
+# Compound Assignment With Augmented Multiplication
 Passed
-Compound Assignment With Augmented Division
+# Compound Assignment With Augmented Division
 Passed
-Declare String Variables
+# Declare String Variables
 Passed
-Escaping Literal Quotes in Strings
+# Escaping Literal Quotes in Strings
 Passed
-Quoting Strings with Single Quotes
+# Quoting Strings with Single Quotes
 Passed
-Escape Sequences in Strings
+# Escape Sequences in Strings
 Passed
-Concatenating Strings with Plus Operator
+# Concatenating Strings with Plus Operator
 Passed
-Concatenating Strings with the Plus Equals Operator
+# Concatenating Strings with the Plus Equals Operator
 Passed
-Constructing Strings with Variables
+# Constructing Strings with Variables
 Passed
-Appending Variables to Strings
+# Appending Variables to Strings
 Passed
-Find the Length of a String
+# Find the Length of a String
 Passed
-Use Bracket Notation to Find the First Character in a String
+# Use Bracket Notation to Find the First Character in a String
 Passed
-Understand String Immutability
+# Understand String Immutability
 Passed
-Use Bracket Notation to Find the Nth Character in a String
+# Use Bracket Notation to Find the Nth Character in a String
 Passed
-Use Bracket Notation to Find the Last Character in a String
+# Use Bracket Notation to Find the Last Character in a String
 Passed
-Use Bracket Notation to Find the Nth-to-Last Character in a String
+# Use Bracket Notation to Find the Nth-to-Last Character in a String
 Passed
-Word Blanks
+# Word Blanks
 Passed
-Store Multiple Values in one Variable using JavaScript Arrays
+# Store Multiple Values in one Variable using JavaScript Arrays
 Passed
-Nest one Array within Another Array
+# Nest one Array within Another Array
 Passed
-Access Array Data with Indexes
+# Access Array Data with Indexes
 Passed
-Modify Array Data With Indexes
+# Modify Array Data With Indexes
 Passed
-Access Multi-Dimensional Arrays With Indexes
+# Access Multi-Dimensional Arrays With Indexes
 Passed
-Manipulate Arrays With push()
+# Manipulate Arrays With push()
 Passed
-Manipulate Arrays With pop()
+# Manipulate Arrays With pop()
 Passed
-Manipulate Arrays With shift()
+# Manipulate Arrays With shift()
 Passed
-Manipulate Arrays With unshift()
+# Manipulate Arrays With unshift()
 Passed
-Shopping List
+# Shopping List
 Passed
-Write Reusable JavaScript with Functions
+# # Write Reusable JavaScript with Functions
 Passed
-Passing Values to Functions with Arguments
+# Passing Values to Functions with Arguments
 Passed
 Global Scope and Functions
 Passed
