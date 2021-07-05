@@ -1,3 +1,199 @@
+ // Iterate Odd Numbers With a For Loop
+var myArray = [];
+for (var i = 1; i < 11; i += 2) {
+  myArray.push(i);
+}
+console.log(myArray);
+
+
+// Iterate with JavaScript For Loops
+var myArray = [];
+for (var i = 1; i < 6; i++) {
+  myArray.push(i);
+}
+console.log(myArray);
+
+
+// Iterate with JavaScript While Loops
+// Setup
+var myArray = [5, 4, 3, 2, 1, 0];
+var i = 5;
+while(i < 0) {
+  myArray.push(i);
+  i++;
+}
+console.log(myArray);
+// Only change code below this line
+
+
+// Record Collection
+
+  // Setup
+var recordCollection = {
+  2548: {
+    albumTitle: 'Slippery When Wet',
+    artist: 'Bon Jovi',
+    tracks: ['Let It Rock', 'You Give Love a Bad Name']
+  },
+  2468: {
+    albumTitle: '1999',
+    artist: 'Prince',
+    tracks: ['1999', 'Little Red Corvette']
+  },
+  1245: {
+    artist: 'Robert Palmer',
+    tracks: []
+  },
+  5439: {
+    albumTitle: 'ABBA Gold'
+  }
+};
+// Solution 1
+// Only change code below this line
+function updateRecords(records, id, prop, value) {
+  if (prop !== 'tracks' && value !== "") {
+    records[id][prop] = value;
+  } else if (prop === "tracks" && records[id].hasOwnProperty("tracks") === false) {
+    records[id][prop] = [value];
+  } else if (prop === "tracks" && value !== "") {
+    records[id][prop].push(value);
+  } else if (value === "") {
+    delete records[id][prop];
+  }
+  return records;
+}
+// Code Explanation
+
+//     First checks if value is a blank string. If so, then the key (prop) is removed from the object.
+//     If that first check doesn’t pass, it next checks if prop is equal to tracks. The tracks array is initialized if it does not exist, and then value is pushed into the tracks array. (This step uses shortcircuit evaluation)
+//     If both these checks fail (meaning value is not an empty string and prop is not tracks), then either a new key (prop) and value (value) are added to the object, or an existing key is updated if the prop already exists.
+
+// Example Run
+
+//     updateRecords(5439, "artist", "ABBA"); runs.
+//     value is not a blank string, so the first condition of the else if statement fails.
+//     prop is equal to “artist”, not “tracks”, so the second condition of the else if statement fails.
+//     in the ‘else’ clause, artist: "ABBA" is added to the 5439 id.
+
+// Relevant Links
+
+//     fCC’s challenge: Accessing Objects Properties with Bracket Notation 545
+//     fCC’s challenge: Add New Properties to a JavaScript Object 185
+//     fCC’s challenge: Delete Properties from a JavaScript Object 67
+//     fCC’s challenge: Accessing Nested Objects 168
+//     “Array.prototype.push()” - MDN JavaScript reference 196
+//     “delete operator” - MDN JavaScript reference 126
+//     shortcircuit evaluation 474
+
+
+
+// Solution 2
+// Only change code below this line
+function updateRecords(records, id, prop, value) {
+  if (value === '') delete records[id][prop];
+  else if (prop === 'tracks') {
+    records[id][prop] = records[id][prop] || []; // this is called shortcircuit evaluation, see below for explanation
+    records[id][prop].push(value);
+  } else {
+    records[id][prop] = value;
+  }
+  return records;
+}
+
+
+console.log(updateRecords(recordCollection, 5439, 'artist', 'ABBA'));
+
+updateRecords(recordCollection, 5439, 'artist', 'ABBA');
+
+// Accessing Nested Arrays
+var myPlants = [
+  {
+    type: "flowers",
+    list: [
+      "rose",
+      "tulip",
+      "dandelion"
+    ]
+  },
+  {
+    type: "trees",
+    list: [
+      "fir",
+      "pine",
+      "birch"
+    ]
+  }
+];
+
+var secondTree = myPlants[1].list[1];
+console.log(secondTree);
+
+
+// Accessing Nested Objects
+var myStorage = {
+  "car": {
+    "inside": {
+      "glove box": "maps",
+      "passenger seat": "crumbs"
+     },
+    "outside": {
+      "trunk": "jack"
+    }
+  }
+};
+
+var gloveBoxContents = myStorage.car.inside["glove box"];
+console.log(gloveBoxContents)
+
+// Manipulating Complex Objects
+var myMusic = [
+    // Object One
+    {
+        "artist": "Billy Joel",
+        "title": "Piano Man",
+        "release_year": 1973,
+        "formats": [
+            "CD",
+            "8T",
+            "LP"
+        ],
+
+        "gold": true
+    },
+    // Object Two
+    {
+        "artist":  "Pink_Floyd",
+        "title": "Dark_Side_of_the_Moon",
+        "release_year": 1973,
+        "formats": [
+            "CD",
+            "8T",
+            "Vynal LP",
+            "Cassette"
+    ],
+        "gold": true
+
+    }
+
+];
+
+function checkObj(obj, checkProp) {
+    // Only change code below this line
+    var myObj = {
+        gift: "pony",
+        pet: "kitten",
+        bed: "sleigh",
+        city: "Seattle"
+    };
+    if (obj.hasOwnProperty(checkProp)) {
+        return myObj[checkProp];
+    } else {
+        return "Not Found"
+    }
+    // Only change code above this line
+}
+
+
 // Using Objects for lookups
 // Setup
 function phoneticLookup(val) {
@@ -12,32 +208,32 @@ function phoneticLookup(val) {
         "echo": "Easy",
         "foxtrot": "Frank"
     };
-    // switch (val) {
-    //     case "alpha":
-    //         result = "Adams";
-    //         break;
-    //     case "bravo":
-    //         result = "Boston";
-    //         break;
-    //     case "charlie":
-    //         result = "Chicago";
-    //         break;
-    //     case "delta":
-    //         result = "Denver";
-    //         break;
-    //     case "echo":
-    //         result = "Easy";
-    //         break;
-    //     case "foxtrot":
-    //         result = "Frank";
-    // }
     result = lookup[val];
-
+    
     // Only change code above this line
     return result;
 }
 
-phoneticLookup("charlie");
+console.log(phoneticLookup("charlie"));
+// switch (val) {
+//     case "alpha":
+//         result = "Adams";
+//         break;
+//     case "bravo":
+//         result = "Boston";
+//         break;
+//     case "charlie":
+//         result = "Chicago";
+//         break;
+//     case "delta":
+//         result = "Denver";
+//         break;
+//     case "echo":
+//         result = "Easy";
+//         break;
+//     case "foxtrot":
+//         result = "Frank";
+// }
 
 
 
@@ -67,6 +263,8 @@ var myDog = {
 };
 myDog.bark = "woof";
 console.log(myDog.bark);
+
+
 
 // Updating Object Properties
 // Setup
