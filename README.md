@@ -1,224 +1,224 @@
 # fcc-JavaScript-Algorithms-and-Data-Structures
 # Comment Your JavaScript Code
-# # Passed
-Declare JavaScript Variables
-# # Passed
-Storing Values with the Assignment Operator
-# Passed
-Assigning the Value of One Variable to Another
-# Passed
+Passed
+# Declare JavaScript Variables
+Passed
+# Storing Values with the Assignment Operator
+Passed
+# Assigning the Value of One Variable to Another
+Passed
 Initializing Variables with the Assignment Operator
-# Passed
+Passed
 Understanding Uninitialized Variables
-# Passed
+Passed
 Understanding Case Sensitivity in Variables
-# Passed
+Passed
 Add Two Numbers with JavaScript
-# Passed
+Passed
 Subtract One Number from Another with JavaScript
-# Passed
+Passed
 Multiply Two Numbers with JavaScript
-# Passed
+Passed
 Divide One Number by Another with JavaScript
-# Passed
+Passed
 Increment a Number with JavaScript
-# Passed
+Passed
 Decrement a Number with JavaScript
-# Passed
+Passed
 Create Decimal Numbers with JavaScript
-# Passed
+Passed
 Multiply Two Decimals with JavaScript
-# Passed
+Passed
 Divide One Decimal by Another with JavaScript
-# Passed
+Passed
 Finding a Remainder in JavaScript
-# Passed
+Passed
 Compound Assignment With Augmented Addition
-# Passed
+Passed
 Compound Assignment With Augmented Subtraction
-# Passed
+Passed
 Compound Assignment With Augmented Multiplication
-# Passed
+Passed
 Compound Assignment With Augmented Division
-# Passed
+Passed
 Declare String Variables
-# Passed
+Passed
 Escaping Literal Quotes in Strings
-# Passed
+Passed
 Quoting Strings with Single Quotes
-# Passed
+Passed
 Escape Sequences in Strings
-# Passed
+Passed
 Concatenating Strings with Plus Operator
-# Passed
+Passed
 Concatenating Strings with the Plus Equals Operator
-# Passed
+Passed
 Constructing Strings with Variables
-# Passed
+Passed
 Appending Variables to Strings
-# Passed
+Passed
 Find the Length of a String
-# Passed
+Passed
 Use Bracket Notation to Find the First Character in a String
-# Passed
+Passed
 Understand String Immutability
-# Passed
+Passed
 Use Bracket Notation to Find the Nth Character in a String
-# Passed
+Passed
 Use Bracket Notation to Find the Last Character in a String
-# Passed
+Passed
 Use Bracket Notation to Find the Nth-to-Last Character in a String
-# Passed
+Passed
 Word Blanks
-# Passed
+Passed
 Store Multiple Values in one Variable using JavaScript Arrays
-# Passed
+Passed
 Nest one Array within Another Array
-# Passed
+Passed
 Access Array Data with Indexes
-# Passed
+Passed
 Modify Array Data With Indexes
-# Passed
+Passed
 Access Multi-Dimensional Arrays With Indexes
-# Passed
+Passed
 Manipulate Arrays With push()
-# Passed
+Passed
 Manipulate Arrays With pop()
-# Passed
+Passed
 Manipulate Arrays With shift()
-# Passed
+Passed
 Manipulate Arrays With unshift()
-# Passed
+Passed
 Shopping List
-# Passed
+Passed
 Write Reusable JavaScript with Functions
-# Passed
+Passed
 Passing Values to Functions with Arguments
-# Passed
+Passed
 Global Scope and Functions
-# Passed
+Passed
 Local Scope and Functions
-# Passed
+Passed
 Global vs. Local Scope in Functions
-# Passed
+Passed
 Return a Value from a Function with Return
-# Passed
+Passed
 Understanding Undefined Value returned from a Function
-# Passed
+Passed
 Assignment with a Returned Value
-# Passed
+Passed
 Stand in Line
-# Passed
+Passed
 Understanding Boolean Values
-# Passed
+Passed
 Use Conditional Logic with If Statements
-# Passed
+Passed
 Comparison with the Equality Operator
-# Passed
+Passed
 Comparison with the Strict Equality Operator
-# Passed
+Passed
 Practice comparing different values
-# Passed
+Passed
 Comparison with the Inequality Operator
-# Passed
+Passed
 Comparison with the Strict Inequality Operator
-# Passed
+Passed
 Comparison with the Greater Than Operator
-# Passed
+Passed
 Comparison with the Greater Than Or Equal To Operator
-# Passed
+Passed
 Comparison with the Less Than Operator
-# Passed
+Passed
 Comparison with the Less Than Or Equal To Operator
-# Passed
+Passed
 Comparisons with the Logical And Operator
-# Passed
+Passed
 Comparisons with the Logical Or Operator
-# Passed
+Passed
 Introducing Else Statements
-# Passed
+Passed
 Introducing Else If Statements
-# Passed
+Passed
 Logical Order in If Else Statements
-# Passed
+Passed
 Chaining If Else Statements
-# Passed
+Passed
 Golf Code
-# Passed
+Passed
 Selecting from Many Options with Switch Statements
-# Passed
+Passed
 Adding a Default Option in Switch Statements
-# Passed
+Passed
 Multiple Identical Options in Switch Statements
-# Passed
+Passed
 Replacing If Else Chains with Switch
-# Passed
+Passed
 Returning Boolean Values from Functions
-# Passed
+Passed
 Return Early Pattern for Functions
-# Passed
+Passed
 Counting Cards
-# Passed
+Passed
 Build JavaScript Objects
-# Passed
+Passed
 Accessing Object Properties with Dot Notation
-# Passed
+Passed
 Accessing Object Properties with Bracket Notation
-# Passed
+Passed
 Accessing Object Properties with Variables
-# Passed
+Passed
 Updating Object Properties
-# Passed
+Passed
 Add New Properties to a JavaScript Object
-# Passed
+Passed
 Delete Properties from a JavaScript Object
-# Passed
+Passed
 Using Objects for Lookups
-# Passed
+Passed
 Testing Objects for Properties
-# Passed
+Passed
 Manipulating Complex Objects
-# Passed
+Passed
 Accessing Nested Objects
-# Passed
+Passed
 Accessing Nested Arrays
-# Passed
+Passed
 Record Collection
-# Passed
+Passed
 Iterate with JavaScript While Loops
-# Passed
+Passed
 Iterate with JavaScript For Loops
-# Not Passed
+Not Passed
 Iterate Odd Numbers With a For Loop
-# Not Passed
+Not Passed
 Count Backwards With a For Loop
-# Not Passed
+Not Passed
 Iterate Through an Array with a For Loop
-# Not Passed
+Not Passed
 Nesting For Loops
-# Not Passed
+Not Passed
 Iterate with JavaScript Do...While Loops
-# Not Passed
+Not Passed
 Replace Loops using Recursion
-# Not Passed
+Not Passed
 Profile Lookup
-# Not Passed
+Not Passed
 Generate Random Fractions with JavaScript
-# Not Passed
+Not Passed
 Generate Random Whole Numbers with JavaScript
-# Not Passed
+Not Passed
 Generate Random Whole Numbers within a Range
-# Not Passed
+Not Passed
 Use the parseInt Function
-# Not Passed
+Not Passed
 Use the parseInt Function with a Radix
-# Not Passed
+Not Passed
 Use the Conditional (Ternary) Operator
-# Not Passed
+Not Passed
 Use Multiple Conditional (Ternary) Operators
-# Not Passed
+Not Passed
 Use Recursion to Create a Countdown
-# Not Passed
+Not Passed
 
     Use Recursion to Create a Range of Numbers
 
@@ -272,18 +272,18 @@ This is it — time to put your new JavaScript skills to work. These projects ar
 
 Complete these 5 JavaScript projects to earn the JavaScript Algorithms and Data Structures certification.
 
-    Palindrome CheckerNot # Passed
+    Palindrome CheckerNot Passed
 
-Roman Numeral ConverterNot # Passed
-Caesars CipherNot # Passed
-Telephone Number ValidatorNot # Passed
-Cash RegisterNot # Passed
+Roman Numeral ConverterNot Passed
+Caesars CipherNot Passed
+Telephone Number ValidatorNot Passed
+Cash RegisterNot Passed
 Claim Your Certification
 Complete the following steps to claim and view your JavaScript Algorithms and Data Structures Certification
-Accept our Academic Honesty Policy# Passed
-Set your profile settings to public# Passed
-Set your certification settings to public# Passed
-Set your name, and make it public# Passed
+Accept our Academic Honesty PolicyPassed
+Set your profile settings to publicPassed
+Set your certification settings to publicPassed
+Set your name, and make it publicPassed
 Complete JavaScript Algorithms and Data Structures Certification ProjectsIntro Information
 Claim and view your certificationIntro Information
 Browse our other free certifications
