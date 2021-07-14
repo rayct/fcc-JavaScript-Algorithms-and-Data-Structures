@@ -1,30 +1,91 @@
+// Profile Lookup
+// Array of Objects with key value pairs
+var contacts = [
+  // 1st Object
+    {
+        "firstName": "Akira",
+        "lastName": "Laine",
+        "number": "0543236543",
+        "likes": ["Pizza", "Coding", "Brownie Points"]
+  },
+  // 2nd Object
+    {
+        "firstName": "Harry",
+        "lastName": "Potter",
+        "number": "0994372684",
+        "likes": ["Hogwarts", "Magic", "Hagrid"]
+  },
+    // 3rd Object
+    {
+        "firstName": "Sherlock",
+        "lastName": "Holmes",
+        "number": "0487345643",
+        "likes": ["Intriguing Cases", "Violin"]
+  },
+   // 4th Object
+    {
+        "firstName": "Kristian",
+        "lastName": "Vos",
+        "number": "unknown",
+        "likes": ["JavaScript", "Gaming", "Foxes"]
+    }
+];
+
+function lookUpProfile(name, prop) {
+  // Only change code below this line
+
+    for (var i = 0; i < contacts.length; i++) {
+        if(contacts[i].firstName === name) {
+            return contacts[i][prop] || "No such property"
+        }
+    }
+    return "No such contact";
+
+  // Only change code above this line
+}
 
 
+var data = lookUpProfile("Kristian", "lastName");
+console.log(data);
 
 
+// Replace Loops using Recursion (n = negate, or NOT gate)
+function sum(arr, n) {
+if (n <= 0) {
+      return 0;
+    } else {
+      return sum(arr, n - 1)+ arr[n - 1];
+    }
+}
+console.log(sum([2, 3, 4], 1));
 
+// Iterate with JavaScript Do...While Loops
+var myArray = [];
+var i = 10;
+do {
+  myArray.push(i);
+  i++;
+} while (i < 5);
+console.log(myArray);
 
 // Iterate Through an Array with a For Loop
 var myArr = [ 2, 3, 4, 5, 6];
-
-// Only change code below this line
 var total = 0;
 for (var i = 0; i < myArr.length; i++) {
   total += myArr[i];
 }
 console.log(total);
 
+
 // Count Backwards With a For Loop
 var myArray = [];
-
-// Only change code below this line
-for (var i = 9; i > 0; i -= 2) {
+for (var i = 10; i > 0; i -= 2) {
   myArray.push(i);
 }
 console.log(myArray);
  
  
- // Iterate Odd Numbers With a For Loop
+// Iterate Odd Numbers With a For Loop
 var myArray = [];
 for (var i = 1; i < 11; i += 2) {
   myArray.push(i);
@@ -54,7 +115,7 @@ console.log(myArray);
 
 // Record Collection
 
-  // Setup
+// Setup
 var recordCollection = {
   2548: {
     albumTitle: 'Slippery When Wet',
@@ -74,6 +135,7 @@ var recordCollection = {
     albumTitle: 'ABBA Gold'
   }
 };
+
 // Solution 1
 // Only change code below this line
 function updateRecords(records, id, prop, value) {
