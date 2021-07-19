@@ -11,27 +11,27 @@ Passed
 Passed
 # 6. Understanding Uninitialized Variables
 Passed
-# Understanding Case Sensitivity in Variables
+# 7. Understanding Case Sensitivity in Variables
 Passed
-# Add Two Numbers with JavaScript
+# 8. Add Two Numbers with JavaScript
 Passed
-# Subtract One Number from Another with JavaScript
+# 9. Subtract One Number from Another with JavaScript
 Passed
-# Multiply Two Numbers with JavaScript
+# 10. Multiply Two Numbers with JavaScript
 Passed
-# Divide One Number by Another with JavaScript
+# 11. Divide One Number by Another with JavaScript
 Passed
-# Increment a Number with JavaScript
+# 12. Increment a Number with JavaScript
 Passed
-# Decrement a Number with JavaScript
+# 13. Decrement a Number with JavaScript
 Passed
-# Create Decimal Numbers with JavaScript
+# 14. Create Decimal Numbers with JavaScript
 Passed
-# Multiply Two Decimals with JavaScript
+# 15. Multiply Two Decimals with JavaScript
 Passed
-# Divide One Decimal by Another with JavaScript
+# 16. Divide One Decimal by Another with JavaScript
 Passed
-# Finding a Remainder in JavaScript
+# 17. Finding a Remainder in JavaScript
 Passed
 # Compound Assignment With Augmented Addition
 Passed
@@ -95,132 +95,131 @@ Passed
 Passed
 # Passing Values to Functions with Arguments
 Passed
-Global Scope and Functions
+# Global Scope and Functions
 Passed
-Local Scope and Functions
+# Local Scope and Functions
 Passed
-Global vs. Local Scope in Functions
+# Global vs. Local Scope in Functions
 Passed
-Return a Value from a Function with Return
+# Return a Value from a Function with Return
 Passed
-Understanding Undefined Value returned from a Function
+# Understanding Undefined Value returned from a Function
 Passed
-Assignment with a Returned Value
+# Assignment with a Returned Value
 Passed
-Stand in Line
+# Stand in Line
 Passed
-Understanding Boolean Values
+# Understanding Boolean Values
 Passed
-Use Conditional Logic with If Statements
+# Use Conditional Logic with If Statements
 Passed
-Comparison with the Equality Operator
+# Comparison with the Equality Operator
 Passed
-Comparison with the Strict Equality Operator
+# Comparison with the Strict Equality Operator
 Passed
-Practice comparing different values
+# Practice comparing different values
 Passed
-Comparison with the Inequality Operator
+# Comparison with the Inequality Operator
 Passed
-Comparison with the Strict Inequality Operator
+# Comparison with the Strict Inequality Operator
 Passed
-Comparison with the Greater Than Operator
+# Comparison with the Greater Than Operator
 Passed
-Comparison with the Greater Than Or Equal To Operator
+# Comparison with the Greater Than Or Equal To Operator
 Passed
-Comparison with the Less Than Operator
+# Comparison with the Less Than Operator
 Passed
-Comparison with the Less Than Or Equal To Operator
+# Comparison with the Less Than Or Equal To Operator
 Passed
-Comparisons with the Logical And Operator
+# Comparisons with the Logical And Operator
 Passed
-Comparisons with the Logical Or Operator
+# Comparisons with the Logical Or Operator
 Passed
-Introducing Else Statements
+# Introducing Else Statements
 Passed
-Introducing Else If Statements
+# Introducing Else If Statements
 Passed
-Logical Order in If Else Statements
+# Logical Order in If Else Statements
 Passed
-Chaining If Else Statements
+# Chaining If Else Statements
 Passed
-Golf Code
+# Golf Code
 Passed
-Selecting from Many Options with Switch Statements
+# Selecting from Many Options with Switch Statements
 Passed
-Adding a Default Option in Switch Statements
+# Adding a Default Option in Switch Statements
 Passed
-Multiple Identical Options in Switch Statements
+# Multiple Identical Options in Switch Statements
 Passed
-Replacing If Else Chains with Switch
+# Replacing If Else Chains with Switch
 Passed
-Returning Boolean Values from Functions
+# Returning Boolean Values from Functions
 Passed
-Return Early Pattern for Functions
+# Return Early Pattern for Functions
 Passed
-Counting Cards
+# Counting Cards
 Passed
-Build JavaScript Objects
+# Build JavaScript Objects
 Passed
-Accessing Object Properties with Dot Notation
+# Accessing Object Properties with Dot Notation
 Passed
-Accessing Object Properties with Bracket Notation
+# Accessing Object Properties with Bracket Notation
 Passed
-Accessing Object Properties with Variables
+# Accessing Object Properties with Variables
 Passed
-Updating Object Properties
+# Updating Object Properties
 Passed
-Add New Properties to a JavaScript Object
+# Add New Properties to a JavaScript Object
 Passed
-Delete Properties from a JavaScript Object
+# Delete Properties from a JavaScript Object
 Passed
-Using Objects for Lookups
+# Using Objects for Lookups
 Passed
-Testing Objects for Properties
+# Testing Objects for Properties
 Passed
-Manipulating Complex Objects
+# Manipulating Complex Objects
 Passed
-Accessing Nested Objects
+# Accessing Nested Objects
 Passed
-Accessing Nested Arrays
+# Accessing Nested Arrays
 Passed
-Record Collection
+# Record Collection
 Passed
-Iterate with JavaScript While Loops
+# Iterate with JavaScript While Loops
 Passed
-Iterate with JavaScript For Loops
+# Iterate with JavaScript For Loops
+Passed
+# Iterate Odd Numbers With a For Loop
+Passed
+# Count Backwards With a For Loop
+Passed
+# Iterate Through an Array with a For Loop
+Passed
+# Nesting For Loops
+Passed
+# Iterate with JavaScript Do...While Loops
+Passed
+# Replace Loops using Recursion
+Passed
+# Profile Lookup
+Passed
+# Generate Random Fractions with JavaScript
+Passed
+# Generate Random Whole Numbers with JavaScript
 Not Passed
-Iterate Odd Numbers With a For Loop
+# Generate Random Whole Numbers within a Range
 Not Passed
-Count Backwards With a For Loop
+# Use the parseInt Function
+Passed
+# Use the parseInt Function with a Radix
+Passed
+# Use the Conditional (Ternary) Operator
 Not Passed
-Iterate Through an Array with a For Loop
+# Use Multiple Conditional (Ternary) Operators
 Not Passed
-Nesting For Loops
+# Use Recursion to Create a Countdown
 Not Passed
-Iterate with JavaScript Do...While Loops
-Not Passed
-Replace Loops using Recursion
-Not Passed
-Profile Lookup
-Not Passed
-Generate Random Fractions with JavaScript
-Not Passed
-Generate Random Whole Numbers with JavaScript
-Not Passed
-Generate Random Whole Numbers within a Range
-Not Passed
-Use the parseInt Function
-Not Passed
-Use the parseInt Function with a Radix
-Not Passed
-Use the Conditional (Ternary) Operator
-Not Passed
-Use Multiple Conditional (Ternary) Operators
-Not Passed
-Use Recursion to Create a Countdown
-Not Passed
-
-    Use Recursion to Create a Range of Numbers
+# Use Recursion to Create a Range of Numbers
 
 ES6
 

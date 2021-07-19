@@ -1,3 +1,40 @@
+// Use the parseInt Function with a Radix
+function convertToInteger(str) {
+return parseInt(str, 2);
+}
+convertToInteger("10011");
+
+// Use the parseInt Function
+function convertToInteger(str) {
+  return parseInt(str);
+}
+convertToInteger("007");
+
+
+// Generate Random Whole Numbers within a Range
+function randomRange(myMin, myMax) {
+  // Only change code below this line
+  return Math.floor(Math.random() * (myMax - myMin + 1)) + myMin
+  // Only change code above this line
+}
+var myRandom = randomRange(5, 15);
+console.log(randomRange());
+
+
+// Generate Random Whole Numbers with JavaScript
+function randomWholeNum() {
+  // Only change code below this line
+  return Math.floor(Math.random() * 10);
+}
+console.log(randomWholeNum());
+
+
+// Generate Random Fractions with JavaScript
+function randomFraction() { 
+  return Math.random ();
+  console.log(randomFraction);
+}
+
 // Profile Lookup
 // Array of Objects with key value pairs
 var contacts = [
@@ -30,7 +67,7 @@ var contacts = [
         "likes": ["JavaScript", "Gaming", "Foxes"]
     }
 ];
-
+// Look up function
 function lookUpProfile(name, prop) {
   // Only change code below this line
 
