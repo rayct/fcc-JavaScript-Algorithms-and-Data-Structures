@@ -206,19 +206,19 @@ Passed
 # Generate Random Fractions with JavaScript
 Passed
 # Generate Random Whole Numbers with JavaScript
-Not Passed
+Passed
 # Generate Random Whole Numbers within a Range
-Not Passed
+Passed
 # Use the parseInt Function
 Passed
 # Use the parseInt Function with a Radix
 Passed
 # Use the Conditional (Ternary) Operator
-Not Passed
+Passed
 # Use Multiple Conditional (Ternary) Operators
-Not Passed
+Passed
 # Use Recursion to Create a Countdown
-Not Passed
+Passed
 # Use Recursion to Create a Range of Numbers
 
 ES6

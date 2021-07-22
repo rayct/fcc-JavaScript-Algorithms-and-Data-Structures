@@ -1,3 +1,41 @@
+// Use Recursion to Create a Range of Numbers
+function rangeOfNumbers(startNum, endNum) {
+  if (startNum === endNum) {
+  return [startNum];
+  } else {
+    const arr = rangeOfNumbers(startNum, endNum - 1);
+    arr.push(endNum);
+    return arr
+  }
+};
+console.log(rangeOfNumbers(5, 8));
+
+// Use Recursion to Create a Countdown
+function countup(n) {
+  if (n < 1) {
+    return [];
+  } else {
+    const countArray = countup(n - 1);
+    countArray.push(n);
+    return countArray;
+  }
+}
+console.log(countup(5));
+
+// Use Multiple Conditional (Ternary = ?) Operators
+function checkSign(num) {
+  return num > 0 ? "positive"
+    : (num < 0) ? "negative"
+      : "zero";
+ }
+
+// Use the Conditional (Ternary) Operator
+function checkEqual(a, b) {
+  return a === b ? "Equal" : "Not Equal";
+}
+checkEqual(1, 2);
+console.log(checkEqual);
+
 // Use the parseInt Function with a Radix
 function convertToInteger(str) {
 return parseInt(str, 2);
@@ -95,6 +133,7 @@ if (n <= 0) {
     }
 }
 console.log(sum([2, 3, 4], 1));
+
 
 // Iterate with JavaScript Do...While Loops
 var myArray = [];
