@@ -1,9 +1,16 @@
 // Use Destructuring Assignment to Extract Values from Objects
+const HIGH_TEMPERATURES = {
+  yesterday: 75,
+  today: 77,
+  tomorrow: 80
+};
 
+// const today = HIGH_TEMPERATURES.today;
+// const tomorrow = HIGH_TEMPERATURES.tomorrow;
+const { yesterday, today } = HIGH_TEMPERATURES;
+const { tomorrow } = HIGH_TEMPERATURES;
 
-
-
-
+console.log(HIGH_TEMPERATURES);
 
 
 // Use the Spread Operator to Evaluate Arrays In-Place
