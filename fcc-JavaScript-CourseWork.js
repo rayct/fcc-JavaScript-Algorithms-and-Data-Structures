@@ -1,8 +1,38 @@
+//  ES6 = Q=16 - Use Destructuring Assignment to Pass an Object as a Function's Parameters
+const stats = {
+  max: 56.78,
+  standard_deviation: 4.34,
+  median: 34.54,
+  mode: 23.87,
+  min: -0.75,
+  average: 35.85
+};
+
+// Only change code below this line
+const half = (stats) => (stats.max + stats.min) / 2.0; 
+// Only change code above this line
+
+//  ES6 = Q=15 - Use Destructuring Assignment with the Rest Parameter to Reassign Array Elements.
+const source = [1,2,3,4,5,6,7,8,9,10];
+function removeFirstTwo(list) {
+  // Only change code below this line
+
+  const [ , , ...arr] = list; // Change this line - Solution 1
+  // const [a, b, ...arr] = list; // Change this line - Solution 2
+
+  // Only change code above this line
+  return arr;
+}
+const arr = removeFirstTwo(source);
+console.log(arr, source); // - Solution 1
+console.log(arr); // - Solution 2
+console.log(source); // - Solution 3
+
+
 // ES6 = Q=14 - Use Destructuring Assignment to Assign Variables from Arrays
-
-
-
-
+let a = 8, b = 6;
+[a, b] = [b, a];
+console.log(a, b);
 
 // ES6 Q=13 - Use Destructuring Assignment to Assign Variables from Nested Objects
 const LOCAL_FORECAST = {
@@ -19,7 +49,6 @@ const {today: {low: lowToday, high: highToday }} = LOCAL_FORECAST;
 console.log(LOCAL_FORECAST);
 console.log(highToday, lowToday);
 // Only change code above this line
-
 
 // ES6 Q=12 -  Use Destructuring Assignment to Assign Variables from Objects
 const HIGH_TEMPERATURES = {
