@@ -1,4 +1,4 @@
-// Use Destructuring Assignment to Assign Variables from Nested Objects
+// ES6 Q=13 - Use Destructuring Assignment to Assign Variables from Nested Objects
 const LOCAL_FORECAST = {
   yesterday: { low: 61, high: 75 },
   today: { low: 64, high: 77 },
@@ -14,7 +14,7 @@ console.log(LOCAL_FORECAST);
 // Only change code above this line
 
 
-// Use Destructuring Assignment to Assign Variables from Objects
+// ES6 Q=12 -  Use Destructuring Assignment to Assign Variables from Objects
 const HIGH_TEMPERATURES = {
   yesterday: 75,
   today: 77,
@@ -29,7 +29,7 @@ const HIGH_TEMPERATURES = {
 // Only change code above this line
 
 
-// Use Destructuring Assignment to Extract Values from Objects
+// ES6 Q=11 -  Use Destructuring Assignment to Extract Values from Objects
 const HIGH_TEMPERATURES = {
   yesterday: 75,
   today: 77,
@@ -44,7 +44,7 @@ const { tomorrow } = HIGH_TEMPERATURES;
 console.log(HIGH_TEMPERATURES);
 
 
-// Use the Spread Operator to Evaluate Arrays In-Place
+// ES6 Q=10 -  Use the Spread Operator to Evaluate Arrays In-Place
 const arr1 = ['JAN', 'FEB', 'MAR', 'APR', 'MAY'];
 let arr2;
 
@@ -52,7 +52,7 @@ arr2 = [...arr1];  // Change this line
 
 console.log(arr2);
 
-// Use the Rest Parameter with Function Parameters
+// ES6 Q=9 -  Use the Rest Parameter with Function Parameters
 const sum = (...args) => { 
     return args.reduce((a, b) => a + b, 0);
   };
@@ -71,7 +71,7 @@ const myConcat = (arr1, arr2) => {
 
 console.log(myConcat([1, 2], [3, 4, 5]));
 
-// Use Arrow Functions to Write Concise Anonymous Functions
+// ES6 Q=8 - Use Arrow Functions to Write Concise Anonymous Functions
 const magic = () => {
   return new Date();
 };
@@ -97,7 +97,7 @@ function freezeObj() {
 const PI = freezeObj();
 
 
-// Mutate an Array Declared with const
+// ES6 Q=7 - Mutate an Array Declared with const
 const s = [5, 7, 2];
 function editInPlace() {
   // Only change code below this line
@@ -112,7 +112,7 @@ s [2] = 7;
 editInPlace();
 console.log(s);
  
-// Declare a Read-Only Variable with the const Keyword
+// ES6 Q=6 - Declare a Read-Only Variable with the const Keyword
 function printManyTimes(str) {
 
   // Only change code below this line
@@ -130,7 +130,7 @@ function printManyTimes(str) {
 printManyTimes("freeCodeCamp");
 
 
-//Compare Scopes of the var and let Keywords.
+// ES6 Q=5 - Compare Scopes of the var and let Keywords.
 function checkScope() {
   let i = 'function scope';
   if (true) {
@@ -142,7 +142,7 @@ function checkScope() {
 }
 checkScope();
 
-// ES6 Explore Differences Between the var and let Keywords
+// ES6 Q=4 - Explore Differences Between the var and let Keywords
 let catName;
 let quote;
 function catTalk() {
@@ -154,7 +154,7 @@ function catTalk() {
 }
 catTalk();
 console.log(catTalk(data));
-// Use Recursion to Create a Range of Numbers
+// ES6 Q=2 - Use Recursion to Create a Range of Numbers
 function rangeOfNumbers(startNum, endNum) {
   if (startNum === endNum) {
   return [startNum];
@@ -166,7 +166,7 @@ function rangeOfNumbers(startNum, endNum) {
 };
 console.log(rangeOfNumbers(5, 8));
 
-// Use Recursion to Create a Countdown
+// ES6 Q=1 - Use Recursion to Create a Countdown
 function countup(n) {
   if (n < 1) {
     return [];
@@ -178,7 +178,7 @@ function countup(n) {
 }
 console.log(countup(5));
 
-// Use Multiple Conditional (Ternary = ?) Operators
+// ES6 Q=3 - Use Multiple Conditional (Ternary = ?) Operators
 function checkSign(num) {
   return num > 0 ? "positive"
     : (num < 0) ? "negative"
