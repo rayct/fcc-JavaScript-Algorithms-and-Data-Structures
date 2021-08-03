@@ -1,4 +1,4 @@
-// ES6 = Q=14 - 
+// ES6 = Q=14 - Use Destructuring Assignment to Assign Variables from Arrays
 
 
 
