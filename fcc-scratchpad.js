@@ -1,3 +1,9 @@
+// ES6 = Q=14 - 
+
+
+
+
+
 // ES6 Q=13 - Use Destructuring Assignment to Assign Variables from Nested Objects
 const LOCAL_FORECAST = {
   yesterday: { low: 61, high: 75 },
@@ -11,6 +17,7 @@ const LOCAL_FORECAST = {
 // const highToday = LOCAL_FORECAST.today.high;
 const {today: {low: lowToday, high: highToday }} = LOCAL_FORECAST;
 console.log(LOCAL_FORECAST);
+console.log(highToday, lowToday);
 // Only change code above this line
 
 
