@@ -1,4 +1,20 @@
-//  ES6 = Q=16 - Use Destructuring Assignment to Pass an Object as a Function's Parameters
+// ES6 = Q=17 - Create Strings using Template Literals
+const result = {
+  success: ["max-length", "no-amd", "prefer-arrow-functions"],
+  failure: ["no-var", "var-on-top", "linebreak"],
+  skipped: ["no-extra-semi", "no-dup-keys"]
+};
+function makeList(arr) {
+  // Only change code below this line
+  const failureItems = [];
+  // Only change code above this line
+
+  return failureItems;
+}
+
+const failuresList = makeList(result.failure);
+
+// ES6 = Q=16 - Use Destructuring Assignment to Pass an Object as a Function's Parameters
 const stats = {
   max: 56.78,
   standard_deviation: 4.34,
@@ -9,8 +25,10 @@ const stats = {
 };
 
 // Only change code below this line
-const half = (stats) => (stats.max + stats.min) / 2.0; 
+const half = ({ max, min }) => (max + min) / 2.0; 
 // Only change code above this line
+console.log(stats);
+console.log(half(stats));
 
 //  ES6 = Q=15 - Use Destructuring Assignment with the Rest Parameter to Reassign Array Elements.
 const source = [1,2,3,4,5,6,7,8,9,10];
@@ -27,7 +45,6 @@ const arr = removeFirstTwo(source);
 console.log(arr, source); // - Solution 1
 console.log(arr); // - Solution 2
 console.log(source); // - Solution 3
-
 
 // ES6 = Q=14 - Use Destructuring Assignment to Assign Variables from Arrays
 let a = 8, b = 6;
