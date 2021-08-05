@@ -1,13 +1,17 @@
+// ES6 = Q=19 - Write Concise Declarative Functions with ES6
+
+
+
+
+
 // ES6 = Q=18 - Write Concise Object Literal Declarations Using Object Property Shorthand
 const createPerson = (name, age, gender) => {
   // Only change code below this line
-  return {
-    name: name,
-    age: age,
-    gender: gender
-  };
+  // const createPerson =  (name, age, gender)
+  return ({name, age, gender})
   // Only change code above this line
 };
+console.log(createPerson("Zodiac Hasbro", 56, "male"));
 
 // ES6 = Q=17 - Create Strings using Template Literals
 const result = {
