@@ -1,3 +1,14 @@
+// ES6 = Q=18 - Write Concise Object Literal Declarations Using Object Property Shorthand
+const createPerson = (name, age, gender) => {
+  // Only change code below this line
+  return {
+    name: name,
+    age: age,
+    gender: gender
+  };
+  // Only change code above this line
+};
+
 // ES6 = Q=17 - Create Strings using Template Literals
 const result = {
   success: ["max-length", "no-amd", "prefer-arrow-functions"],
@@ -7,12 +18,16 @@ const result = {
 function makeList(arr) {
   // Only change code below this line
   const failureItems = [];
+  for (let i = 0; i < arr.length; i++) {
+    failureItems.push(`<li class="text-warning">${arr[i]}</li>`)
+  }
   // Only change code above this line
 
   return failureItems;
 }
 
 const failuresList = makeList(result.failure);
+console.log(result.failure);
 
 // ES6 = Q=16 - Use Destructuring Assignment to Pass an Object as a Function's Parameters
 const stats = {
