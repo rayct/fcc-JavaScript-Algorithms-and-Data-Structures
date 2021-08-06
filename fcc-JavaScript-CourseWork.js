@@ -1,8 +1,49 @@
+// ES6 = Q=21 Use getters and setters to Control Access to an Object
+// Only change code below this line
+class Thermostat {
+  constructor(temp) {
+    this._temp = 5/9 * (temp - 32); 
+  }
+  // getter
+  get temperature() {
+    return this._temp;
+  }
+  // setter
+  set temperature(updatedTemp) {
+    this._temp = updatedTemp;
+  }
+}
+// Only change code above this line
+const thermos = new Thermostat(76); // Setting in Fahrenheit scale
+let temp = thermos.temperature; // 24.44 in Celsius
+thermos.temperature = 26;
+temp = thermos.temperature; // 26 in Celsius
+console.log(temp);
+
+
+// ES6 = Q=20 Use a Class Syntax to Define a Constructor Function.
+// Only change code below this line
+class Vegetable {
+  constructor(name) {
+    this.name = name;
+  }
+}
+// Only change code above this line
+
+const carrot = new Vegetable('carrot');
+console.log(carrot.name); // Should display 'carrot'
+
 // ES6 = Q=19 - Write Concise Declarative Functions with ES6
-
-
-
-
+// Only change code below this line
+const bicycle = {
+  gear: 48,
+  setGear(newGear) {
+    this.gear = newGear;
+  }
+};
+// Only change code above this line
+bicycle.setGear(3);
+console.log(bicycle.gear);
 
 // ES6 = Q=18 - Write Concise Object Literal Declarations Using Object Property Shorthand
 const createPerson = (name, age, gender) => {
