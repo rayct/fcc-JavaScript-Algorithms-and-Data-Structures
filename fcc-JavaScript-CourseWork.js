@@ -1,4 +1,109 @@
-// ES6 = Q=21 Use getters and setters to Control Access to an Object
+// ES6 = Q=31 - Handle a Rejected Promise with catch - ES6 Completed
+const makeServerRequest = new Promise((resolve, reject) => {
+  // responseFromServer is set to false to represent an unsuccessful response from a server
+  let responseFromServer = false;
+    
+  if(responseFromServer) {
+    resolve("We got the data");
+  } else {  
+    reject("Data not received");
+  }
+});
+
+makeServerRequest.catch(error => {
+  console.log(error);
+});
+
+//  ES6 = Q=30 - Handle a Fulfilled Promise with then
+// # Solution 1
+const makeServerRequest = new Promise((resolve, reject) => {
+  // responseFromServer is set to true to represent a successful response from a server
+  let responseFromServer = true;
+    
+  if(responseFromServer) {
+    resolve("We got the data");
+  } else {  
+    reject("Data not received");
+  }
+});
+makeServerRequest.then(result => console.log(result));
+// # Solution 2
+const makeServerRequest = new Promise((resolve, reject) => {
+  // responseFromServer is set to true to represent a successful response from a server
+  let responseFromServer = true;
+    
+  if(responseFromServer) {
+    resolve("We got the data");
+  } else {  
+    reject("Data not received");
+  }
+});
+makeServerRequest.then(result => { 
+  console.log(result);
+});
+
+//  ES6 = Q=29 - Complete a Promise with resolve and reject
+// FYI A promise has three states: pending, fulfilled, and rejected
+const makeServerRequest = new Promise((resolve, reject) => {
+  // responseFromServer represents a response from a server
+  let responseFromServer;
+    
+  if(responseFromServer) {
+    // Change this line
+    resolve("We got the data");
+  } else {  
+    reject("Data not received");
+    // Change this line
+  }
+});
+
+//  ES6 = Q=28 - Create a JavaScript Promise
+const makeServerRequest = new Promise((reolve, reject) => {
+
+});
+
+//  ES6 = Q=27 - Import a Default Export 
+import subtract from './math_functions.js';
+// Only change code above this line
+subtract(7,4);
+
+//  ES6 = Q=26 - Create an Export Fallback with export default
+export default function subtract(x, y) {
+  return x - y;
+}
+
+// ES6 = Q=25 - Use * to Import Everything from a File
+import * as stringFunctions from './string_functions.js';
+// Only change code above this line
+
+stringFunctions.uppercaseString("hello");
+stringFunctions.lowercaseString("WORLD!");
+
+// ES6 = Q=24 - Reuse JavaScript Code Using import
+import { uppercaseString, lowercaseString } from './string_functions.js';
+// Only change code above this line
+
+uppercaseString("hello");
+lowercaseString("WORLD!");
+
+// ES6 = Q=23 - Use expot to Share a Code Block
+const uppercaseString = (string) => {
+  return string.toUpperCase();
+}
+
+const lowercaseString = (string) => {
+  return string.toLowerCase()
+}
+export { lowercaseString, uppercaseString };
+
+// ES6 = Q=22 - Create a Module Script
+<html lang="en">
+  <body>
+    <script src="module" src="index.js"></script>
+  </body>
+</html>
+
+// ES6 = Q=21 - Use getters and setters to Control Access to an Object
 // Only change code below this line
 class Thermostat {
   constructor(temp) {
@@ -19,7 +124,6 @@ let temp = thermos.temperature; // 24.44 in Celsius
 thermos.temperature = 26;
 temp = thermos.temperature; // 26 in Celsius
 console.log(temp);
-
 
 // ES6 = Q=20 Use a Class Syntax to Define a Constructor Function.
 // Only change code below this line
