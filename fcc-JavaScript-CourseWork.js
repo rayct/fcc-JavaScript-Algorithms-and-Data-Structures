@@ -1,3 +1,95 @@
+// ============================== REGEX ================================ //
+// Regular Expressions = Q=14/33 - Find One or More Criminals in a Hunt
+
+
+
+// Regular Expressions = Q=14/33 - Find Characters with Lazy Matching
+let text = "<h1>Winter is coming</h1>";
+let myRegex = /<.*?>/; // Change this line = the ? character to change it to lazy matching.
+let result = text.match(myRegex);
+console.log(result);
+// In regular expressions, a greedy match finds the longest possible part of a string that fits the regex pattern and returns it as a match.
+// The alternative is called a lazy match, which finds the smallest possible part of the string that satisfies the regex pattern.
+
+// Regular Expressions = Q=13/33 - Match Characters that Occur Zero or More Times
+// Only change code below this line
+let chewieRegex = /Aa*/; // Change this line = * matches characters that occur zero or more times.
+// Only change code above this line
+let result = chewieQuote.match(chewieRegex);
+console.log(result);
+
+// Regular Expressions = Q=12/33 - Match Characters that Occur One or More Times, plus + sign to look for characters that occur one or more times
+let difficultSpelling = "Mississippi";
+let myRegex = /s+/g; // Change this line
+let result = difficultSpelling.match(myRegex);
+console.log(result);
+
+// Regular Expressions = Q=11/33 - Match Single Characters Not Specified eg: negated character sets.
+let quoteSample = "3 blind mice";
+let myRegex = /[^aeiou,3]/gi; // Change this line
+let result = quoteSample.match(myRegex);
+console.log(result);
+
+// Regular Expressions = Q=10/33 - Match Numbers and Letters of the Alphabet
+let quoteSample = "Blueberry 3.141592653s are delicious.";
+let myRegex = /[h-s2-6]/gi; // Change this line
+let result = quoteSample.match(myRegex); // Change this line
+console.log(result);
+
+// Regular Expressions = Q=9/33 - Match Letters of the Alphabet
+let quoteSample = "The quick brown fox jumps over the lazy dog.";
+let alphabetRegex = /[a-z]gi/; // Change this line
+let result = quoteSample.match(alphabetRegex); // Change this line
+console.log(result);
+
+// Regular Expressions = Q=8/33 - Match Single Character with Multiple Possibilities
+let quoteSample = "Beware of bugs in the above code; I have only proved it correct, not tried it.";
+let vowelRegex = /[aeiou]/gi; // Change this line = Using Global Flags g and i.
+let result = quoteSample.match(vowelRegex); // Change this line
+console.log(vowelRegex);
+
+// Regular Expressions = Q=7/33 - Match Anything with Wildcard Period
+let exampleStr = "Let's have fun with regular expressions!";
+let unRegex = /un./; // Change this line = The wildcard character . will match any one character.
+let result = unRegex.test(exampleStr);
+console.log(unRegex);
+
+// Regular Expressions = Q=6/33 - Find More Than the First Mstch
+let twinkleStar = "Twinkle, twinkle, little star";
+let startRegex = /Twinkle/gi; // g-flag Extracts a pattern more than once, i-flag ignores case sensitivety
+let result = twinkleStar.match(starRegex);
+console.log(starRegex);
+
+// Regular Expressions = Q=5/33 - Extract Matches
+let extractStr = "Extract the word 'coding' from this string.";
+let codingRegex = /coding/; // Change this line
+let result = extractStr.match(codingRegex); // Change this line
+console.log(codingRegex); // Change this line
+
+// Regular Expressions = Q=4/33 - Ignore Case While Matching
+let myString = "freeCodeCamp";
+let fccRegex = /freeCodeCamp/i; // Change this line
+let result = fccRegex.test(myString);
+console.log(fccRegex);
+// Regular Expressions = Q=3/33 - Match a Literal String with Different Possibilities
+let petString = "James has a pet cat.";
+let petRegex = /dog|cat|bird|fish/; // Change this line
+let result = petRegex.test(petString);
+console.log(petRegex);
+// Regular Expressions = Q=2/33 - Match Literal Strings
+let waldoIsHiding = "Somewhere Waldo is hiding in this text.";
+let waldoRegex = /Waldo/; // Change this line
+let result = waldoRegex.test(waldoIsHiding);
+console.log(result);
+
+// Regular Expressions = Q=1/33 - Using the Test Method
+let myString = "Hello, World!";
+let myRegex = /Hello/;
+let result = myRegex.test(myString);
+console.log(myRegex);
+
+// ============================== ES6 ================================ //
+
 // ES6 = Q=31 - Handle a Rejected Promise with catch - ES6 Completed
 const makeServerRequest = new Promise((resolve, reject) => {
   // responseFromServer is set to false to represent an unsuccessful response from a server
