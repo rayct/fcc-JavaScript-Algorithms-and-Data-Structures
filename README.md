@@ -81,13 +81,13 @@ Passed
 Passed
 # Access Multi-Dimensional Arrays With Indexes
 Passed
-# Manipulate Arrays With push()
+# Manipulate Arrays With push
 Passed
-# Manipulate Arrays With pop()
+# Manipulate Arrays With pop
 Passed
-# Manipulate Arrays With shift()
+# Manipulate Arrays With shift
 Passed
-# Manipulate Arrays With unshift()
+# Manipulate Arrays With unshift
 Passed
 # Shopping List
 Passed
