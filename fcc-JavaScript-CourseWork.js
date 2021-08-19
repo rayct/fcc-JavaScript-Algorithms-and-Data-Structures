@@ -1,7 +1,100 @@
 // ============================== REGEX ================================ //
+// Regular Expressions = Q=25/33 - Specify Only the Lower Number of Matches
+// Notes: You can specify the lower and upper number of patterns with quantity specifiers using curly brackets.
+// Sometimes you only want to specify the lower number of patterns with no upper limit.
+// To only specify the lower number of patterns, keep the first number followed by a comma.
+//  For example, to match only the string hah with the letter a appearing at least 3 times, your regex would be /ha{3,}h/.
+let haStr = "Hazzzzah";
+let haRegex = /Haz{4,}ah/; // Change this line
+let result = haRegex.test(haStr);
+console.log(result);
+
+// Regular Expressions = Q=24/33 - Specify Upper and Lower Number of Matches
+// Note: You can specify the lower and upper number of patterns with quantity specifiers. 
+// Quantity specifiers are used with curly brackets({ and }).
+// You put two numbers between the curly brackets - for the lower and upper number of patterns.
+// For example, to match only the letter a appearing between 3 and 5 times in the string ah, your regex would be /a{3,5}h/.
+// \s = include white space, and /on{3,6}\sno/i. i = ignores case sensitivity
+let ohStr = "Ohhh no";
+let ohRegex = /oh{3,6}\sno/i; // Change this line
+let result = ohRegex.test(ohStr);
+console.log(result);
+
+
+// Regular Expressions = Q=23/33 - Match Non-Whitespace Characters
+// Notes: Search for non-whitespace using \S, which is an uppercase s. 
+// This pattern will not match whitespace, carriage return, tab, form feed, and new line characters.
+// You can think of it being similar to the character class [^ \r\t\f\n\v].
+let sample = "Whitespace is important in separating words";
+let countNonWhiteSpace = /\S/g; // Change this line
+let result = sample.match(countNonWhiteSpace);
+console.log(result);
+
+// Regular Expressions = Q=22/33 - Match Whitespace
+// Notes: You can search for whitespace using \s, which is a lowercase s. 
+// This pattern not only matches whitespace, but also carriage return, tab, form feed, and new line characters.
+// You can think of it as similar to the character class [\r\t\f\n\v].
+let sample = "Whitespace is important in separating words";
+let countWhiteSpace = /\s/g; // Change this line
+let result = sample.match(countWhiteSpace);
+console.log(result);
+
+// Regular Expressions = Q=21/33 - Restrict Possible Usernames
+// Notes: 
+let username = "JackOfAllTrades";
+let userCheck = /^[a-z]([a-z]+|[0-9]\d+)\d*$/i; // Change this line
+let result = userCheck.test(username);
+console.log(result);
+
+// Regular Expressions = Q=20/33 - Match All Non-Numbers
+// Notes: You can also search for non-digits using a similar shortcut that uses an uppercase D instead.
+// The shortcut to look for non-digit characters is \D.
+// This is equal to the character class [^ 0 - 9], which looks for a single character that is not a number between zero and nine.
+let movieName = "2001: A Space Odyssey";
+let noNumRegex = /\D/g; // Change this line
+let result = movieName.match(noNumRegex).length;
+console.log(result);
+
+// Regular Expressions = Q=19/33 - Match All Numbers
+// Notes: The shortcut to look for digit characters is \d, with a lowercase d.
+// This is equal to the character class [0 - 9], which looks for a single character of any number between zero and nine.
+let movieName = "2001: A Space Odyssey";
+let numRegex = /\d/g; // Change this line
+let result = movieName.match(numRegex).length;
+console.log(result);
+
+// Regular Expressions = Q=18/33 - Match Everything But Letters and Numbers
+// Notes: The shorthand character class \W to count the number of non-alphanumeric characters in various quotes and strings.
+// You can search for the opposite of the \w with \W. 
+// Note, the opposite pattern uses a capital letter.
+// This shortcut is the same as [^ A - Za - z0 -9_].
+let quoteSample = "The five boxing wizards jump quickly.";
+let nonAlphabetRegex = /\W/g; // Change this line
+let result = quoteSample.match(nonAlphabetRegex).length;
+console.log(result);
+
+// Regular Expressions = Q=17/33 - Match All Letters and Numbers
+// Notes: \w = This character class matches upper and lowercase letters plus numbers.
+let quoteSample = "The five boxing wizards jump quickly.";
+let alphabetRegexV2 = /\w/g; // Change this line
+let result = quoteSample.match(alphabetRegexV2).length;
+console.log(result);
+
+// Regular Expressions = Q=16/33 - Match Ending String Patterns
+let caboose = "The last car on a train is the caboose";
+let lastRegex = /caboose$/; // Change this line
+let result = lastRegex.test(caboose);
+
+console.log(result);
+// Regular Expressions = Q=15/33 - Match Beginning String Patterns
+let rickyAndCal = "Cal and Ricky both like racing.";
+let calRegex = /^Cal/; // Change this line
+let result = calRegex.test(rickyAndCal);
+console.log(result);
+
 // Regular Expressions = Q=14/33 - Find One or More Criminals in a Hunt
-
-
+let reCriminals = /C+/; // Change this line
+console.log(reCriminals);
 
 // Regular Expressions = Q=14/33 - Find Characters with Lazy Matching
 let text = "<h1>Winter is coming</h1>";
