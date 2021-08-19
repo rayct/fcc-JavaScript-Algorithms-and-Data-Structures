@@ -1,4 +1,4 @@
-# fcc-JavaScript-Algorithms-and-Data-Structures
+<!-- Course 1 - JavaScript-Algorithms-and-Data-Structures - Basic JavaScript - 111 Questions -->
 # 1. Comment Your JavaScript Code
 Passed
 # 2. Declare JavaScript Variables
@@ -220,72 +220,79 @@ Passed
 # Use Recursion to Create a Countdown
 Passed
 # Use Recursion to Create a Range of Numbers
+Passed
 
-ES6
 
-ECMAScript, or ES, is a standardized version of JavaScript. Because all major browsers follow this specification, the terms ECMAScript and JavaScript are interchangeable.
+<!-- Course 2 ES6 - JavaScript Algorithms and Data Structures - 31 Questions -->
+# Explore Differences Between the var and let Keywords
+Passed
+# Compare Scopes of the var and let Keywords
+Passed
+# Declare a Read-Only Variable with the const Keyword
+Passed
+# Mutate an Array Declared with const
+Passed
+# Prevent Object Mutation
+Passed
+# Use Arrow Functions to Write Concise Anonymous Functions
+Passed
+# Write Arrow Functions with Parameters
+Passed
+# Set Default Parameters for Your Functions
+Passed
+# Use the Rest Parameter with Function Parameters
+Passed
+# Use the Spread Operator to Evaluate Arrays In-Place
+Passed
+# Use Destructuring Assignment to Extract Values from Objects
+Passed
+# Use Destructuring Assignment to Assign Variables from Objects
+Passed
+# Use Destructuring Assignment to Assign Variables from Nested Objects
+Passed
+# Use Destructuring Assignment to Assign Variables from Arrays
+Passed
+# Use Destructuring Assignment with the Rest Parameter to Reassign Array Elements
+Passed
+# Use Destructuring Assignment to Pass an Object as a Function's Parameters
+Passed
+# Create Strings using Template Literals
+Passed
+# Write Concise Object Literal Declarations Using Object Property Shorthand
+Passed
+# Write Concise Declarative Functions with ES6
+Passed
+# Use class Syntax to Define a Constructor Function
+Passed
+# Use getters and setters to Control Access to an Object
+Passed
+# Create a Module Script
+Passed
+# Use export to Share a Code Block
+Passed
+# Use JavaScript Code Using import
+Passed
+# Use * to Import Everything from a File
+Passed
+# Create an Export Fallback with export default
+Passed
+# Import a Default Export
+Passed
+# Create a JavaScript Promise
+Passed
+# Complete a Promise with resolve and reject
+Passed
+# Handle a Fulfilled Promise with then
+Passed
+# Handle a Rejected Promise with catch
+Passed
 
-Most of the JavaScript you've learned up to this point was in ES5 (ECMAScript 5), which was finalized in 2009. While you can still write programs in ES5, JavaScript is always evolving, and new features are released every year.
+<!-- Course 3 Regular Expressions - JavaScript Algorithms and Data Structures - 33 Questions -->
 
-ES6, released in 2015, added many powerful new features to the language. In this course, you'll learn these new features, including let and const, arrow functions, classes, promises, and modules.
-Regular Expressions
 
-Regular expressions, often shortened to "regex" or "regexp", are patterns that help programmers match, search, and replace text. Regular expressions are very powerful, but can be hard to read because they use special characters to make more complex, flexible matches.
 
-In this course, you'll learn how to use special characters, capture groups, positive and negative lookaheads, and other techniques to match any text you want.
-Debugging
 
-Debugging is the process of going through your code, finding any issues, and fixing them.
 
-Issues in code generally come in three forms: syntax errors that prevent your program from running, runtime errors where your code has unexpected behavior, or logical errors where your code doesn't do what you intended.
 
-In this course, you'll learn how to use the JavaScript console to debug programs and prevent common issues before they happen.
-Basic Data Structures
-
-Data can be stored and accessed in many ways. You already know some common JavaScript data structures — arrays and objects.
-
-In this Basic Data Structures course, you'll learn more about the differences between arrays and objects, and which to use in different situations. You'll also learn how to use helpful JS methods like splice() and Object.keys() to access and manipulate data.
-Basic Algorithm Scripting
-
-An algorithm is a series of step-by-step instructions that describe how to do something.
-
-To write an effective algorithm, it helps to break a problem down into smaller parts, and think carefully about how to solve each part with code.
-
-In this course, you'll learn the fundamentals of algorithmic thinking by writing algorithms that do everything from converting temperatures to handling complex 2D arrays.
-Object Oriented Programming
-
-OOP, or Object Oriented Programming, is one of the major approaches to the software development process. In OOP, objects and classes are used to organize code to describe things and what they can do.
-
-In this course, you'll learn the basic principles of OOP in JavaScript including the this keyword, prototype chains, constructors, and inheritance.
-Functional Programming
-
-Functional Programming is another popular approach to software development. In Functional Programming, code is organized into smaller, basic functions that can be combined to build complex programs.
-
-In this course, you'll learn the core concepts of Functional Programming including pure functions, how to avoid mutations, and how to write cleaner code with methods like .map() and .filter().
-Intermediate Algorithm Scripting
-
-Now that you know the basics of algorithmic thinking, along with OOP and Functional Programming, test your skills with the Intermediate Algorithm Scripting challenges.
-JavaScript Algorithms and Data Structures Projects
-
-This is it — time to put your new JavaScript skills to work. These projects are similar to the algorithm scripting challenges you've done before – just much more difficult.
-
-Complete these 5 JavaScript projects to earn the JavaScript Algorithms and Data Structures certification.
-
-    Palindrome CheckerNot Passed
-
-Roman Numeral ConverterNot Passed
-Caesars CipherNot Passed
-Telephone Number ValidatorNot Passed
-Cash RegisterNot Passed
-Claim Your Certification
-Complete the following steps to claim and view your JavaScript Algorithms and Data Structures Certification
-Accept our Academic Honesty PolicyPassed
-Set your profile settings to publicPassed
-Set your certification settings to publicPassed
-Set your name, and make it publicPassed
-Complete JavaScript Algorithms and Data Structures Certification ProjectsIntro Information
-Claim and view your certificationIntro Information
-Browse our other free certifications
-(we recommend doing these in order)
 
 
