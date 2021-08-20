@@ -1,4 +1,23 @@
 // ============================== REGEX ================================ //
+// Regular Expressions = Q=27/33 - Check for All or None
+// Notes: Sometimes the patterns you want to search for may have parts of it that may or may not exist. However, it may be important to check for them nonetheless.
+// You can specify the possible existence of an element with a question mark, 
+// You can think of this symbol as saying the previous element is optional.
+// For example, there are slight differences in American and British English and you can use the question mark to match both spellings.
+let favWord = "favorite";
+let favRegex = /favou?rite/; // Change this line = ?. This checks for zero or one of the preceding element.
+let result = favRegex.test(favWord);
+console.log(result);
+
+// Regular Expressions = Q=26/33 - Specify Exact Number of Matches =
+// Notes: Sometimes you only want a specific number of matches.
+// To specify a certain number of patterns, just have that one number between the curly brackets.
+// For example, to match only the word hah with the letter a 3 times, your regex would be /ha{3}h/.
+let timStr = "Timmmmber";
+let timRegex = /Tim{4}ber/; //Change this line to something result 
+let result = timRegex.test(timStr);
+console.log(result);
+
 // Regular Expressions = Q=25/33 - Specify Only the Lower Number of Matches
 // Notes: You can specify the lower and upper number of patterns with quantity specifiers using curly brackets.
 // Sometimes you only want to specify the lower number of patterns with no upper limit.
