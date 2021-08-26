@@ -1,5 +1,94 @@
+// ============================== DEBUGGING ================================ //
+// Debugging = Q=4/12 - Catch Misspelled Variable and Function Names
+// Notes: 
+
+
+
+
+
+// Debugging = Q=3/12 - Use typeof to Check the Type of a Variable
+// Notes: You can use typeof to check the data structure, or type, of a variable. This is useful in debugging when working with multiple data types.
+// If you think you're adding two numbers, but one is actually a string, the results can be unexpected.
+// Type errors can lurk in calculations or function calls.
+// Be careful especially when you're accessing and working with external data in the form of a JavaScript Object Notation (JSON) object.
+let seven = 7;
+let three = "3";
+console.log(seven + three);
+// Only change code below this line
+console.log(typeof seven); // Number
+console.log(typeof three); // String
+
+// Debugging = Q=2/12 - Understanding the Differences between the freeCodeCamp and Browser Console
+// Notes: 
+let output = "(Get this to log once in the freeCodeCamp console and twice in the browser console";
+console.clear();
+console.log(output);
+
+// Debugging = Q=1/12 - Use the JavaScript Console to Check the Value of a Variable
+// Notes: Placing it at strategic points in your code can show you the intermediate values of variables.
+// It's good practice to have an idea of what the output should be before looking at what it is.
+// Having check points to see the status of your calculations throughout your code will help narrow down where the problem is.
+let a = 5;
+let b = 1;
+a++;
+// Only change code below this line
+let sumAB = a + b;
+console.log(a);
+
 // ============================== REGEX ================================ //
-// Regular Expressions = Q=27/33 - Check for All or None
+// Regular Expressions = Q=33/33 - Remove Whitespace from Start to End
+// Notes: Sometimes whitespace characters around strings are not wanted but are there.
+// Typical processing of strings is to remove the whitespace at the start and end of it.
+let hello = "   Hello, World!  ";
+let wsRegex = /^\s+|\s+$/g; // Change this line
+let result = hello.replace(wsRegex, ""); // Change this line
+console.log(result);
+
+// Regular Expressions = Q=32/33 - Use Capture Groups to Search and Replace
+// Notes: Searching is useful. However, you can make searching even more powerful when it also changes (or replaces) the text you match.
+// You can search and replace text in a string using .replace() on a string.
+// The inputs for .replace() is first the regex pattern you want to search for. 
+// The second parameter is the string to replace the match or a function to do something.
+let str = "one two three";
+let fixRegex = /(\w+)\s(\w+)\s(\w+)/; // Change this line
+let replaceText = "$3 $2 $1"; // Change this line
+let result = str.replace(fixRegex, replaceText);
+console.log(result);
+
+// Regular Expressions = Q=31/33 - Reuse Patterns Using Capture Groups
+// Notes: Capture groups can be used to find repeated substrings.
+// Capture groups are constructed by enclosing the regex pattern to be captured in parentheses.
+// In this case, the goal is to capture a word consisting of alphanumeric characters so the capture group will be \w+ enclosed by parentheses: /(\w+)/.
+// The substring matched by the group is saved to a temporary "variable", which can be accessed within the same regex using a backslash and the number of the capture group (e.g. \1).
+// Capture groups are automatically numbered by the position of their opening parentheses (left to right), starting at 1.
+let repeatNum = "42 42 42";
+let reRegex = /^(\d+)\s\1\s\1$/; // Change this line
+let result = reRegex.test(repeatNum);
+console.log(result);
+
+// Regular Expressions = Q=30/33 - Check For Mixed Grouping of Characters
+// Notes: Use .* to allow for middle names.
+let myString = "Eleanor Roosevelt";
+let myRegex = /(Eleanor|Franklin).*Roosevelt/; // Change this line
+let result = myRegex.test(myString); // Change this line
+console.log(result);
+// After passing the challenge experiment with myString and see how the grouping works
+
+// Regular Expressions = Q=29/33 - Positive and Negative Lookahead
+// Notes: Lookaheads are patterns that tell JavaScript to look-ahead in your string to check for patterns further along.
+// This can be useful when you want to search for multiple patterns over the same string.
+// There are two kinds of lookaheads: positive lookahead and negative lookahead.
+// A positive lookahead will look to make sure the element in the search pattern is there, but won't actually match it.
+// A positive lookahead is used as (?=...) where the ... is the required part that is not matched.
+// A negative lookahead will look to make sure the element in the search pattern is not there.
+// A negative lookahead is used as (?!...) where the ... is the pattern that you do not want to be there.
+// The rest of the pattern is returned if the negative lookahead part is not present.
+let sampleWord = "astronaut";
+let pwRegex = /(?=\w{6})(?=\D*\d\d)/; // Change this line
+let result = pwRegex.test(sampleWord);
+console.log(result);
+
+// Regular Expressions = Q=28/33 - Check for All or None
 // Notes: Sometimes the patterns you want to search for may have parts of it that may or may not exist. However, it may be important to check for them nonetheless.
 // You can specify the possible existence of an element with a question mark, 
 // You can think of this symbol as saying the previous element is optional.
@@ -9,7 +98,7 @@ let favRegex = /favou?rite/; // Change this line = ?. This checks for zero or on
 let result = favRegex.test(favWord);
 console.log(result);
 
-// Regular Expressions = Q=26/33 - Specify Exact Number of Matches =
+// Regular Expressions = Q=27/33 - Specify Exact Number of Matches =
 // Notes: Sometimes you only want a specific number of matches.
 // To specify a certain number of patterns, just have that one number between the curly brackets.
 // For example, to match only the word hah with the letter a 3 times, your regex would be /ha{3}h/.
@@ -18,7 +107,7 @@ let timRegex = /Tim{4}ber/; //Change this line to something result
 let result = timRegex.test(timStr);
 console.log(result);
 
-// Regular Expressions = Q=25/33 - Specify Only the Lower Number of Matches
+// Regular Expressions = Q=26/33 - Specify Only the Lower Number of Matches
 // Notes: You can specify the lower and upper number of patterns with quantity specifiers using curly brackets.
 // Sometimes you only want to specify the lower number of patterns with no upper limit.
 // To only specify the lower number of patterns, keep the first number followed by a comma.
@@ -28,7 +117,7 @@ let haRegex = /Haz{4,}ah/; // Change this line
 let result = haRegex.test(haStr);
 console.log(result);
 
-// Regular Expressions = Q=24/33 - Specify Upper and Lower Number of Matches
+// Regular Expressions = Q=25/33 - Specify Upper and Lower Number of Matches
 // Note: You can specify the lower and upper number of patterns with quantity specifiers. 
 // Quantity specifiers are used with curly brackets({ and }).
 // You put two numbers between the curly brackets - for the lower and upper number of patterns.
@@ -40,7 +129,7 @@ let result = ohRegex.test(ohStr);
 console.log(result);
 
 
-// Regular Expressions = Q=23/33 - Match Non-Whitespace Characters
+// Regular Expressions = Q=24/33 - Match Non-Whitespace Characters
 // Notes: Search for non-whitespace using \S, which is an uppercase s. 
 // This pattern will not match whitespace, carriage return, tab, form feed, and new line characters.
 // You can think of it being similar to the character class [^ \r\t\f\n\v].
@@ -49,7 +138,7 @@ let countNonWhiteSpace = /\S/g; // Change this line
 let result = sample.match(countNonWhiteSpace);
 console.log(result);
 
-// Regular Expressions = Q=22/33 - Match Whitespace
+// Regular Expressions = Q=23/33 - Match Whitespace
 // Notes: You can search for whitespace using \s, which is a lowercase s. 
 // This pattern not only matches whitespace, but also carriage return, tab, form feed, and new line characters.
 // You can think of it as similar to the character class [\r\t\f\n\v].
@@ -58,14 +147,14 @@ let countWhiteSpace = /\s/g; // Change this line
 let result = sample.match(countWhiteSpace);
 console.log(result);
 
-// Regular Expressions = Q=21/33 - Restrict Possible Usernames
+// Regular Expressions = Q=22/33 - Restrict Possible Usernames
 // Notes: 
 let username = "JackOfAllTrades";
 let userCheck = /^[a-z]([a-z]+|[0-9]\d+)\d*$/i; // Change this line
 let result = userCheck.test(username);
 console.log(result);
 
-// Regular Expressions = Q=20/33 - Match All Non-Numbers
+// Regular Expressions = Q=21/33 - Match All Non-Numbers
 // Notes: You can also search for non-digits using a similar shortcut that uses an uppercase D instead.
 // The shortcut to look for non-digit characters is \D.
 // This is equal to the character class [^ 0 - 9], which looks for a single character that is not a number between zero and nine.
@@ -74,7 +163,7 @@ let noNumRegex = /\D/g; // Change this line
 let result = movieName.match(noNumRegex).length;
 console.log(result);
 
-// Regular Expressions = Q=19/33 - Match All Numbers
+// Regular Expressions = Q=20/33 - Match All Numbers
 // Notes: The shortcut to look for digit characters is \d, with a lowercase d.
 // This is equal to the character class [0 - 9], which looks for a single character of any number between zero and nine.
 let movieName = "2001: A Space Odyssey";
@@ -82,7 +171,7 @@ let numRegex = /\d/g; // Change this line
 let result = movieName.match(numRegex).length;
 console.log(result);
 
-// Regular Expressions = Q=18/33 - Match Everything But Letters and Numbers
+// Regular Expressions = Q=19/33 - Match Everything But Letters and Numbers
 // Notes: The shorthand character class \W to count the number of non-alphanumeric characters in various quotes and strings.
 // You can search for the opposite of the \w with \W. 
 // Note, the opposite pattern uses a capital letter.
@@ -92,26 +181,27 @@ let nonAlphabetRegex = /\W/g; // Change this line
 let result = quoteSample.match(nonAlphabetRegex).length;
 console.log(result);
 
-// Regular Expressions = Q=17/33 - Match All Letters and Numbers
+// Regular Expressions = Q=18/33 - Match All Letters and Numbers
 // Notes: \w = This character class matches upper and lowercase letters plus numbers.
 let quoteSample = "The five boxing wizards jump quickly.";
 let alphabetRegexV2 = /\w/g; // Change this line
 let result = quoteSample.match(alphabetRegexV2).length;
 console.log(result);
 
-// Regular Expressions = Q=16/33 - Match Ending String Patterns
+// Regular Expressions = Q=17/33 - Match Ending String Patterns
 let caboose = "The last car on a train is the caboose";
 let lastRegex = /caboose$/; // Change this line
 let result = lastRegex.test(caboose);
 
 console.log(result);
-// Regular Expressions = Q=15/33 - Match Beginning String Patterns
+// Regular Expressions = Q=16/33 - Match Beginning String Patterns
 let rickyAndCal = "Cal and Ricky both like racing.";
 let calRegex = /^Cal/; // Change this line
 let result = calRegex.test(rickyAndCal);
 console.log(result);
 
-// Regular Expressions = Q=14/33 - Find One or More Criminals in a Hunt
+// Regular Expressions = Q=15/33 - Find One or More Criminals in a Hunt
+// Notes:  plus + sign to look for characters that occur one or more times.
 let reCriminals = /C+/; // Change this line
 console.log(reCriminals);
 
@@ -125,7 +215,7 @@ console.log(result);
 
 // Regular Expressions = Q=13/33 - Match Characters that Occur Zero or More Times
 // Only change code below this line
-let chewieRegex = /Aa*/; // Change this line = * matches characters that occur zero or more times.
+let chewieRegex = /Aa*/; // Change this line = * Matches characters that occur zero or more times.
 // Only change code above this line
 let result = chewieQuote.match(chewieRegex);
 console.log(result);
@@ -166,7 +256,7 @@ let unRegex = /un./; // Change this line = The wildcard character . will match a
 let result = unRegex.test(exampleStr);
 console.log(unRegex);
 
-// Regular Expressions = Q=6/33 - Find More Than the First Mstch
+// Regular Expressions = Q=6/33 - Find More Than the First Match
 let twinkleStar = "Twinkle, twinkle, little star";
 let startRegex = /Twinkle/gi; // g-flag Extracts a pattern more than once, i-flag ignores case sensitivety
 let result = twinkleStar.match(starRegex);
