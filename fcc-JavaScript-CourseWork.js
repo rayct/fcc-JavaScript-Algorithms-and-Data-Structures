@@ -1,13 +1,87 @@
 // ============================== DEBUGGING ================================ //
+// Debugging = Q=10/12 - Catch Off By One Errors When Using Indexing (sometimes called OBOE).
+function countToFive() {
+  let firstFive = "12345";
+  let len = firstFive.length;
+  // Only change code below this line
+  for (let i = 0; i < len; i++) {
+  // Only change code above this line
+    console.log(firstFive[i]);
+  }
+}
+
+countToFive();
+
+// Debugging = Q=9/12 - Catch Arguments Passed in the Wrong Order When Calling a Function
+function raiseToPower(e, b) {
+  return Math.pow(e, b);
+}
+
+let base = 2;
+let exp = 3;
+let power = raiseToPower(base, exp);
+console.log(power);
+
+// Debugging = Q=8/12 - Catch Missing Open and Closing Parenthesis After a Function Call
+function getNine() {
+  let x = 6;
+  let y = 3;
+  return x + y;
+}
+
+let result = getNine();
+console.log(result);
+
+// Debugging = Q=7/12 - Catch Use of Assignment Operator Instead of Equality Operator
+// Notes: Branching programs, i.e. ones that do different things if certain conditions are met, rely on if, else if, and else statements in JavaScript.
+// The condition sometimes takes the form of testing whether a result is equal to a value.
+// This logic is spoken (in English, at least) as "if x equals y, then ..." which can literally translate into code using the =, or assignment operator.
+// This leads to unexpected control flow in your program.
+let x = 7;
+let y = 9;
+let result = "to come";
+
+if(x == y) {
+  result = "Equal!";
+} else {
+  result = "Not equal!";
+}
+
+console.log(result);
+
+// Debugging = Q=6/12 - Catch Mixed Usage of Single and Double Quotes
+// Notes: JavaScript allows the use of both single (') and double (") quotes to declare a string.
+// Deciding which one to use generally comes down to personal preference, with some exceptions.
+// Having two choices is great when a string has contractions or another piece of text that's in quotes.
+// Just be careful that you don't close the string too early, which causes a syntax error.
+// Example One: Using Single Quotes for the href
+let innerHtml = "<p>Click here to <a href='#Home'>return home</a></p>";
+console.log(innerHtml);
+// Example Two: Using escape quotes inside the string by using the backslash (\) escape character:
+let innerHtml = "<p>Click here to <a href=\"#Home\">return home</a></p>";
+console.log(innerHtml);
+
+// Debugging = Q=5/12 - Catch Unclosed Parentheses, Brackets, Braces and Quotes
+// Notes:
+let myArray = [1, 2, 3];
+let arraySum = myArray.reduce((previous, current ) => previous + current);
+console.log(`Sum of array values is: ${arraySum}`);
+
 // Debugging = Q=4/12 - Catch Misspelled Variable and Function Names
-// Notes: 
-
-
-
-
+// Notes: The console.log() and typeof methods are the two primary ways to check intermediate values and types of program output.
+// Now it's time to get into the common forms that bugs take.
+// One syntax-level issue that fast typers can commiserate with is the humble spelling error.
+// Transposed, missing, or mis-capitalized characters in a variable or function name will have the browser looking for an object that doesn't exist - and complain in the form of a reference error.
+// JavaScript variable and function names are case-sensitive.
+// TASK: Fix the two spelling errors in the code so the netWorkingCapital calculation works
+let receivables = 10;
+let payables = 8;
+let netWorkingCapital = receivables - payables;
+console.log(`Net working capital is: ${netWorkingCapital}`);
 
 // Debugging = Q=3/12 - Use typeof to Check the Type of a Variable
-// Notes: You can use typeof to check the data structure, or type, of a variable. This is useful in debugging when working with multiple data types.
+// Notes: 
+// You can use typeof to check the data structure, or type, of a variable. This is useful in debugging when working with multiple data types.
 // If you think you're adding two numbers, but one is actually a string, the results can be unexpected.
 // Type errors can lurk in calculations or function calls.
 // Be careful especially when you're accessing and working with external data in the form of a JavaScript Object Notation (JSON) object.
@@ -118,7 +192,7 @@ let result = haRegex.test(haStr);
 console.log(result);
 
 // Regular Expressions = Q=25/33 - Specify Upper and Lower Number of Matches
-// Note: You can specify the lower and upper number of patterns with quantity specifiers. 
+// Notes: You can specify the lower and upper number of patterns with quantity specifiers. 
 // Quantity specifiers are used with curly brackets({ and }).
 // You put two numbers between the curly brackets - for the lower and upper number of patterns.
 // For example, to match only the letter a appearing between 3 and 5 times in the string ah, your regex would be /a{3,5}h/.
