@@ -1,3 +1,15 @@
+// ============================== BASIC DATA STRUCTURES ================================ //
+// Basic Data Structures = Q=1/21 - Use an Array to Store a Collection of Data
+// NOTE: 
+
+
+
+
+
+
+
+
+
 // ============================== DEBUGGING ================================ //
 // Debugging = Q=12/12 - Prevent Infinite Loops with a Valid Terminal Condition
 // NOTE: 
