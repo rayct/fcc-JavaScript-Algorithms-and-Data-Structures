@@ -1,4 +1,34 @@
 // ============================== DEBUGGING ================================ //
+// Debugging = Q=12/12 - Prevent Infinite Loops with a Valid Terminal Condition
+// NOTE: 
+function myFunc() {
+  for (let i = 1; i <= 4; i += 2) {
+    console.log("Still going!");
+  }
+}
+
+// Debugging = Q=11/12 - Use Caution When Reinitializing Variables Inside a Loop.
+// Notes: This error occurs due to the row[] array being declared as a global variable outside of the nested for loop.
+function zeroArray(m, n) {
+  // Creates a 2-D array with m rows and n columns of zeroes
+  let newArray = [];
+  for (let i = 0; i < m; i++) {
+    let row = []; // NOTE: array is not a global variable as it is inside the nested for loop
+    // Adds the m-th row into newArray
+
+    for (let j = 0; j < n; j++) {
+      // Pushes n zeroes into the current row to create the columns
+      row.push(0);
+    }
+    // Pushes the current row, which now has n zeroes in it, to the array
+    newArray.push(row);
+  }
+  return newArray;
+}
+
+let matrix = zeroArray(3, 2);
+console.log(matrix);
+
 // Debugging = Q=10/12 - Catch Off By One Errors When Using Indexing (sometimes called OBOE).
 function countToFive() {
   let firstFive = "12345";
