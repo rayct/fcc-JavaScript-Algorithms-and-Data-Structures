@@ -1,14 +1,115 @@
 // ============================== BASIC DATA STRUCTURES ================================ //
+// Basic Data Structures = Q=7/21 - Copy an Array with the Spread Operator
+// NOTES:
+function copyMachine(arr, num) {
+  let newArr = [];
+  while (num >= 1) {
+    // Only change code below this line
+
+    // Only change code above this line
+    num--;
+  }
+  return newArr;
+}
+
+console.log(copyMachine([true, false, true], 2));
+
+// Basic Data Structures = Q=6/21 - Copy Array Items Using Splice
+// NOTES:
+function forecast(arr) {
+  // Only change code below this line
+
+  return arr.slice(2, 4); // This Will return [ 'warm', 'sunny' ]
+}
+
+// Only change code above this line
+console.log(forecast(['cold', 'rainy', 'warm', 'sunny', 'cool', 'thunderstorms']));
+
+// Basic Data Structures = Q=5/21 - Add Items Using Splice
+// NOTES: You can use the third parameter, comprised of one or more element(s), to add to the array.
+// This can be incredibly useful for quickly switching out an element, or a set of elements, for another.
+function htmlColorNames(arr) {
+  // Only change code below this line
+
+  const startIndex = 0;
+  const amountToDelete = 2;
+
+  arr.splice(startIndex, amountToDelete, 'DarkSalmon', 'BlanchedAlmond');
+  // Only change code above this line
+  return arr;
+}
+
+console.log(htmlColorNames(['DarkGoldenRod', 'WhiteSmoke', 'LavenderBlush', 'PaleTurquoise', 'FireBrick']));
+
+// Basic Data Structures = Q=4/21 - Remove Items Using Splice
+// NOTES: 
+const arr = [2, 4, 5, 1, 7, 5, 2, 1];
+// Only change code below this line
+let newArray = arr.splice(1, 4);
+// Only change code above this line
+console.log(arr);
+
+// Basic Data Structures = Q=3/21 - Remove Items from an Array with pop() and shift()
+// NOTES: 
+function popShift(arr) {
+  let popped = arr.pop(); // Change this line
+  let shifted = arr.shift(); // Change this line
+  return [shifted, popped];
+}
+
+console.log(popShift(['challenge', 'is', 'not', 'complete']));
+
+// Basic Data Structures = Q=2/21 - Add Items to an Array with push() and unshift()
+// NOTES: Push() method adds elements to the end of an array, and unshift() adds elements to the beginning. Consider the following:
+function mixedNumbers(arr) {
+  // Only change code below this line
+  arr.push(7, 'VIII', 9);
+  arr.unshift('I', 2, 'three');
+  // Only change code above this line
+  return arr;
+}
+
+console.log(mixedNumbers(['IV', 5, 'six']));
+
+// Basic Data Structures = Q=1/21 - Access an Array's Contents Using Bracket Notation
+let myArray = ["a", "b", "c", "d"];
+// Only change code below this line
+myArray['b'] = 'f';
+// Only change code above this line
+console.log(myArray);
+// NOTE: If we want to retrieve the a from ourArray and assign it to a variable, we can do so with the following code:
+let ourVariable = ourArray[0];
+
 // Basic Data Structures = Q=1/21 - Use an Array to Store a Collection of Data
-// NOTE: 
+// NOTE: #1 A One Dimensional array, meaning it only has one level, or that it does not have any other arrays nested within it.
+let yourArray = ['Ray', 1972, '26', true, null]; // Change this line
 
-
-
-
-
-
-
-
+// A more complex implementation of an array can be seen below.
+// This is known as a multi - dimensional array, or an array that contains other arrays.
+// Notice that this array also contains JavaScript objects, which we will examine very closely in our next section, but for now, all you need to know is that arrays are also capable of storing complex objects.
+// NOTE: #2
+let complexArray = [
+  [
+    {
+      one: 1,
+      two: 2
+    },
+    {
+      three: 3,
+      four: 4
+    }
+  ],
+  [
+    {
+      a: "a",
+      b: "b"
+    },
+    {
+      c: "c",
+      d: "d"
+    }
+  ]
+];
 
 // ============================== DEBUGGING ================================ //
 // Debugging = Q=12/12 - Prevent Infinite Loops with a Valid Terminal Condition
@@ -20,7 +121,7 @@ function myFunc() {
 }
 
 // Debugging = Q=11/12 - Use Caution When Reinitializing Variables Inside a Loop.
-// Notes: This error occurs due to the row[] array being declared as a global variable outside of the nested for loop.
+// NOTES: This error occurs due to the row[] array being declared as a global variable outside of the nested for loop.
 function zeroArray(m, n) {
   // Creates a 2-D array with m rows and n columns of zeroes
   let newArray = [];
@@ -75,7 +176,7 @@ let result = getNine();
 console.log(result);
 
 // Debugging = Q=7/12 - Catch Use of Assignment Operator Instead of Equality Operator
-// Notes: Branching programs, i.e. ones that do different things if certain conditions are met, rely on if, else if, and else statements in JavaScript.
+// NOTES: Branching programs, i.e. ones that do different things if certain conditions are met, rely on if, else if, and else statements in JavaScript.
 // The condition sometimes takes the form of testing whether a result is equal to a value.
 // This logic is spoken (in English, at least) as "if x equals y, then ..." which can literally translate into code using the =, or assignment operator.
 // This leads to unexpected control flow in your program.
@@ -92,7 +193,7 @@ if(x == y) {
 console.log(result);
 
 // Debugging = Q=6/12 - Catch Mixed Usage of Single and Double Quotes
-// Notes: JavaScript allows the use of both single (') and double (") quotes to declare a string.
+// NOTES: JavaScript allows the use of both single (') and double (") quotes to declare a string.
 // Deciding which one to use generally comes down to personal preference, with some exceptions.
 // Having two choices is great when a string has contractions or another piece of text that's in quotes.
 // Just be careful that you don't close the string too early, which causes a syntax error.
@@ -104,13 +205,13 @@ let innerHtml = "<p>Click here to <a href=\"#Home\">return home</a></p>";
 console.log(innerHtml);
 
 // Debugging = Q=5/12 - Catch Unclosed Parentheses, Brackets, Braces and Quotes
-// Notes:
+// NOTES:
 let myArray = [1, 2, 3];
 let arraySum = myArray.reduce((previous, current ) => previous + current);
 console.log(`Sum of array values is: ${arraySum}`);
 
 // Debugging = Q=4/12 - Catch Misspelled Variable and Function Names
-// Notes: The console.log() and typeof methods are the two primary ways to check intermediate values and types of program output.
+// NOTES: The console.log() and typeof methods are the two primary ways to check intermediate values and types of program output.
 // Now it's time to get into the common forms that bugs take.
 // One syntax-level issue that fast typers can commiserate with is the humble spelling error.
 // Transposed, missing, or mis-capitalized characters in a variable or function name will have the browser looking for an object that doesn't exist - and complain in the form of a reference error.
@@ -122,7 +223,7 @@ let netWorkingCapital = receivables - payables;
 console.log(`Net working capital is: ${netWorkingCapital}`);
 
 // Debugging = Q=3/12 - Use typeof to Check the Type of a Variable
-// Notes: 
+// NOTES: 
 // You can use typeof to check the data structure, or type, of a variable. This is useful in debugging when working with multiple data types.
 // If you think you're adding two numbers, but one is actually a string, the results can be unexpected.
 // Type errors can lurk in calculations or function calls.
@@ -135,13 +236,13 @@ console.log(typeof seven); // Number
 console.log(typeof three); // String
 
 // Debugging = Q=2/12 - Understanding the Differences between the freeCodeCamp and Browser Console
-// Notes: 
+// NOTES: 
 let output = "(Get this to log once in the freeCodeCamp console and twice in the browser console";
 console.clear();
 console.log(output);
 
 // Debugging = Q=1/12 - Use the JavaScript Console to Check the Value of a Variable
-// Notes: Placing it at strategic points in your code can show you the intermediate values of variables.
+// NOTES: Placing it at strategic points in your code can show you the intermediate values of variables.
 // It's good practice to have an idea of what the output should be before looking at what it is.
 // Having check points to see the status of your calculations throughout your code will help narrow down where the problem is.
 let a = 5;
@@ -153,7 +254,7 @@ console.log(a);
 
 // ============================== REGEX ================================ //
 // Regular Expressions = Q=33/33 - Remove Whitespace from Start to End
-// Notes: Sometimes whitespace characters around strings are not wanted but are there.
+// NOTES: Sometimes whitespace characters around strings are not wanted but are there.
 // Typical processing of strings is to remove the whitespace at the start and end of it.
 let hello = "   Hello, World!  ";
 let wsRegex = /^\s+|\s+$/g; // Change this line
@@ -161,7 +262,7 @@ let result = hello.replace(wsRegex, ""); // Change this line
 console.log(result);
 
 // Regular Expressions = Q=32/33 - Use Capture Groups to Search and Replace
-// Notes: Searching is useful. However, you can make searching even more powerful when it also changes (or replaces) the text you match.
+// NOTES: Searching is useful. However, you can make searching even more powerful when it also changes (or replaces) the text you match.
 // You can search and replace text in a string using .replace() on a string.
 // The inputs for .replace() is first the regex pattern you want to search for. 
 // The second parameter is the string to replace the match or a function to do something.
@@ -172,7 +273,7 @@ let result = str.replace(fixRegex, replaceText);
 console.log(result);
 
 // Regular Expressions = Q=31/33 - Reuse Patterns Using Capture Groups
-// Notes: Capture groups can be used to find repeated substrings.
+// NOTES: Capture groups can be used to find repeated substrings.
 // Capture groups are constructed by enclosing the regex pattern to be captured in parentheses.
 // In this case, the goal is to capture a word consisting of alphanumeric characters so the capture group will be \w+ enclosed by parentheses: /(\w+)/.
 // The substring matched by the group is saved to a temporary "variable", which can be accessed within the same regex using a backslash and the number of the capture group (e.g. \1).
@@ -183,7 +284,7 @@ let result = reRegex.test(repeatNum);
 console.log(result);
 
 // Regular Expressions = Q=30/33 - Check For Mixed Grouping of Characters
-// Notes: Use .* to allow for middle names.
+// NOTES: Use .* to allow for middle names.
 let myString = "Eleanor Roosevelt";
 let myRegex = /(Eleanor|Franklin).*Roosevelt/; // Change this line
 let result = myRegex.test(myString); // Change this line
@@ -191,7 +292,7 @@ console.log(result);
 // After passing the challenge experiment with myString and see how the grouping works
 
 // Regular Expressions = Q=29/33 - Positive and Negative Lookahead
-// Notes: Lookaheads are patterns that tell JavaScript to look-ahead in your string to check for patterns further along.
+// NOTES: Lookaheads are patterns that tell JavaScript to look-ahead in your string to check for patterns further along.
 // This can be useful when you want to search for multiple patterns over the same string.
 // There are two kinds of lookaheads: positive lookahead and negative lookahead.
 // A positive lookahead will look to make sure the element in the search pattern is there, but won't actually match it.
@@ -205,7 +306,7 @@ let result = pwRegex.test(sampleWord);
 console.log(result);
 
 // Regular Expressions = Q=28/33 - Check for All or None
-// Notes: Sometimes the patterns you want to search for may have parts of it that may or may not exist. However, it may be important to check for them nonetheless.
+// NOTES: Sometimes the patterns you want to search for may have parts of it that may or may not exist. However, it may be important to check for them nonetheless.
 // You can specify the possible existence of an element with a question mark, 
 // You can think of this symbol as saying the previous element is optional.
 // For example, there are slight differences in American and British English and you can use the question mark to match both spellings.
@@ -215,7 +316,7 @@ let result = favRegex.test(favWord);
 console.log(result);
 
 // Regular Expressions = Q=27/33 - Specify Exact Number of Matches =
-// Notes: Sometimes you only want a specific number of matches.
+// NOTES: Sometimes you only want a specific number of matches.
 // To specify a certain number of patterns, just have that one number between the curly brackets.
 // For example, to match only the word hah with the letter a 3 times, your regex would be /ha{3}h/.
 let timStr = "Timmmmber";
@@ -224,7 +325,7 @@ let result = timRegex.test(timStr);
 console.log(result);
 
 // Regular Expressions = Q=26/33 - Specify Only the Lower Number of Matches
-// Notes: You can specify the lower and upper number of patterns with quantity specifiers using curly brackets.
+// NOTES: You can specify the lower and upper number of patterns with quantity specifiers using curly brackets.
 // Sometimes you only want to specify the lower number of patterns with no upper limit.
 // To only specify the lower number of patterns, keep the first number followed by a comma.
 //  For example, to match only the string hah with the letter a appearing at least 3 times, your regex would be /ha{3,}h/.
@@ -234,7 +335,7 @@ let result = haRegex.test(haStr);
 console.log(result);
 
 // Regular Expressions = Q=25/33 - Specify Upper and Lower Number of Matches
-// Notes: You can specify the lower and upper number of patterns with quantity specifiers. 
+// NOTES: You can specify the lower and upper number of patterns with quantity specifiers. 
 // Quantity specifiers are used with curly brackets({ and }).
 // You put two numbers between the curly brackets - for the lower and upper number of patterns.
 // For example, to match only the letter a appearing between 3 and 5 times in the string ah, your regex would be /a{3,5}h/.
@@ -246,7 +347,7 @@ console.log(result);
 
 
 // Regular Expressions = Q=24/33 - Match Non-Whitespace Characters
-// Notes: Search for non-whitespace using \S, which is an uppercase s. 
+// NOTES: Search for non-whitespace using \S, which is an uppercase s. 
 // This pattern will not match whitespace, carriage return, tab, form feed, and new line characters.
 // You can think of it being similar to the character class [^ \r\t\f\n\v].
 let sample = "Whitespace is important in separating words";
@@ -255,7 +356,7 @@ let result = sample.match(countNonWhiteSpace);
 console.log(result);
 
 // Regular Expressions = Q=23/33 - Match Whitespace
-// Notes: You can search for whitespace using \s, which is a lowercase s. 
+// NOTES: You can search for whitespace using \s, which is a lowercase s. 
 // This pattern not only matches whitespace, but also carriage return, tab, form feed, and new line characters.
 // You can think of it as similar to the character class [\r\t\f\n\v].
 let sample = "Whitespace is important in separating words";
@@ -264,14 +365,14 @@ let result = sample.match(countWhiteSpace);
 console.log(result);
 
 // Regular Expressions = Q=22/33 - Restrict Possible Usernames
-// Notes: 
+// NOTES: 
 let username = "JackOfAllTrades";
 let userCheck = /^[a-z]([a-z]+|[0-9]\d+)\d*$/i; // Change this line
 let result = userCheck.test(username);
 console.log(result);
 
 // Regular Expressions = Q=21/33 - Match All Non-Numbers
-// Notes: You can also search for non-digits using a similar shortcut that uses an uppercase D instead.
+// NOTES: You can also search for non-digits using a similar shortcut that uses an uppercase D instead.
 // The shortcut to look for non-digit characters is \D.
 // This is equal to the character class [^ 0 - 9], which looks for a single character that is not a number between zero and nine.
 let movieName = "2001: A Space Odyssey";
@@ -280,7 +381,7 @@ let result = movieName.match(noNumRegex).length;
 console.log(result);
 
 // Regular Expressions = Q=20/33 - Match All Numbers
-// Notes: The shortcut to look for digit characters is \d, with a lowercase d.
+// NOTES: The shortcut to look for digit characters is \d, with a lowercase d.
 // This is equal to the character class [0 - 9], which looks for a single character of any number between zero and nine.
 let movieName = "2001: A Space Odyssey";
 let numRegex = /\d/g; // Change this line
@@ -288,7 +389,7 @@ let result = movieName.match(numRegex).length;
 console.log(result);
 
 // Regular Expressions = Q=19/33 - Match Everything But Letters and Numbers
-// Notes: The shorthand character class \W to count the number of non-alphanumeric characters in various quotes and strings.
+// NOTES: The shorthand character class \W to count the number of non-alphanumeric characters in various quotes and strings.
 // You can search for the opposite of the \w with \W. 
 // Note, the opposite pattern uses a capital letter.
 // This shortcut is the same as [^ A - Za - z0 -9_].
@@ -298,7 +399,7 @@ let result = quoteSample.match(nonAlphabetRegex).length;
 console.log(result);
 
 // Regular Expressions = Q=18/33 - Match All Letters and Numbers
-// Notes: \w = This character class matches upper and lowercase letters plus numbers.
+// NOTES: \w = This character class matches upper and lowercase letters plus numbers.
 let quoteSample = "The five boxing wizards jump quickly.";
 let alphabetRegexV2 = /\w/g; // Change this line
 let result = quoteSample.match(alphabetRegexV2).length;
@@ -317,7 +418,7 @@ let result = calRegex.test(rickyAndCal);
 console.log(result);
 
 // Regular Expressions = Q=15/33 - Find One or More Criminals in a Hunt
-// Notes:  plus + sign to look for characters that occur one or more times.
+// NOTES:  plus + sign to look for characters that occur one or more times.
 let reCriminals = /C+/; // Change this line
 console.log(reCriminals);
 
