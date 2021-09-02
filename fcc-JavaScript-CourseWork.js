@@ -1,11 +1,57 @@
 // ============================== BASIC DATA STRUCTURES ================================ //
-// Basic Data Structures = Q=7/21 - Copy an Array with the Spread Operator
+// Basic Data Structures = Q10/21 - Iterate Through All an Array's Items Using For Loops
 // NOTES:
+function filteredArray(arr, elem) {
+  let newArr = [];
+  // Only change code below this line
+  for (let i = 0; i < arr.length; i++) {
+  // for (let i = 0; i < arr.length; i += 1) { // You could also use this method
+    if (arr[i].indexOf(elem) === -1) {
+      newArr.push(arr[i]);
+    }
+  }
+  // Only change code above this line
+  return newArr;
+}
+
+console.log(filteredArray([[3, 2, 3], [1, 6, 3], [3, 13, 26], [19, 3, 9]], 3));
+
+// Basic Data Structures = Q9/21 - Check For The Presence of an Element With indexOf()
+// NOTES: Since arrays can be changed, or mutated, at any time, there's no guarantee about where a particular piece of data will be on a given array, or if that element even still exists.
+// Luckily, JavaScript provides us with another built -in method, indexOf(), that allows us to quickly and easily check for the presence of an element on an array.
+// indexOf() takes an element as a parameter, and when called, it returns the position, or index, of that element, or - 1 if the element does not exist on the array. 
+function quickCheck(arr, elem) {
+  // Only change code below this line
+  if (arr.indexOf(elem) === -1) {
+
+    return false;      
+  } else {
+    return true;
+  }
+  // Only change code above this  line
+}
+
+console.log(quickCheck(['squash', 'onions', 'shallots'], 'mushrooms'));
+
+// Basic Data Structures = Q8/21 - Combine Arrays with the Spread Operator
+// NOTES: Another huge advantage of the spread operator is the ability to combine arrays, or to insert all the elements of one array into another, at any index.
+// With more traditional syntaxes, we can concatenate arrays, but this only allows us to combine arrays at the end of one, and at the start of another.
+// Spread syntax makes the following operation extremely simple:
+function spreadOut() {
+  let fragment = ['to', 'code'];
+  let sentence = ['learning', ...fragment, 'is', 'fun']; // Change this line
+  return sentence;
+}
+
+console.log(spreadOut());
+
+// Basic Data Structures = Q7/21 - Copy an Array with the Spread Operator
+// NOTES: In practice, we can use the spread operator to copy an array
 function copyMachine(arr, num) {
   let newArr = [];
   while (num >= 1) {
     // Only change code below this line
-
+    newArr.push([...arr]);
     // Only change code above this line
     num--;
   }
@@ -13,19 +59,20 @@ function copyMachine(arr, num) {
 }
 
 console.log(copyMachine([true, false, true], 2));
+// console.log(copyMachine([1, 2 ,3], 5));
 
-// Basic Data Structures = Q=6/21 - Copy Array Items Using Splice
+// Basic Data Structures = Q6/21 - Copy Array Items Using Splice
 // NOTES:
 function forecast(arr) {
   // Only change code below this line
 
-  return arr.slice(2, 4); // This Will return [ 'warm', 'sunny' ]
+  return arr.slice(2, 4); // This will return [ 'warm', 'sunny' ]
 }
 
 // Only change code above this line
 console.log(forecast(['cold', 'rainy', 'warm', 'sunny', 'cool', 'thunderstorms']));
 
-// Basic Data Structures = Q=5/21 - Add Items Using Splice
+// Basic Data Structures = Q5/21 - Add Items Using Splice
 // NOTES: You can use the third parameter, comprised of one or more element(s), to add to the array.
 // This can be incredibly useful for quickly switching out an element, or a set of elements, for another.
 function htmlColorNames(arr) {
@@ -41,7 +88,7 @@ function htmlColorNames(arr) {
 
 console.log(htmlColorNames(['DarkGoldenRod', 'WhiteSmoke', 'LavenderBlush', 'PaleTurquoise', 'FireBrick']));
 
-// Basic Data Structures = Q=4/21 - Remove Items Using Splice
+// Basic Data Structures = Q4/21 - Remove Items Using Splice
 // NOTES: 
 const arr = [2, 4, 5, 1, 7, 5, 2, 1];
 // Only change code below this line
@@ -49,7 +96,7 @@ let newArray = arr.splice(1, 4);
 // Only change code above this line
 console.log(arr);
 
-// Basic Data Structures = Q=3/21 - Remove Items from an Array with pop() and shift()
+// Basic Data Structures = Q3/21 - Remove Items from an Array with pop() and shift()
 // NOTES: 
 function popShift(arr) {
   let popped = arr.pop(); // Change this line
@@ -59,7 +106,7 @@ function popShift(arr) {
 
 console.log(popShift(['challenge', 'is', 'not', 'complete']));
 
-// Basic Data Structures = Q=2/21 - Add Items to an Array with push() and unshift()
+// Basic Data Structures = Q2/21 - Add Items to an Array with push() and unshift()
 // NOTES: Push() method adds elements to the end of an array, and unshift() adds elements to the beginning. Consider the following:
 function mixedNumbers(arr) {
   // Only change code below this line
@@ -71,7 +118,7 @@ function mixedNumbers(arr) {
 
 console.log(mixedNumbers(['IV', 5, 'six']));
 
-// Basic Data Structures = Q=1/21 - Access an Array's Contents Using Bracket Notation
+// Basic Data Structures = Q1/21 - Access an Array's Contents Using Bracket Notation
 let myArray = ["a", "b", "c", "d"];
 // Only change code below this line
 myArray['b'] = 'f';
@@ -80,7 +127,7 @@ console.log(myArray);
 // NOTE: If we want to retrieve the a from ourArray and assign it to a variable, we can do so with the following code:
 let ourVariable = ourArray[0];
 
-// Basic Data Structures = Q=1/21 - Use an Array to Store a Collection of Data
+// Basic Data Structures = Q1/21 - Use an Array to Store a Collection of Data
 // NOTE: #1 A One Dimensional array, meaning it only has one level, or that it does not have any other arrays nested within it.
 let yourArray = ['Ray', 1972, '26', true, null]; // Change this line
 
@@ -112,7 +159,7 @@ let complexArray = [
 ];
 
 // ============================== DEBUGGING ================================ //
-// Debugging = Q=12/12 - Prevent Infinite Loops with a Valid Terminal Condition
+// Debugging = Q12/12 - Prevent Infinite Loops with a Valid Terminal Condition
 // NOTE: 
 function myFunc() {
   for (let i = 1; i <= 4; i += 2) {
@@ -120,7 +167,7 @@ function myFunc() {
   }
 }
 
-// Debugging = Q=11/12 - Use Caution When Reinitializing Variables Inside a Loop.
+// Debugging = Q11/12 - Use Caution When Reinitializing Variables Inside a Loop.
 // NOTES: This error occurs due to the row[] array being declared as a global variable outside of the nested for loop.
 function zeroArray(m, n) {
   // Creates a 2-D array with m rows and n columns of zeroes
@@ -142,7 +189,7 @@ function zeroArray(m, n) {
 let matrix = zeroArray(3, 2);
 console.log(matrix);
 
-// Debugging = Q=10/12 - Catch Off By One Errors When Using Indexing (sometimes called OBOE).
+// Debugging = Q10/12 - Catch Off By One Errors When Using Indexing (sometimes called OBOE).
 function countToFive() {
   let firstFive = "12345";
   let len = firstFive.length;
@@ -155,7 +202,7 @@ function countToFive() {
 
 countToFive();
 
-// Debugging = Q=9/12 - Catch Arguments Passed in the Wrong Order When Calling a Function
+// Debugging = Q9/12 - Catch Arguments Passed in the Wrong Order When Calling a Function
 function raiseToPower(e, b) {
   return Math.pow(e, b);
 }
@@ -165,7 +212,7 @@ let exp = 3;
 let power = raiseToPower(base, exp);
 console.log(power);
 
-// Debugging = Q=8/12 - Catch Missing Open and Closing Parenthesis After a Function Call
+// Debugging = Q8/12 - Catch Missing Open and Closing Parenthesis After a Function Call
 function getNine() {
   let x = 6;
   let y = 3;
@@ -175,7 +222,7 @@ function getNine() {
 let result = getNine();
 console.log(result);
 
-// Debugging = Q=7/12 - Catch Use of Assignment Operator Instead of Equality Operator
+// Debugging = Q7/12 - Catch Use of Assignment Operator Instead of Equality Operator
 // NOTES: Branching programs, i.e. ones that do different things if certain conditions are met, rely on if, else if, and else statements in JavaScript.
 // The condition sometimes takes the form of testing whether a result is equal to a value.
 // This logic is spoken (in English, at least) as "if x equals y, then ..." which can literally translate into code using the =, or assignment operator.
@@ -192,7 +239,7 @@ if(x == y) {
 
 console.log(result);
 
-// Debugging = Q=6/12 - Catch Mixed Usage of Single and Double Quotes
+// Debugging = Q6/12 - Catch Mixed Usage of Single and Double Quotes
 // NOTES: JavaScript allows the use of both single (') and double (") quotes to declare a string.
 // Deciding which one to use generally comes down to personal preference, with some exceptions.
 // Having two choices is great when a string has contractions or another piece of text that's in quotes.
@@ -204,13 +251,13 @@ console.log(innerHtml);
 let innerHtml = "<p>Click here to <a href=\"#Home\">return home</a></p>";
 console.log(innerHtml);
 
-// Debugging = Q=5/12 - Catch Unclosed Parentheses, Brackets, Braces and Quotes
+// Debugging = Q5/12 - Catch Unclosed Parentheses, Brackets, Braces and Quotes
 // NOTES:
 let myArray = [1, 2, 3];
 let arraySum = myArray.reduce((previous, current ) => previous + current);
 console.log(`Sum of array values is: ${arraySum}`);
 
-// Debugging = Q=4/12 - Catch Misspelled Variable and Function Names
+// Debugging = Q4/12 - Catch Misspelled Variable and Function Names
 // NOTES: The console.log() and typeof methods are the two primary ways to check intermediate values and types of program output.
 // Now it's time to get into the common forms that bugs take.
 // One syntax-level issue that fast typers can commiserate with is the humble spelling error.
@@ -222,7 +269,7 @@ let payables = 8;
 let netWorkingCapital = receivables - payables;
 console.log(`Net working capital is: ${netWorkingCapital}`);
 
-// Debugging = Q=3/12 - Use typeof to Check the Type of a Variable
+// Debugging = Q3/12 - Use typeof to Check the Type of a Variable
 // NOTES: 
 // You can use typeof to check the data structure, or type, of a variable. This is useful in debugging when working with multiple data types.
 // If you think you're adding two numbers, but one is actually a string, the results can be unexpected.
@@ -235,13 +282,13 @@ console.log(seven + three);
 console.log(typeof seven); // Number
 console.log(typeof three); // String
 
-// Debugging = Q=2/12 - Understanding the Differences between the freeCodeCamp and Browser Console
+// Debugging = Q2/12 - Understanding the Differences between the freeCodeCamp and Browser Console
 // NOTES: 
 let output = "(Get this to log once in the freeCodeCamp console and twice in the browser console";
 console.clear();
 console.log(output);
 
-// Debugging = Q=1/12 - Use the JavaScript Console to Check the Value of a Variable
+// Debugging = Q1/12 - Use the JavaScript Console to Check the Value of a Variable
 // NOTES: Placing it at strategic points in your code can show you the intermediate values of variables.
 // It's good practice to have an idea of what the output should be before looking at what it is.
 // Having check points to see the status of your calculations throughout your code will help narrow down where the problem is.
@@ -253,7 +300,7 @@ let sumAB = a + b;
 console.log(a);
 
 // ============================== REGEX ================================ //
-// Regular Expressions = Q=33/33 - Remove Whitespace from Start to End
+// Regular Expressions = Q33/33 - Remove Whitespace from Start to End
 // NOTES: Sometimes whitespace characters around strings are not wanted but are there.
 // Typical processing of strings is to remove the whitespace at the start and end of it.
 let hello = "   Hello, World!  ";
@@ -261,7 +308,7 @@ let wsRegex = /^\s+|\s+$/g; // Change this line
 let result = hello.replace(wsRegex, ""); // Change this line
 console.log(result);
 
-// Regular Expressions = Q=32/33 - Use Capture Groups to Search and Replace
+// Regular Expressions = Q32/33 - Use Capture Groups to Search and Replace
 // NOTES: Searching is useful. However, you can make searching even more powerful when it also changes (or replaces) the text you match.
 // You can search and replace text in a string using .replace() on a string.
 // The inputs for .replace() is first the regex pattern you want to search for. 
@@ -272,7 +319,7 @@ let replaceText = "$3 $2 $1"; // Change this line
 let result = str.replace(fixRegex, replaceText);
 console.log(result);
 
-// Regular Expressions = Q=31/33 - Reuse Patterns Using Capture Groups
+// Regular Expressions = Q31/33 - Reuse Patterns Using Capture Groups
 // NOTES: Capture groups can be used to find repeated substrings.
 // Capture groups are constructed by enclosing the regex pattern to be captured in parentheses.
 // In this case, the goal is to capture a word consisting of alphanumeric characters so the capture group will be \w+ enclosed by parentheses: /(\w+)/.
@@ -283,7 +330,7 @@ let reRegex = /^(\d+)\s\1\s\1$/; // Change this line
 let result = reRegex.test(repeatNum);
 console.log(result);
 
-// Regular Expressions = Q=30/33 - Check For Mixed Grouping of Characters
+// Regular Expressions = Q30/33 - Check For Mixed Grouping of Characters
 // NOTES: Use .* to allow for middle names.
 let myString = "Eleanor Roosevelt";
 let myRegex = /(Eleanor|Franklin).*Roosevelt/; // Change this line
@@ -291,7 +338,7 @@ let result = myRegex.test(myString); // Change this line
 console.log(result);
 // After passing the challenge experiment with myString and see how the grouping works
 
-// Regular Expressions = Q=29/33 - Positive and Negative Lookahead
+// Regular Expressions = Q29/33 - Positive and Negative Lookahead
 // NOTES: Lookaheads are patterns that tell JavaScript to look-ahead in your string to check for patterns further along.
 // This can be useful when you want to search for multiple patterns over the same string.
 // There are two kinds of lookaheads: positive lookahead and negative lookahead.
@@ -305,7 +352,7 @@ let pwRegex = /(?=\w{6})(?=\D*\d\d)/; // Change this line
 let result = pwRegex.test(sampleWord);
 console.log(result);
 
-// Regular Expressions = Q=28/33 - Check for All or None
+// Regular Expressions = Q28/33 - Check for All or None
 // NOTES: Sometimes the patterns you want to search for may have parts of it that may or may not exist. However, it may be important to check for them nonetheless.
 // You can specify the possible existence of an element with a question mark, 
 // You can think of this symbol as saying the previous element is optional.
@@ -315,7 +362,7 @@ let favRegex = /favou?rite/; // Change this line = ?. This checks for zero or on
 let result = favRegex.test(favWord);
 console.log(result);
 
-// Regular Expressions = Q=27/33 - Specify Exact Number of Matches =
+// Regular Expressions = Q27/33 - Specify Exact Number of Matches =
 // NOTES: Sometimes you only want a specific number of matches.
 // To specify a certain number of patterns, just have that one number between the curly brackets.
 // For example, to match only the word hah with the letter a 3 times, your regex would be /ha{3}h/.
@@ -324,7 +371,7 @@ let timRegex = /Tim{4}ber/; //Change this line to something result
 let result = timRegex.test(timStr);
 console.log(result);
 
-// Regular Expressions = Q=26/33 - Specify Only the Lower Number of Matches
+// Regular Expressions = Q26/33 - Specify Only the Lower Number of Matches
 // NOTES: You can specify the lower and upper number of patterns with quantity specifiers using curly brackets.
 // Sometimes you only want to specify the lower number of patterns with no upper limit.
 // To only specify the lower number of patterns, keep the first number followed by a comma.
@@ -334,7 +381,7 @@ let haRegex = /Haz{4,}ah/; // Change this line
 let result = haRegex.test(haStr);
 console.log(result);
 
-// Regular Expressions = Q=25/33 - Specify Upper and Lower Number of Matches
+// Regular Expressions = Q25/33 - Specify Upper and Lower Number of Matches
 // NOTES: You can specify the lower and upper number of patterns with quantity specifiers. 
 // Quantity specifiers are used with curly brackets({ and }).
 // You put two numbers between the curly brackets - for the lower and upper number of patterns.
@@ -346,7 +393,7 @@ let result = ohRegex.test(ohStr);
 console.log(result);
 
 
-// Regular Expressions = Q=24/33 - Match Non-Whitespace Characters
+// Regular Expressions = Q24/33 - Match Non-Whitespace Characters
 // NOTES: Search for non-whitespace using \S, which is an uppercase s. 
 // This pattern will not match whitespace, carriage return, tab, form feed, and new line characters.
 // You can think of it being similar to the character class [^ \r\t\f\n\v].
@@ -355,7 +402,7 @@ let countNonWhiteSpace = /\S/g; // Change this line
 let result = sample.match(countNonWhiteSpace);
 console.log(result);
 
-// Regular Expressions = Q=23/33 - Match Whitespace
+// Regular Expressions = Q23/33 - Match Whitespace
 // NOTES: You can search for whitespace using \s, which is a lowercase s. 
 // This pattern not only matches whitespace, but also carriage return, tab, form feed, and new line characters.
 // You can think of it as similar to the character class [\r\t\f\n\v].
@@ -364,14 +411,14 @@ let countWhiteSpace = /\s/g; // Change this line
 let result = sample.match(countWhiteSpace);
 console.log(result);
 
-// Regular Expressions = Q=22/33 - Restrict Possible Usernames
+// Regular Expressions = Q22/33 - Restrict Possible Usernames
 // NOTES: 
 let username = "JackOfAllTrades";
 let userCheck = /^[a-z]([a-z]+|[0-9]\d+)\d*$/i; // Change this line
 let result = userCheck.test(username);
 console.log(result);
 
-// Regular Expressions = Q=21/33 - Match All Non-Numbers
+// Regular Expressions = Q21/33 - Match All Non-Numbers
 // NOTES: You can also search for non-digits using a similar shortcut that uses an uppercase D instead.
 // The shortcut to look for non-digit characters is \D.
 // This is equal to the character class [^ 0 - 9], which looks for a single character that is not a number between zero and nine.
@@ -380,7 +427,7 @@ let noNumRegex = /\D/g; // Change this line
 let result = movieName.match(noNumRegex).length;
 console.log(result);
 
-// Regular Expressions = Q=20/33 - Match All Numbers
+// Regular Expressions = Q20/33 - Match All Numbers
 // NOTES: The shortcut to look for digit characters is \d, with a lowercase d.
 // This is equal to the character class [0 - 9], which looks for a single character of any number between zero and nine.
 let movieName = "2001: A Space Odyssey";
@@ -388,7 +435,7 @@ let numRegex = /\d/g; // Change this line
 let result = movieName.match(numRegex).length;
 console.log(result);
 
-// Regular Expressions = Q=19/33 - Match Everything But Letters and Numbers
+// Regular Expressions = Q19/33 - Match Everything But Letters and Numbers
 // NOTES: The shorthand character class \W to count the number of non-alphanumeric characters in various quotes and strings.
 // You can search for the opposite of the \w with \W. 
 // Note, the opposite pattern uses a capital letter.
@@ -398,31 +445,31 @@ let nonAlphabetRegex = /\W/g; // Change this line
 let result = quoteSample.match(nonAlphabetRegex).length;
 console.log(result);
 
-// Regular Expressions = Q=18/33 - Match All Letters and Numbers
+// Regular Expressions = Q18/33 - Match All Letters and Numbers
 // NOTES: \w = This character class matches upper and lowercase letters plus numbers.
 let quoteSample = "The five boxing wizards jump quickly.";
 let alphabetRegexV2 = /\w/g; // Change this line
 let result = quoteSample.match(alphabetRegexV2).length;
 console.log(result);
 
-// Regular Expressions = Q=17/33 - Match Ending String Patterns
+// Regular Expressions = Q17/33 - Match Ending String Patterns
 let caboose = "The last car on a train is the caboose";
 let lastRegex = /caboose$/; // Change this line
 let result = lastRegex.test(caboose);
 
 console.log(result);
-// Regular Expressions = Q=16/33 - Match Beginning String Patterns
+// Regular Expressions = Q16/33 - Match Beginning String Patterns
 let rickyAndCal = "Cal and Ricky both like racing.";
 let calRegex = /^Cal/; // Change this line
 let result = calRegex.test(rickyAndCal);
 console.log(result);
 
-// Regular Expressions = Q=15/33 - Find One or More Criminals in a Hunt
+// Regular Expressions = Q15/33 - Find One or More Criminals in a Hunt
 // NOTES:  plus + sign to look for characters that occur one or more times.
 let reCriminals = /C+/; // Change this line
 console.log(reCriminals);
 
-// Regular Expressions = Q=14/33 - Find Characters with Lazy Matching
+// Regular Expressions = Q14/33 - Find Characters with Lazy Matching
 let text = "<h1>Winter is coming</h1>";
 let myRegex = /<.*?>/; // Change this line = the ? character to change it to lazy matching.
 let result = text.match(myRegex);
@@ -430,78 +477,78 @@ console.log(result);
 // In regular expressions, a greedy match finds the longest possible part of a string that fits the regex pattern and returns it as a match.
 // The alternative is called a lazy match, which finds the smallest possible part of the string that satisfies the regex pattern.
 
-// Regular Expressions = Q=13/33 - Match Characters that Occur Zero or More Times
+// Regular Expressions = Q13/33 - Match Characters that Occur Zero or More Times
 // Only change code below this line
 let chewieRegex = /Aa*/; // Change this line = * Matches characters that occur zero or more times.
 // Only change code above this line
 let result = chewieQuote.match(chewieRegex);
 console.log(result);
 
-// Regular Expressions = Q=12/33 - Match Characters that Occur One or More Times, plus + sign to look for characters that occur one or more times
+// Regular Expressions = Q12/33 - Match Characters that Occur One or More Times, plus + sign to look for characters that occur one or more times
 let difficultSpelling = "Mississippi";
 let myRegex = /s+/g; // Change this line
 let result = difficultSpelling.match(myRegex);
 console.log(result);
 
-// Regular Expressions = Q=11/33 - Match Single Characters Not Specified eg: negated character sets.
+// Regular Expressions = Q11/33 - Match Single Characters Not Specified eg: negated character sets.
 let quoteSample = "3 blind mice";
 let myRegex = /[^aeiou,3]/gi; // Change this line
 let result = quoteSample.match(myRegex);
 console.log(result);
 
-// Regular Expressions = Q=10/33 - Match Numbers and Letters of the Alphabet
+// Regular Expressions = Q10/33 - Match Numbers and Letters of the Alphabet
 let quoteSample = "Blueberry 3.141592653s are delicious.";
 let myRegex = /[h-s2-6]/gi; // Change this line
 let result = quoteSample.match(myRegex); // Change this line
 console.log(result);
 
-// Regular Expressions = Q=9/33 - Match Letters of the Alphabet
+// Regular Expressions = Q9/33 - Match Letters of the Alphabet
 let quoteSample = "The quick brown fox jumps over the lazy dog.";
 let alphabetRegex = /[a-z]gi/; // Change this line
 let result = quoteSample.match(alphabetRegex); // Change this line
 console.log(result);
 
-// Regular Expressions = Q=8/33 - Match Single Character with Multiple Possibilities
+// Regular Expressions = Q8/33 - Match Single Character with Multiple Possibilities
 let quoteSample = "Beware of bugs in the above code; I have only proved it correct, not tried it.";
 let vowelRegex = /[aeiou]/gi; // Change this line = Using Global Flags g and i.
 let result = quoteSample.match(vowelRegex); // Change this line
 console.log(vowelRegex);
 
-// Regular Expressions = Q=7/33 - Match Anything with Wildcard Period
+// Regular Expressions = Q7/33 - Match Anything with Wildcard Period
 let exampleStr = "Let's have fun with regular expressions!";
 let unRegex = /un./; // Change this line = The wildcard character . will match any one character.
 let result = unRegex.test(exampleStr);
 console.log(unRegex);
 
-// Regular Expressions = Q=6/33 - Find More Than the First Match
+// Regular Expressions = Q6/33 - Find More Than the First Match
 let twinkleStar = "Twinkle, twinkle, little star";
 let startRegex = /Twinkle/gi; // g-flag Extracts a pattern more than once, i-flag ignores case sensitivety
 let result = twinkleStar.match(starRegex);
 console.log(starRegex);
 
-// Regular Expressions = Q=5/33 - Extract Matches
+// Regular Expressions = Q5/33 - Extract Matches
 let extractStr = "Extract the word 'coding' from this string.";
 let codingRegex = /coding/; // Change this line
 let result = extractStr.match(codingRegex); // Change this line
 console.log(codingRegex); // Change this line
 
-// Regular Expressions = Q=4/33 - Ignore Case While Matching
+// Regular Expressions = Q4/33 - Ignore Case While Matching
 let myString = "freeCodeCamp";
 let fccRegex = /freeCodeCamp/i; // Change this line
 let result = fccRegex.test(myString);
 console.log(fccRegex);
-// Regular Expressions = Q=3/33 - Match a Literal String with Different Possibilities
+// Regular Expressions = Q3/33 - Match a Literal String with Different Possibilities
 let petString = "James has a pet cat.";
 let petRegex = /dog|cat|bird|fish/; // Change this line
 let result = petRegex.test(petString);
 console.log(petRegex);
-// Regular Expressions = Q=2/33 - Match Literal Strings
+// Regular Expressions = Q2/33 - Match Literal Strings
 let waldoIsHiding = "Somewhere Waldo is hiding in this text.";
 let waldoRegex = /Waldo/; // Change this line
 let result = waldoRegex.test(waldoIsHiding);
 console.log(result);
 
-// Regular Expressions = Q=1/33 - Using the Test Method
+// Regular Expressions = Q1/33 - Using the Test Method
 let myString = "Hello, World!";
 let myRegex = /Hello/;
 let result = myRegex.test(myString);
@@ -509,7 +556,7 @@ console.log(myRegex);
 
 // ============================== ES6 ================================ //
 
-// ES6 = Q=31 - Handle a Rejected Promise with catch - ES6 Completed
+// ES6 = Q31 - Handle a Rejected Promise with catch - ES6 Completed
 const makeServerRequest = new Promise((resolve, reject) => {
   // responseFromServer is set to false to represent an unsuccessful response from a server
   let responseFromServer = false;
@@ -525,7 +572,7 @@ makeServerRequest.catch(error => {
   console.log(error);
 });
 
-//  ES6 = Q=30 - Handle a Fulfilled Promise with then
+//  ES6 = Q30 - Handle a Fulfilled Promise with then
 // # Solution 1
 const makeServerRequest = new Promise((resolve, reject) => {
   // responseFromServer is set to true to represent a successful response from a server
@@ -553,7 +600,7 @@ makeServerRequest.then(result => {
   console.log(result);
 });
 
-//  ES6 = Q=29 - Complete a Promise with resolve and reject
+//  ES6 = Q29 - Complete a Promise with resolve and reject
 // FYI A promise has three states: pending, fulfilled, and rejected
 const makeServerRequest = new Promise((resolve, reject) => {
   // responseFromServer represents a response from a server
@@ -568,36 +615,36 @@ const makeServerRequest = new Promise((resolve, reject) => {
   }
 });
 
-//  ES6 = Q=28 - Create a JavaScript Promise
+//  ES6 = Q28 - Create a JavaScript Promise
 const makeServerRequest = new Promise((reolve, reject) => {
 
 });
 
-//  ES6 = Q=27 - Import a Default Export 
+//  ES6 = Q27 - Import a Default Export 
 import subtract from './math_functions.js';
 // Only change code above this line
 subtract(7,4);
 
-//  ES6 = Q=26 - Create an Export Fallback with export default
+//  ES6 = Q26 - Create an Export Fallback with export default
 export default function subtract(x, y) {
   return x - y;
 }
 
-// ES6 = Q=25 - Use * to Import Everything from a File
+// ES6 = Q25 - Use * to Import Everything from a File
 import * as stringFunctions from './string_functions.js';
 // Only change code above this line
 
 stringFunctions.uppercaseString("hello");
 stringFunctions.lowercaseString("WORLD!");
 
-// ES6 = Q=24 - Reuse JavaScript Code Using import
+// ES6 = Q24 - Reuse JavaScript Code Using import
 import { uppercaseString, lowercaseString } from './string_functions.js';
 // Only change code above this line
 
 uppercaseString("hello");
 lowercaseString("WORLD!");
 
-// ES6 = Q=23 - Use expot to Share a Code Block
+// ES6 = Q23 - Use expot to Share a Code Block
 const uppercaseString = (string) => {
   return string.toUpperCase();
 }
@@ -607,14 +654,14 @@ const lowercaseString = (string) => {
 }
 export { lowercaseString, uppercaseString };
 
-// ES6 = Q=22 - Create a Module Script
+// ES6 = Q22 - Create a Module Script
 <html lang="en">
   <body>
     <script src="module" src="index.js"></script>
   </body>
 </html>
 
-// ES6 = Q=21 - Use getters and setters to Control Access to an Object
+// ES6 = Q21 - Use getters and setters to Control Access to an Object
 // Only change code below this line
 class Thermostat {
   constructor(temp) {
@@ -636,7 +683,7 @@ thermos.temperature = 26;
 temp = thermos.temperature; // 26 in Celsius
 console.log(temp);
 
-// ES6 = Q=20 Use a Class Syntax to Define a Constructor Function.
+// ES6 = Q20 Use a Class Syntax to Define a Constructor Function.
 // Only change code below this line
 class Vegetable {
   constructor(name) {
@@ -648,7 +695,7 @@ class Vegetable {
 const carrot = new Vegetable('carrot');
 console.log(carrot.name); // Should display 'carrot'
 
-// ES6 = Q=19 - Write Concise Declarative Functions with ES6
+// ES6 = Q19 - Write Concise Declarative Functions with ES6
 // Only change code below this line
 const bicycle = {
   gear: 48,
@@ -660,7 +707,7 @@ const bicycle = {
 bicycle.setGear(3);
 console.log(bicycle.gear);
 
-// ES6 = Q=18 - Write Concise Object Literal Declarations Using Object Property Shorthand
+// ES6 = Q18 - Write Concise Object Literal Declarations Using Object Property Shorthand
 const createPerson = (name, age, gender) => {
   // Only change code below this line
   // const createPerson =  (name, age, gender)
@@ -669,7 +716,7 @@ const createPerson = (name, age, gender) => {
 };
 console.log(createPerson("Zodiac Hasbro", 56, "male"));
 
-// ES6 = Q=17 - Create Strings using Template Literals
+// ES6 = Q17 - Create Strings using Template Literals
 const result = {
   success: ["max-length", "no-amd", "prefer-arrow-functions"],
   failure: ["no-var", "var-on-top", "linebreak"],
@@ -689,7 +736,7 @@ function makeList(arr) {
 const failuresList = makeList(result.failure);
 console.log(result.failure);
 
-// ES6 = Q=16 - Use Destructuring Assignment to Pass an Object as a Function's Parameters
+// ES6 = Q16 - Use Destructuring Assignment to Pass an Object as a Function's Parameters
 const stats = {
   max: 56.78,
   standard_deviation: 4.34,
@@ -705,7 +752,7 @@ const half = ({ max, min }) => (max + min) / 2.0;
 console.log(stats);
 console.log(half(stats));
 
-//  ES6 = Q=15 - Use Destructuring Assignment with the Rest Parameter to Reassign Array Elements.
+//  ES6 = Q15 - Use Destructuring Assignment with the Rest Parameter to Reassign Array Elements.
 const source = [1,2,3,4,5,6,7,8,9,10];
 function removeFirstTwo(list) {
   // Only change code below this line
@@ -721,12 +768,12 @@ console.log(arr, source); // - Solution 1
 console.log(arr); // - Solution 2
 console.log(source); // - Solution 3
 
-// ES6 = Q=14 - Use Destructuring Assignment to Assign Variables from Arrays
+// ES6 = Q14 - Use Destructuring Assignment to Assign Variables from Arrays
 let a = 8, b = 6;
 [a, b] = [b, a];
 console.log(a, b);
 
-// ES6 Q=13 - Use Destructuring Assignment to Assign Variables from Nested Objects
+// ES6 Q13 - Use Destructuring Assignment to Assign Variables from Nested Objects
 const LOCAL_FORECAST = {
   yesterday: { low: 61, high: 75 },
   today: { low: 64, high: 77 },
@@ -742,7 +789,7 @@ console.log(LOCAL_FORECAST);
 console.log(highToday, lowToday);
 // Only change code above this line
 
-// ES6 Q=12 -  Use Destructuring Assignment to Assign Variables from Objects
+// ES6 Q12 -  Use Destructuring Assignment to Assign Variables from Objects
 const HIGH_TEMPERATURES = {
   yesterday: 75,
   today: 77,
@@ -757,7 +804,7 @@ const HIGH_TEMPERATURES = {
 // Only change code above this line
 
 
-// ES6 Q=11 -  Use Destructuring Assignment to Extract Values from Objects
+// ES6 Q11 -  Use Destructuring Assignment to Extract Values from Objects
 const HIGH_TEMPERATURES = {
   yesterday: 75,
   today: 77,
@@ -772,7 +819,7 @@ const { tomorrow } = HIGH_TEMPERATURES;
 console.log(HIGH_TEMPERATURES);
 
 
-// ES6 Q=10 -  Use the Spread Operator to Evaluate Arrays In-Place
+// ES6 Q10 -  Use the Spread Operator to Evaluate Arrays In-Place
 const arr1 = ['JAN', 'FEB', 'MAR', 'APR', 'MAY'];
 let arr2;
 
@@ -780,7 +827,7 @@ arr2 = [...arr1];  // Change this line
 
 console.log(arr2);
 
-// ES6 Q=9 -  Use the Rest Parameter with Function Parameters
+// ES6 Q9 -  Use the Rest Parameter with Function Parameters
 const sum = (...args) => { 
     return args.reduce((a, b) => a + b, 0);
   };
@@ -799,7 +846,7 @@ const myConcat = (arr1, arr2) => {
 
 console.log(myConcat([1, 2], [3, 4, 5]));
 
-// ES6 Q=8 - Use Arrow Functions to Write Concise Anonymous Functions
+// ES6 Q8 - Use Arrow Functions to Write Concise Anonymous Functions
 const magic = () => {
   return new Date();
 };
@@ -825,7 +872,7 @@ function freezeObj() {
 const PI = freezeObj();
 
 
-// ES6 Q=7 - Mutate an Array Declared with const
+// ES6 Q7 - Mutate an Array Declared with const
 const s = [5, 7, 2];
 function editInPlace() {
   // Only change code below this line
@@ -840,7 +887,7 @@ s [2] = 7;
 editInPlace();
 console.log(s);
  
-// ES6 Q=6 - Declare a Read-Only Variable with the const Keyword
+// ES6 Q6 - Declare a Read-Only Variable with the const Keyword
 function printManyTimes(str) {
 
   // Only change code below this line
@@ -858,7 +905,7 @@ function printManyTimes(str) {
 printManyTimes("freeCodeCamp");
 
 
-// ES6 Q=5 - Compare Scopes of the var and let Keywords.
+// ES6 Q5 - Compare Scopes of the var and let Keywords.
 function checkScope() {
   let i = 'function scope';
   if (true) {
@@ -870,7 +917,7 @@ function checkScope() {
 }
 checkScope();
 
-// ES6 Q=4 - Explore Differences Between the var and let Keywords
+// ES6 Q4 - Explore Differences Between the var and let Keywords
 let catName;
 let quote;
 function catTalk() {
@@ -882,7 +929,7 @@ function catTalk() {
 }
 catTalk();
 console.log(catTalk(data));
-// ES6 Q=2 - Use Recursion to Create a Range of Numbers
+// ES6 Q2 - Use Recursion to Create a Range of Numbers
 function rangeOfNumbers(startNum, endNum) {
   if (startNum === endNum) {
   return [startNum];
@@ -894,7 +941,7 @@ function rangeOfNumbers(startNum, endNum) {
 };
 console.log(rangeOfNumbers(5, 8));
 
-// ES6 Q=1 - Use Recursion to Create a Countdown
+// ES6 Q1 - Use Recursion to Create a Countdown
 function countup(n) {
   if (n < 1) {
     return [];
@@ -906,7 +953,7 @@ function countup(n) {
 }
 console.log(countup(5));
 
-// ES6 Q=3 - Use Multiple Conditional (Ternary = ?) Operators
+// ES6 Q3 - Use Multiple Conditional (Ternary = ?) Operators
 function checkSign(num) {
   return num > 0 ? "positive"
     : (num < 0) ? "negative"
