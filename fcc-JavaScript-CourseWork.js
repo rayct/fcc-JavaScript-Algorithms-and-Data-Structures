@@ -1,16 +1,24 @@
 // ============================== BASIC DATA STRUCTURES ================================ //
-// Basic Data Structures = Q14/21 -  
+// Basic Data Structures = Q14/20 -  Access Property Names with Bracket Notation
 // NOTES: 
+let foods = {
+  apples: 25,
+  oranges: 32,
+  plums: 28,
+  bananas: 13,
+  grapes: 35,
+  strawberries: 27
+};
 
+function checkInventory(scannedItem) {
+  // Only change code below this line
 
+  // Only change code above this line
+}
 
+console.log(checkInventory("apples"));
 
-
-
-
-
-
-// Basic Data Structures = Q13/21 -  Modify an Object Nested Within an Object
+// Basic Data Structures = Q13/20 -  Modify an Object Nested Within an Object
 // NOTES: Object properties can be nested to an arbitrary depth, and their values can be any type of data supported by JavaScript, including arrays and even other objects.
 // Consider the following
 // nestedObject has three properties: id (value is a number), date (value is a string), and data (value is an object with its nested structure).
@@ -49,7 +57,7 @@ userActivity['data']['online'] = 45; // Using Bracket Notation
 console.log(userActivity.data);
 
 // ===================================================================
-// Basic Data Structures = Q12/21 -  Add Key-Value Pairs to JavaScript Objects
+// Basic Data Structures = Q12/20 -  Add Key-Value Pairs to JavaScript Objects
 // NOTES: At their most basic, objects are just collections of key-value pairs. In other words, they are pieces of data (values) mapped to unique identifiers called properties (keys).
 // Object Notation
 // Bracket notation is required if your property has a space in it or if you want to use a variable to name the property. 
@@ -78,7 +86,7 @@ console.log(foods['strawberries']);
 
 
 
-// Basic Data Structures = Q11/21 -  Create complex multi-dimensional arrays or Nested Arrays
+// Basic Data Structures = Q11/20 -  Create complex multi-dimensional arrays or Nested Arrays
 // NOTES:
 let myNestedArray = [
   // Only change code below this line
@@ -103,7 +111,7 @@ let myNestedArray = [
 ];
 console.log(myNestedArray.length);
 
-// Basic Data Structures = Q10/21 - Iterate Through All an Array's Items Using For Loops
+// Basic Data Structures = Q10/20 - Iterate Through All an Array's Items Using For Loops
 // NOTES: 
 //  Shortcut way
 // for (let i = 0; i < arr.length; i++) {
@@ -127,7 +135,7 @@ function filteredArray(arr, elem) {
 
 console.log(filteredArray([[3, 2, 3], [1, 6, 3], [3, 13, 26], [19, 3, 9]], 3));
 
-// Basic Data Structures = Q9/21 - Check For The Presence of an Element With indexOf()
+// Basic Data Structures = Q9/20 - Check For The Presence of an Element With indexOf()
 // NOTES: Since arrays can be changed, or mutated, at any time, there's no guarantee about where a particular piece of data will be on a given array, or if that element even still exists.
 // Luckily, JavaScript provides us with another built -in method, indexOf(), that allows us to quickly and easily check for the presence of an element on an array.
 // indexOf() takes an element as a parameter, and when called, it returns the position, or index, of that element, or - 1 if the element does not exist on the array. 
@@ -144,7 +152,7 @@ function quickCheck(arr, elem) {
 
 console.log(quickCheck(['squash', 'onions', 'shallots'], 'mushrooms'));
 
-// Basic Data Structures = Q8/21 - Combine Arrays with the Spread Operator
+// Basic Data Structures = Q8/20 - Combine Arrays with the Spread Operator
 // NOTES: Another huge advantage of the spread operator is the ability to combine arrays, or to insert all the elements of one array into another, at any index.
 // With more traditional syntaxes, we can concatenate arrays, but this only allows us to combine arrays at the end of one, and at the start of another.
 // Spread syntax makes the following operation extremely simple:
@@ -156,7 +164,7 @@ function spreadOut() {
 
 console.log(spreadOut());
 
-// Basic Data Structures = Q7/21 - Copy an Array with the Spread Operator
+// Basic Data Structures = Q7/20 - Copy an Array with the Spread Operator
 // NOTES: In practice, we can use the spread operator to copy an array
 function copyMachine(arr, num) {
   let newArr = [];
@@ -172,7 +180,7 @@ function copyMachine(arr, num) {
 console.log(copyMachine([true, false, true], 2));
 // console.log(copyMachine([1, 2 ,3], 5));
 
-// Basic Data Structures = Q6/21 - Copy Array Items Using Splice
+// Basic Data Structures = Q6/20 - Copy Array Items Using Splice
 // NOTES:
 function forecast(arr) {
   // Only change code below this line
@@ -183,7 +191,7 @@ function forecast(arr) {
 // Only change code above this line
 console.log(forecast(['cold', 'rainy', 'warm', 'sunny', 'cool', 'thunderstorms']));
 
-// Basic Data Structures = Q5/21 - Add Items Using Splice
+// Basic Data Structures = Q5/20 - Add Items Using Splice
 // NOTES: You can use the third parameter, comprised of one or more element(s), to add to the array.
 // This can be incredibly useful for quickly switching out an element, or a set of elements, for another.
 function htmlColorNames(arr) {
@@ -199,7 +207,7 @@ function htmlColorNames(arr) {
 
 console.log(htmlColorNames(['DarkGoldenRod', 'WhiteSmoke', 'LavenderBlush', 'PaleTurquoise', 'FireBrick']));
 
-// Basic Data Structures = Q4/21 - Remove Items Using Splice
+// Basic Data Structures = Q4/20 - Remove Items Using Splice
 // NOTES: 
 const arr = [2, 4, 5, 1, 7, 5, 2, 1];
 // Only change code below this line
@@ -207,7 +215,7 @@ let newArray = arr.splice(1, 4);
 // Only change code above this line
 console.log(arr);
 
-// Basic Data Structures = Q3/21 - Remove Items from an Array with pop() and shift()
+// Basic Data Structures = Q3/20 - Remove Items from an Array with pop() and shift()
 // NOTES: 
 function popShift(arr) {
   let popped = arr.pop(); // Change this line
@@ -217,7 +225,7 @@ function popShift(arr) {
 
 console.log(popShift(['challenge', 'is', 'not', 'complete']));
 
-// Basic Data Structures = Q2/21 - Add Items to an Array with push() and unshift()
+// Basic Data Structures = Q2/20 - Add Items to an Array with push() and unshift()
 // NOTES: Push() method adds elements to the end of an array, and unshift() adds elements to the beginning. Consider the following:
 function mixedNumbers(arr) {
   // Only change code below this line
@@ -229,7 +237,7 @@ function mixedNumbers(arr) {
 
 console.log(mixedNumbers(['IV', 5, 'six']));
 
-// Basic Data Structures = Q1/21 - Access an Array's Contents Using Bracket Notation
+// Basic Data Structures = Q1/20 - Access an Array's Contents Using Bracket Notation
 let myArray = ["a", "b", "c", "d"];
 // Only change code below this line
 myArray['b'] = 'f';
@@ -238,7 +246,7 @@ console.log(myArray);
 // NOTE: If we want to retrieve the a from ourArray and assign it to a variable, we can do so with the following code:
 let ourVariable = ourArray[0];
 
-// Basic Data Structures = Q1/21 - Use an Array to Store a Collection of Data
+// Basic Data Structures = Q1/20 - Use an Array to Store a Collection of Data
 // NOTE: #1 A One Dimensional array, meaning it only has one level, or that it does not have any other arrays nested within it.
 let yourArray = ['Ray', 1972, '26', true, null]; // Change this line
 
