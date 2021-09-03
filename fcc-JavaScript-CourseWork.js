@@ -1,6 +1,117 @@
 // ============================== BASIC DATA STRUCTURES ================================ //
-// Basic Data Structures = Q10/21 - Iterate Through All an Array's Items Using For Loops
+// Basic Data Structures = Q14/21 -  
+// NOTES: 
+
+
+
+
+
+
+
+
+
+// Basic Data Structures = Q13/21 -  Modify an Object Nested Within an Object
+// NOTES: Object properties can be nested to an arbitrary depth, and their values can be any type of data supported by JavaScript, including arrays and even other objects.
+// Consider the following
+// nestedObject has three properties: id (value is a number), date (value is a string), and data (value is an object with its nested structure).
+// While structures can quickly become complex, we can still use the same notations to access the information we need.
+// To assign the value 10 to the busy property of the nested onlineStatus object, we use dot notation to reference the property:
+// ===================================================================
+let nestedObject = {
+  id: 28802695164,
+  date: 'December 31, 2016',
+  data: {
+    totalUsers: 99,
+    online: 80,
+    onlineStatus: {
+      active: 67,
+      away: 13,
+      busy: 8
+    }
+  }
+};
+// ===================================================================
+
+let userActivity = {
+  id: 23894201352,
+  date: 'January 1, 2017',
+  data: {
+    totalUsers: 51,
+    online: 42
+  }
+};
+
+// Only change code below this line
+// userActivity.data.online = 45; // Using Dot Notation
+userActivity['data']['online'] = 45; // Using Bracket Notation
+// Only change code above this line
+
+console.log(userActivity.data);
+
+// ===================================================================
+// Basic Data Structures = Q12/21 -  Add Key-Value Pairs to JavaScript Objects
+// NOTES: At their most basic, objects are just collections of key-value pairs. In other words, they are pieces of data (values) mapped to unique identifiers called properties (keys).
+// Object Notation
+// Bracket notation is required if your property has a space in it or if you want to use a variable to name the property. 
+// The property is enclosed in quotes to denote it as a string and will be added exactly as shown.
+// Without quotes, it will be evaluated as a variable and the name of the property will be whatever value the variable is.
+// Here's an example with a variable:
+const strawberries = 'strawberrie color';
+
+foods[strawberries] = 'red';
+
+// ===========================
+let foods = {
+  apples: 25,
+  oranges: 32,
+  plums: 28
+};
+
+// Only change code below this line
+foods.bananas = 13; // Dot Notation 
+foods['grapes'] = 35; // Bracket Notation
+foods.strawberries = 27; // Dot Notation
+// Only change code above this line
+
+console.log(foods['strawberries']);
+// ===========================
+
+
+
+// Basic Data Structures = Q11/21 -  Create complex multi-dimensional arrays or Nested Arrays
 // NOTES:
+let myNestedArray = [
+  // Only change code below this line
+  ['unshift', false, 1, 2, 3, 'complex', 'nested'],
+  ['loop', 'shift', 6, 7, 1000, 'method'],
+  [
+    'concat',
+    false,
+    true,
+    'spread',
+    'array',
+    ['deep',
+     ['deeper', 
+       ['deepest'
+        ]
+        ] 
+      ]
+    ],
+  ['mutate', 1327.98, 'splice', 'slice', 'push'],
+  ['iterate', 1.3849, 7, '8.4876', 'arbitrary', 'depth']
+  // Only change code above this line
+];
+console.log(myNestedArray.length);
+
+// Basic Data Structures = Q10/21 - Iterate Through All an Array's Items Using For Loops
+// NOTES: 
+//  Shortcut way
+// for (let i = 0; i < arr.length; i++) {
+    // if (!arr[i].includes(elem)) {
+      // newArr.push(arr[i]);
+    // }    
+// }
+ 
 function filteredArray(arr, elem) {
   let newArr = [];
   // Only change code below this line
