@@ -1,5 +1,33 @@
 // ============================== BASIC DATA STRUCTURES ================================ //
-// Basic Data Structures = Q14/20 -  Access Property Names with Bracket Notation
+// Basic Data Structures = Q16/20 - Check if an Object has a Property
+// NOTES:
+
+
+
+
+
+
+
+// Basic Data Structures = Q15/20 - Use the delete Keyword to Remove Object Properties
+// NOTES:
+let foods = {
+  apples: 25,
+  oranges: 32,
+  plums: 28,
+  bananas: 13,
+  grapes: 35,
+  strawberries: 27
+};
+
+// Only change code below this line
+delete foods.oranges;
+delete foods.plums;
+delete foods.strawberries;
+// Only change code above this line
+
+console.log(foods['oranges']);
+
+// Basic Data Structures = Q14/20 - Access Property Names with Bracket Notation
 // NOTES: 
 let foods = {
   apples: 25,
@@ -12,13 +40,13 @@ let foods = {
 
 function checkInventory(scannedItem) {
   // Only change code below this line
-
+  return foods[scannedItem];
   // Only change code above this line
 }
 
 console.log(checkInventory("apples"));
 
-// Basic Data Structures = Q13/20 -  Modify an Object Nested Within an Object
+// Basic Data Structures = Q13/20 - Modify an Object Nested Within an Object
 // NOTES: Object properties can be nested to an arbitrary depth, and their values can be any type of data supported by JavaScript, including arrays and even other objects.
 // Consider the following
 // nestedObject has three properties: id (value is a number), date (value is a string), and data (value is an object with its nested structure).
@@ -57,7 +85,7 @@ userActivity['data']['online'] = 45; // Using Bracket Notation
 console.log(userActivity.data);
 
 // ===================================================================
-// Basic Data Structures = Q12/20 -  Add Key-Value Pairs to JavaScript Objects
+// Basic Data Structures = Q12/20 - Add Key-Value Pairs to JavaScript Objects
 // NOTES: At their most basic, objects are just collections of key-value pairs. In other words, they are pieces of data (values) mapped to unique identifiers called properties (keys).
 // Object Notation
 // Bracket notation is required if your property has a space in it or if you want to use a variable to name the property. 
@@ -86,7 +114,7 @@ console.log(foods['strawberries']);
 
 
 
-// Basic Data Structures = Q11/20 -  Create complex multi-dimensional arrays or Nested Arrays
+// Basic Data Structures = Q11/20 - Create complex multi-dimensional arrays or Nested Arrays
 // NOTES:
 let myNestedArray = [
   // Only change code below this line
