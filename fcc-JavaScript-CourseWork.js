@@ -1,12 +1,59 @@
 // ============================== BASIC DATA STRUCTURES ================================ //
+// Basic Data Structures = Q18/20 - Generate an Array of All Object Keys with Object.keys()
+// NOTES: 
+let users = {
+  Alan: {
+    age: 27,
+    online: false
+  },
+  Jeff: {
+    age: 32,
+    online: true
+  },
+  Sarah: {
+    age: 48,
+    online: false
+  },
+  Ryan: {
+    age: 19,
+    online: true
+  }
+};
+
+function getArrayOfUsers(obj) {
+  // Only change code below this line
+  
+  // Only change code above this line
+}
+
+console.log(getArrayOfUsers(users));
+
 // Basic Data Structures = Q17/20 - Iterate Through the Keys of an Object with a for...in Statement
 // NOTES: 
 function countOnline(usersObj) {
   // Only change code below this line
+  let onlineUsers = 0;
 
-  // Only change code above this line
+  // for (let user in usersObj) {
+  //   if (usersObj [user] ['online']) {
+  for (let user in usersObj) {
+    let onlineStatus = usersObj[user]['online']; // Refactored Code
+    if (onlineStatus) { // Refactored Code
+      onlineUsers += 1;
+    }
+  }
+
+  return onlineUsers;
 }
-console.log(usersObj);
+  
+  let exampleUsers = {
+    Alan: { online: false },
+    Jeff: { online: true },
+    Sarah: { online: false }
+  }
+
+console.log(countOnline(exampleUsers));
+  // Only change code above this line
 
 // Basic Data Structures = Q16/20 - Check if an Object has a Property
 // NOTES:
