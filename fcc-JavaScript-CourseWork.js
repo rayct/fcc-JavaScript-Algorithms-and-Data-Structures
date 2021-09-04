@@ -1,12 +1,50 @@
 // ============================== BASIC DATA STRUCTURES ================================ //
+// Basic Data Structures = Q17/20 - Iterate Through the Keys of an Object with a for...in Statement
+// NOTES: 
+function countOnline(usersObj) {
+  // Only change code below this line
+
+  // Only change code above this line
+}
+console.log(usersObj);
+
 // Basic Data Structures = Q16/20 - Check if an Object has a Property
 // NOTES:
+let users = {
+  Alan: {
+    age: 27,
+    online: true
+  },
+  Jeff: {
+    age: 32,
+    online: true
+  },
+  Sarah: {
+    age: 48,
+    online: true
+  },
+  Ryan: {
+    age: 19,
+    online: true
+  }
+};
 
+function isEveryoneHere(userObj) {
+  // Only change code below this line
+  let everyone = ['Alan', 'Jeff', 'Sarah', 'Ryan'];
 
+  for (let i = 0; i < everyone.length; i += 1) {
+    let people = everyone[i];
+    if (userObj.hasOwnProperty(people) === false){
+      return false;
+    }
+  }
+  return true;
 
+  // Only change code above this line
+}
 
-
-
+console.log(isEveryoneHere(users));
 
 // Basic Data Structures = Q15/20 - Use the delete Keyword to Remove Object Properties
 // NOTES:
