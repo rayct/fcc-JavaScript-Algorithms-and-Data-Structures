@@ -1,16 +1,29 @@
 // ============================== BASIC ALGORITHM SCRIPTING ================================ //
 // Basic Algorithm Scripting = Q4/16 - Find the Longest Word in a String
 // NOTES: 
+function findLongestWordLength(str) {
+  return str.length;
+}
 
-
-
-
-
-
+findLongestWordLength("The quick brown fox jumped over the lazy dog");
 
 
 // Basic Algorithm Scripting = Q3/16 - Factorialize a Number
-// NOTES: 
+// NOTES: Using A WHile Loop and a FOR Loop
+
+// ====== FOR LOOP ===== //
+function factorialize(num) {
+  let result = 1;
+
+  for (let i = num; i > 0; i -= 1) {
+    result *= i;
+  }
+  return result;
+}
+
+console.log(factorialize(10));
+
+// ====== WHILE LOOP ===== //
 function factorialize(num) {
   let result = 1;
 
