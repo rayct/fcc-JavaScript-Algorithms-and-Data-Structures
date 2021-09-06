@@ -1,12 +1,61 @@
 // ============================== BASIC ALGORITHM SCRIPTING ================================ //
+// Basic Algorithm Scripting = Q4/16 - Find the Longest Word in a String
+// NOTES: 
+
+
+
+
+
+
+
+
+// Basic Algorithm Scripting = Q3/16 - Factorialize a Number
+// NOTES: 
+function factorialize(num) {
+  let result = 1;
+
+  while (num > 0) {
+    result *= num;
+    num -= 1;
+  }
+  return result;
+}
+
+console.log(factorialize(10));
+
+// Basic Algorithm Scripting = Q2/16 - Reverse a String
+// NOTES: 
+function reverseString(str) {
+  return str.split("").reverse().join(['']);
+}
+
+console.log(reverseString("hello"));
+
+// WITH A FOR LOOP
+function reverseString(str) {
+  let result = "";
+  for (let i = 0; i < str.length - 1; i -= 1) {
+    result += str[i];
+
+  }
+  return result;
+  console.log(reverseString("hello"));
+
 // Basic Algorithm Scripting = Q1/16 - Convert Celsius to Fahrenheit
 // NOTES: 
 function convertToF(celsius) {
-  let fahrenheit;
+  let fahrenheit = celsius * 9/5 + 32;
   return fahrenheit;
 }
 
-convertToF(30);
+console.log(convertToF(30));
+
+// REFACTORED_ALGORITHM
+function convertToF(celsius) {
+  return celsius * 9/5 + 32;
+}
+
+console.log(convertToF(30));
 
 
 // ============================== BASIC DATA STRUCTURES ================================ //
