@@ -1,4 +1,23 @@
 // ============================== BASIC ALGORITHM SCRIPTING ================================ //
+// Basic Algorithm Scripting = Q5/16 - Return Largest Numbers in Arrays
+// NOTES:
+function largestOfFour(arr) {
+  let result = [];
+  for (let i = 0; i < arr.length; i += 1) {
+    let individualArray = arr[i];
+    let individualHighestNum = -Infinity;
+    for (let v = 0; v < individualArray.length; v += 1){
+      if (individualHighestNum < individualArray[v]) {
+        individualHighestNum = individualArray[v];
+      }
+    }
+      result.push(individualHighestNum);
+  }
+  return result;
+}
+
+console.log(largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]));
+
 // Basic Algorithm Scripting = Q4/16 - Find the Longest Word in a String
 // NOTES: 
 function findLongestWordLength(str) {
