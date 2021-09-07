@@ -2,11 +2,22 @@
 // Basic Algorithm Scripting = Q4/16 - Find the Longest Word in a String
 // NOTES: 
 function findLongestWordLength(str) {
-  return str.length;
+  let longestWord = "";
+  let words = str.split(" ");
+  console.log(words);
+
+  for (let i = 0; i < words.length; i += 1) {
+    let individualWord = words[i];
+    if (individualWord.length > longestWord.length) {
+      longestWord = individualWord;
+    }
+
+  }
+
+  return longestWord.length;
 }
 
-findLongestWordLength("The quick brown fox jumped over the lazy dog");
-
+console.log(findLongestWordLength("The quick brown fox jumped over the lazy dog"));
 
 // Basic Algorithm Scripting = Q3/16 - Factorialize a Number
 // NOTES: Using A WHile Loop and a FOR Loop
