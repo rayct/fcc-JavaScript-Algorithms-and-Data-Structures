@@ -1,4 +1,35 @@
 // ============================== BASIC ALGORITHM SCRIPTING ================================ //
+// Basic Algorithm Scripting = Q7/16 - Repeat a String Repeat a String
+// NOTES:
+function repeatStringNumTimes(str, num) {
+  if(num <= 0) {
+    return '';
+  }
+  let result = '';
+
+  for (let i = 0; i < num; i+= 1) {
+    result += str;
+  }
+
+  return result;
+}
+
+console.log(repeatStringNumTimes("abc", 3));
+
+// Basic Algorithm Scripting = Q6/16 - Confirm the Ending
+// NOTES:
+function confirmEnding(str, target) {
+  let targetLength = target.length;
+  let targetMatch = str.slice(str.length - targetLength);
+  // console.log(targetMatch);
+  if (targetMatch == target) {
+    return true;
+  }
+  return false;
+}
+
+console.log(confirmEnding("Bastian", "n"));
+
 // Basic Algorithm Scripting = Q5/16 - Return Largest Numbers in Arrays
 // NOTES:
 function largestOfFour(arr) {
@@ -6,7 +37,7 @@ function largestOfFour(arr) {
   for (let i = 0; i < arr.length; i += 1) {
     let individualArray = arr[i];
     let individualHighestNum = -Infinity;
-    for (let v = 0; v < individualArray.length; v += 1){
+    for (let v = 0; v < individualArray.length; v += 1) {
       if (individualHighestNum < individualArray[v]) {
         individualHighestNum = individualArray[v];
       }
