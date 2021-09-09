@@ -1,4 +1,18 @@
 // ============================== BASIC ALGORITHM SCRIPTING ================================ //
+// Basic Algorithm Scripting = Q10/16 - Boo who
+// NOTES: Check if a value is classified as a boolean primitive. Return true or false.
+// Boolean primitives are true and false.
+function booWho(bool) {
+  if (typeof bool == 'boolean') {
+    // console.log(bool);
+    return true;
+  }
+
+  return false;
+}
+
+console.log(booWho(typeof true));
+
 // Basic Algorithm Scripting = Q9/16 - Finders Keepers
 // NOTES: A function that looks through an array arr and returns the first element in it that passes a 'truth test'.
 // This means that given an element x, the 'truth test' is passed if func(x) is true.
@@ -7,6 +21,7 @@ function findElement(arr, func) {
   let num = 0;
 
   for (let i = 0; i < arr.length; i += 1) {
+    // console.log(arr[i]) Output the Array at position [i]
     if (func(arr[i])) {
       return arr[i];
     
@@ -18,7 +33,7 @@ function findElement(arr, func) {
 
 console.log(findElement([1, 2, 3, 4], num => num % 2 === 0));
 // console.log(findElement([1, 3, 5, 8, 9, 10], function(num) { return num % 2 === 0; }));
-// console.log(findElement([1, 3, 5, 9], function(num) { return num % 2 === 0; }));/
+// console.log(findElement([1, 3, 5, 9], function(num) { return num % 2 === 0; }));
 
 // Basic Algorithm Scripting = Q8/16 - Truncate a String
 // NOTES:
