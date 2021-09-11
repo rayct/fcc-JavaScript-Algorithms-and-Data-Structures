@@ -1,4 +1,29 @@
 // ============================== BASIC ALGORITHM SCRIPTING ================================ //
+// Basic Algorithm Scripting = Q10/16 - Title Case a Sentence Case
+// NOTES: Return the provided string with the first letter of each word capitalized.
+// Make sure the rest of the word is in lower case.
+function titleCase(str) {
+  let result = '';
+  let words = str.split('');
+
+  for (let i = 0; i < words.length; i += 1) {
+    let word = words[i];
+
+    for (let j = 0; j < word.length; j += 1) {
+      
+      if (j === 0) {
+        result += word[j].toUpperCase();
+      } else {
+        result += word[j].toLowerCase(); 
+      }
+    }
+    result += '';
+  } 
+  return str.toLowerCase().split(" ").map(upper => upper[0].toUpperCase() + upper.slice(1)).join(" ");
+}
+
+console.log(titleCase("I'm a little tea pot"));
+
 // Basic Algorithm Scripting = Q10/16 - Boo who
 // NOTES: Check if a value is classified as a boolean primitive. Return true or false.
 // Boolean primitives are true and false.
