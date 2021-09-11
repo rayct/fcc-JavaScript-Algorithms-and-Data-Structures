@@ -1,23 +1,36 @@
 // ============================== BASIC ALGORITHM SCRIPTING ================================ //
+// Basic Algorithm Scripting = Q11/16 - Slice and SPlice
+// NOTES: 
+function frankenSplice(arr1, arr2, n) {
+let splicedArr = [...arr2];
+
+  splicedArr.splice(n, 0, ...arr1);  
+
+  return splicedArr;
+
+}
+
+console.log(frankenSplice([1, 2, 3], [4, 5, 6], 1));
+
 // Basic Algorithm Scripting = Q11/16 - Title Case a Sentence Case
 // NOTES: Return the provided string with the first letter of each word capitalized.
 // Make sure the rest of the word is in lower case.
 function titleCase(str) {
   let result = '';
   let words = str.split('');
-
   for (let i = 0; i < words.length; i += 1) {
     let word = words[i];
-
     for (let j = 0; j < word.length; j += 1) {
-      
       if (j === 0) {
         result += word[j].toUpperCase();
       } else {
         result += word[j].toLowerCase(); 
       }
     }
-    result += '';
+    if (words.length - 1 !== i) {
+      
+      result += '';
+    }
   } 
   return str.toLowerCase().split(" ").map(upper => upper[0].toUpperCase() + upper.slice(1)).join(" ");
 }
