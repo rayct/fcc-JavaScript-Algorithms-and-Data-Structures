@@ -1,5 +1,5 @@
 // ============================== BASIC ALGORITHM SCRIPTING ================================ //
-// Basic Algorithm Scripting = Q10/16 - Title Case a Sentence Case
+// Basic Algorithm Scripting = Q11/16 - Title Case a Sentence Case
 // NOTES: Return the provided string with the first letter of each word capitalized.
 // Make sure the rest of the word is in lower case.
 function titleCase(str) {
