@@ -1,4 +1,12 @@
 // ============================== BASIC ALGORITHM SCRIPTING ================================ //
+// Basic Algorithm Scripting = Q12/16 - Falsy Bouncer
+// NOTES: 
+function bouncer(arr) {
+  return arr.filter(Boolean);
+}
+
+console.log(bouncer([7, "ate", "", false, 9]));
+
 // Basic Algorithm Scripting = Q11/16 - Slice and SPlice
 // NOTES: You are given two arrays and an index.
 // Copy each element of the first array into the second array, in order.
