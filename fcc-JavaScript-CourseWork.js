@@ -1,4 +1,48 @@
 // ============================== BASIC ALGORITHM SCRIPTING ================================ //
+// Basic Algorithm Scripting = Q15/16 - 
+// NOTES: 
+
+
+
+
+
+
+// Basic Algorithm Scripting = Q14/16 - Mutations
+// NOTES: 
+// Mutations - Solution 1
+function mutation(arr) {
+  let firstElement = arr[0].toLowerCase();
+  let secondElement = arr[1].toLowerCase();
+
+  for (let j = 0; j < secondElement.length; j += 1) {
+    let letter = secondElement[j];
+    if (firstElement.indexOf(letter) === -1) {
+
+      return false;
+    }
+  }
+ return true;
+}
+
+console.log(mutation(["hello", "hello"]));
+
+// Mutations - Solution 2
+function mutation(arr) {
+  let newArr = [];
+
+  for (let i = 0; i < arr.length; i += 1) {
+    newArr[i] = arr[i].toLowerCase();
+  }
+  
+  for (let j = 0; j < newArr[1].length; j += 1) {
+    if (newArr[0].indexOf(newArr[1][j]) < 0)
+      return false;
+  }
+ return true;
+}
+
+console.log(mutation(["hello", "hey"]));
+
 // Basic Algorithm Scripting = Q13/16 - Where do I Belong
 // NOTES: Return the lowest index at which a value (second argument) should be inserted into an array (first argument) once it has been sorted.
 // The returned value should be a number.
@@ -28,7 +72,7 @@ function bouncer(arr) {
 
 console.log(bouncer([7, "ate", "", false, 9]));
 
-// Basic Algorithm Scripting = Q11/16 - Slice and SPlice
+// Basic Algorithm Scripting = Q11/16 - Slice and Splice
 // NOTES: You are given two arrays and an index.
 // Copy each element of the first array into the second array, in order.
 // Begin inserting elements at index n of the second array.
