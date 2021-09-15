@@ -1,6 +1,6 @@
 // ============================== OBJECT ORIENTATED PROGRAMMING ============================ //
 // Object orientated Programming = Q1/26 - Create a Basic JavaScript Object
-// NOTES: Below is an Example of a JavaScript with two propertie/value pairs.
+// NOTES: Below is an Example of a JavaScript Object with two propertie/value pairs.
 let dog = {
   name: 'Buster',
   numLegs: 4
