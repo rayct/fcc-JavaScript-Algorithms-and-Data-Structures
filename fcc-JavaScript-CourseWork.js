@@ -5,7 +5,7 @@ let dog = {
   name: 'Buster',
   numLegs: 4
 };
-console.log(dog);
+// console.log(dog);
 
 // ============================== BASIC ALGORITHM SCRIPTING ================================ //
 // Basic Algorithm Scripting = Q16/16 - Chunky Monkey
