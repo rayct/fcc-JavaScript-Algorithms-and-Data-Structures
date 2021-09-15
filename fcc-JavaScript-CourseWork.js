@@ -23,7 +23,6 @@ function chunkArrayInGroups(arr, size) {
 
 console.log(chunkArrayInGroups(["a", "b", "c", "d"], 2));
 
-
 // Basic Algorithm Scripting = Q15/16 - Mutations
 // NOTES: 
 // Mutations - Solution 1
