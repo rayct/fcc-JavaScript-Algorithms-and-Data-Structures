@@ -1,13 +1,30 @@
+// ============================== OBJECT ORIENTATED PROGRAMMING ============================ //
+// Object orientated Programming = Q1/26 - Create a Basic JavaScript Object
+// NOTES: Below is an Example of a JavaScript with two propertie/value pairs.
+let dog = {
+  name: 'Buster',
+  numLegs: 4
+};
+console.log(dog);
+
 // ============================== BASIC ALGORITHM SCRIPTING ================================ //
-// Basic Algorithm Scripting = Q15/16 - 
-// NOTES: 
+// Basic Algorithm Scripting = Q16/16 - Chunky Monkey
+// NOTES: Write a function that splits an array (first argument) into groups the length of size (second argument) and returns them as a two-dimensional array.
+function chunkArrayInGroups(arr, size) {
+  let result = [];
 
 
+  for (let i = 0; i < arr.length; i += size) {
+    result.push(arr.slice(i, i + size));
+  }
+  return result;
+  
+}
+
+console.log(chunkArrayInGroups(["a", "b", "c", "d"], 2));
 
 
-
-
-// Basic Algorithm Scripting = Q14/16 - Mutations
+// Basic Algorithm Scripting = Q15/16 - Mutations
 // NOTES: 
 // Mutations - Solution 1
 function mutation(arr) {
@@ -16,6 +33,7 @@ function mutation(arr) {
 
   for (let j = 0; j < secondElement.length; j += 1) {
     let letter = secondElement[j];
+    
     if (firstElement.indexOf(letter) === -1) {
 
       return false;
@@ -43,7 +61,7 @@ function mutation(arr) {
 
 console.log(mutation(["hello", "hey"]));
 
-// Basic Algorithm Scripting = Q13/16 - Where do I Belong
+// Basic Algorithm Scripting = Q14/16 - Where do I Belong
 // NOTES: Return the lowest index at which a value (second argument) should be inserted into an array (first argument) once it has been sorted.
 // The returned value should be a number.
 // For example, getIndexToIns([1,2,3,4], 1.5) should return 1 because it is greater than 1 (index 0), but less than 2 (index 1).
@@ -64,7 +82,7 @@ function getIndexToIns(arr, num) {
 
 console.log(getIndexToIns([40, 60], 50));
 
-// Basic Algorithm Scripting = Q12/16 - Falsy Bouncer
+// Basic Algorithm Scripting = Q13/16 - Falsy Bouncer
 // NOTES: 
 function bouncer(arr) {
   return arr.filter(Boolean);
@@ -72,7 +90,7 @@ function bouncer(arr) {
 
 console.log(bouncer([7, "ate", "", false, 9]));
 
-// Basic Algorithm Scripting = Q11/16 - Slice and Splice
+// Basic Algorithm Scripting = Q12/16 - Slice and Splice
 // NOTES: You are given two arrays and an index.
 // Copy each element of the first array into the second array, in order.
 // Begin inserting elements at index n of the second array.
@@ -113,7 +131,7 @@ function titleCase(str) {
 
 console.log(titleCase("I'm a little tea pot"));
 
-// Basic Algorithm Scripting = Q10/16 - Boo who
+// Basic Algorithm Scripting = 10/16 - Boo who
 // NOTES: Check if a value is classified as a boolean primitive. Return true or false.
 // Boolean primitives are true and false.
 function booWho(bool) {
