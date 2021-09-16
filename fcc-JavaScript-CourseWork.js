@@ -1,11 +1,69 @@
 // ============================== OBJECT ORIENTATED PROGRAMMING ============================ //
-// Object orientated Programming = Q1/26 - Create a Basic JavaScript Object
+// Object Orientated Programming = Q6/26 - Use a Constructor to Create Objects
+// NOTES: 
+function Dog() {
+  this.name = "Rupert";
+  this.color = "brown";
+  this.numLegs = 4;
+}
+// Only change code below this line
+
+
+
+
+
+
+// Object Orientated Programming = Q5/26 - Define a Consturctor Function
+// NOTES: Constructors are functions that create new objects. They define properties and behaviors that will belong to the new object.
+// Think of them as a blueprint for the creation of new objects
+function Dog() {
+  this.name = 'Buster';
+  this.color = 'Brown';
+  this.numLegs = 4;
+}
+console.log('Dog');
+
+// Object Orientated Programming = Q4/26 - Make Code More Reusable with the this Keyword
+// NOTES: Modify the dog.sayLegs method to remove any references to dog.
+let dog = {
+  name: "Spot",
+  numLegs: 4,
+  sayLegs: function() {return "This dog has " + this.numLegs + " legs.";}
+};
+
+console.log(dog.sayLegs());
+
+// Object Orientated Programming = Q3/26 - Create a Method on an Object
+// NOTES: Objects can have a special type of property, called a method.
+// Methods are properties that are functions. This adds different behavior to an object.
+
+let dog = {
+  name: "Spot",
+  numLegs: 4,
+  sayLegs: function(){return "This dog has " + dog.numLegs + " legs."}
+
+};
+
+console.log(dog.sayLegs());
+
+// Object Orientated Programming = Q2/26 - Use Dot Notation to Access the Properties of an Object
+// NOTES: 
+let dog = {
+  name: "Spot",
+  numLegs: 4
+};
+// Only change code below this line
+console.log(dog.name);
+console.log(dog.numLegs);
+
+// Object Orientated Programming = Q1/26 - Create a Basic JavaScript Object
 // NOTES: Below is an Example of a JavaScript Object with two propertie/value pairs.
 let dog = {
   name: 'Buster',
   numLegs: 4
 };
 console.log(dog);
+
 
 // ============================== BASIC ALGORITHM SCRIPTING ================================ //
 // Basic Algorithm Scripting = Q16/16 - Chunky Monkey
