@@ -7,11 +7,8 @@ function Dog() {
   this.numLegs = 4;
 }
 // Only change code below this line
-
-
-
-
-
+let hound = new Dog();
+console.log(hound);
 
 // Object Orientated Programming = Q5/26 - Define a Consturctor Function
 // NOTES: Constructors are functions that create new objects. They define properties and behaviors that will belong to the new object.
