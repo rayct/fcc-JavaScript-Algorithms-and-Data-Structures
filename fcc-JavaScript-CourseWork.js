@@ -1,10 +1,22 @@
 // ============================== OBJECT ORIENTATED PROGRAMMING ============================ //
+// Object Orientated Programming = Q10/26 - Use Prototype Properties to Reduce Duplicate Code
+// NOTES: Added a numLegs property to the prototype of Dog
+function Dog(name) {
+  this.name = name;
+}
+
+Dog.protoype.numLegs = 4;
+
+// Only change code above this line
+let beagle = new Dog('Snoopy');
+console .log(beagle);
+
 // Object Orientated Programming = Q9/26 - Understand Own Properties
 // NOTES: 
-function Bird(name) {
-  this.name = name;
-  this.numLegs = 2;
-}
+function Bird(name) { //  Start of the Object
+  this.name = name; // Property 1
+  this.numLegs = 2; // Property 2
+}  // End of Object
 
 let canary = new Bird("Tweety");
 let ownProps = [];
