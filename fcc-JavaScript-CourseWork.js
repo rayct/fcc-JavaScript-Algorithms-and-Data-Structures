@@ -1,4 +1,43 @@
 // ============================== OBJECT ORIENTATED PROGRAMMING ============================ //
+// Object Orientated Programming = Q8/26 - Understand Own Properties
+// NOTES: 
+function Bird(name) {
+  this.name = name;
+  this.numLegs = 2;
+}
+
+let canary = new Bird("Tweety");
+let ownProps = [];
+// Only change code below this line
+
+
+
+
+
+// Object Orientated Programming = Q8/26 - Verify an Object's Constructor with instanceof
+// NOTES: 1. myHouse should have a numBedrooms attribute set to a number.
+// NOTES: 2. You should verify that myHouse is an instance of House using the instanceof operator.
+// NOTES: 3. Anytime a constructor function creates a new object, that object is said to be an instance of its constructor.
+// JavaScript gives a convenient way to verify this with the instanceof operator.
+// instanceof allows you to compare an object to a constructor, returning true or false based on whether or not that object was created with the constructor.
+function House(numBedrooms) {
+  this.numBedrooms = numBedrooms;
+
+}
+let myHouse = new House(4);
+myHouse instanceof House;
+console.log(myHouse);
+
+// Object Orientated Programming = Q7/26 - Extend Constructors to Receive Arguments
+// NOTES:
+function Dog(name, color) {
+  this.name = name;
+  this.color = color;
+  this.numLegs = 4;
+}
+let terrier = new Dog();
+console.log(terrier);
+
 // Object Orientated Programming = Q6/26 - Use a Constructor to Create Objects
 // NOTES: 
 function Dog() {
