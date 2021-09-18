@@ -1,5 +1,5 @@
 // ============================== OBJECT ORIENTATED PROGRAMMING ============================ //
-// Object Orientated Programming = Q8/26 - Understand Own Properties
+// Object Orientated Programming = Q9/26 - Understand Own Properties
 // NOTES: 
 function Bird(name) {
   this.name = name;
@@ -9,10 +9,12 @@ function Bird(name) {
 let canary = new Bird("Tweety");
 let ownProps = [];
 // Only change code below this line
-
-
-
-
+for (let property in canary) {
+  if (canary.hasOwnProperty(property)) {
+    ownProbs.push(proprty);
+  }
+}
+console.log(ownProps);
 
 // Object Orientated Programming = Q8/26 - Verify an Object's Constructor with instanceof
 // NOTES: 1. myHouse should have a numBedrooms attribute set to a number.
