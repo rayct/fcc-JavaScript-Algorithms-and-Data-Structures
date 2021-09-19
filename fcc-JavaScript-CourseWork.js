@@ -4,11 +4,18 @@
 function Dog(name) {
   this.name = name;
 }
+let buster = new Dog('Buster')
 
 // Only change code below this line
 function joinDogFraternity(candidate) {
+  if (candidate.constructor === Dog) {
+    return true;
+  } else {
+    return false;
+  }
 
 }
+console.log(buster.constructor === Dog);
 
 
 // Object Orientated Programming = Q11/26 - Iterate Over All Properties
