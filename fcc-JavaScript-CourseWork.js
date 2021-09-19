@@ -1,4 +1,41 @@
 // ============================== OBJECT ORIENTATED PROGRAMMING ============================ //
+// Object Orientated Programming = Q12/26 - Understand the Constructor Property
+// NOTES: Write a joinDogFraternity function that takes a candidate parameter and, using the constructor property, return true if the candidate is a Dog, otherwise return false.
+function Dog(name) {
+  this.name = name;
+}
+
+// Only change code below this line
+function joinDogFraternity(candidate) {
+
+}
+
+
+// Object Orientated Programming = Q11/26 - Iterate Over All Properties
+// NOTES: 
+function Dog(name) {
+  this.name = name;
+}
+
+Dog.prototype.numLegs = 4;
+
+let beagle = new Dog("Snoopy");
+
+let ownProps = [];
+let prototypeProps = [];
+
+// Only change code below this line
+for (let property in beagle) {
+  if(beagle.hasOwnProperty(property)) {
+    ownProps.push(property);
+  } else {
+    prototypeProps.push(property);
+  }
+}
+console.log(beagle);
+console.log(ownProps);
+console.log(prototypeProps);
+
 // Object Orientated Programming = Q10/26 - Use Prototype Properties to Reduce Duplicate Code
 // NOTES: Added a numLegs property to the prototype of Dog
 function Dog(name) {
