@@ -1,6 +1,127 @@
 // ============================== OBJECT ORIENTATED PROGRAMMING ============================ //
+// Object Orientated Programming = Q26/26 - 
+// NOTES:
+
+
+
+
+// Object Orientated Programming = Q25/26 -
+// NOTES:
+
+
+
+
+// Object Orientated Programming = Q24/26 -
+// NOTES:
+
+
+
+
+// Object Orientated Programming = Q23/26 -
+// NOTES:
+
+
+
+
+// Object Orientated Programming = Q22/26 -
+// NOTES:
+
+
+
+
+// Object Orientated Programming = Q21/26 -
+// NOTES:
+
+
+
+
+// Object Orientated Programming = Q20/26 -
+// NOTES:
+
+
+
+
+// Object Orientated Programming = Q19/26 -
+// NOTES:
+
+
+
+
+// Object Orientated Programming = Q18/26 -
+// NOTES:
+
+
+
+
+// Object Orientated Programming = Q17/26 -
+// NOTES:
+
+
+
+
+// Object Orientated Programming = Q16/26 -
+// NOTES:
+
+
+
+
+
+// Object Orientated Programming = Q15/26 - Understand Where an Object’s Prototype Comes From
+// NOTES:
+function Dog(name) {
+  this.name = name;
+}
+
+let beagle = new Dog("Snoopy");
+
+// Only change code below this line
+
+
+
+// Object Orientated Programming = Q14/26 - Remember to Set the Constructor Property when Changing the Prototype
+// NOTES: Define the constructor property on the Dog prototype. 
+function Dog(name) {
+  this.name = name;
+}
+
+// Only change code below this line
+Dog.prototype = {
+  constructor: Dog, // Define the constructor property
+  numLegs: 4,
+  eat: function() {
+    console.log("nom nom nom");
+  },
+  describe: function() {
+    console.log("My name is " + this.name);
+  }
+};
+let buster = new Dog('Buster');
+console.log(buster.constructor === Object);
+
+// Object Orientated Programming = Q13/26 - Change the Protoype to a New Object Orient
+// NOTES: Protype properties have the console.log in them.
+// 
+function Dog(name) {
+  this.name = name;
+}
+Dog.prototype = {
+  // Only change code below this line
+  numLegs: 4,
+  eat: function() {
+    console.log('Dog Food');
+  },
+  describe: function() {
+    console.log('My name is ' + this.name);
+  }
+};
+let buster = new Dog('Buster')
+
+console.log(buster);
+buster.describe();
+
 // Object Orientated Programming = Q12/26 - Understand the Constructor Property
 // NOTES: Write a joinDogFraternity function that takes a candidate parameter and, using the constructor property, return true if the candidate is a Dog, otherwise return false.
+// SOLUTION 1.
 function Dog(name) {
   this.name = name;
 }
@@ -12,6 +133,24 @@ function joinDogFraternity(candidate) {
     return true;
   } else {
     return false;
+  }
+
+}
+console.log(buster.constructor === Dog);
+
+// SOLUTION 2.
+function Dog(name) {
+  this.name = name;
+}
+
+let buster = new Dog('Buster')
+
+// Only change code below this line
+function joinDogFraternity(candidate) {
+  if (candidate.constructor !== Dog) {
+    return false;
+  } else {
+    return true;
   }
 
 }
