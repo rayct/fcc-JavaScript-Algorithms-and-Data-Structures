@@ -75,8 +75,8 @@ function Dog(name) {
 let beagle = new Dog("Snoopy");
 
 // Only change code below this line
-
-
+console.log(Dog.prototype.isPrototypeOf(beagle));
+console.log(beagle);
 
 // Object Orientated Programming = Q14/26 - Remember to Set the Constructor Property when Changing the Prototype
 // NOTES: Define the constructor property on the Dog prototype. 
