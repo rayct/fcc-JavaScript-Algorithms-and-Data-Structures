@@ -53,21 +53,57 @@
 
 
 
-// Object Orientated Programming = Q17/26 -
+// Object Orientated Programming = Q17/26 - Use Inheritance So You Don't Repeat Yourself
+// NOTES: There's a principle in programming called Don't Repeat Yourself (DRY).
+// The reason repeated code is a problem is because any change requires fixing code in multiple places.
+// This usually means more work for programmers and more room for errors.
+function Cat(name) {
+  this.name = name;
+}
+
+Cat.prototype = {
+  constructor: Cat,
+};
+
+function Bear(name) {
+  this.name = name;
+}
+
+Bear.prototype = {
+  constructor: Bear,
+};
+
+function Animal() { }
+
+Animal.prototype = {
+  constructor: Animal,
+  eat: function() {
+    // console.log('My name is ' + this.name);
+  }
+
+};
+console.log(Animal.prototype);
+console.log(Bear.prototype);
+console.log(Cat.prototype);
+
+ 
+// Object Orientated Programming = Q16/26 - Understand the Prototype Chain
 // NOTES:
+function Dog(name) {
+  this.name = name;
+}
 
+let beagle = new Dog("Snoopy");
 
+Dog.prototype.isPrototypeOf(beagle);  // yields true
 
-
-// Object Orientated Programming = Q16/26 -
-// NOTES:
-
-
-
+// Fix the code below so that it evaluates to true
+console.log(Object.prototype.isPrototypeOf(Dog.prototype));
 
 
 // Object Orientated Programming = Q15/26 - Understand Where an Object’s Prototype Comes From
 // NOTES:
+// Solution 1
 function Dog(name) {
   this.name = name;
 }
@@ -77,6 +113,25 @@ let beagle = new Dog("Snoopy");
 // Only change code below this line
 console.log(Dog.prototype.isPrototypeOf(beagle));
 console.log(beagle);
+
+// Solution 2
+function Dog(name) {
+  this.name = name;
+}
+
+let beagle = new Dog("Snoopy");
+
+// Only change code below this line
+console.log(Dog.prototype.isPrototypeOf(beagle));
+
+beagle = {
+  constructor: Dog,
+  numLegs: 4
+};
+
+console.log(beagle.constructor);
+console.log(Dog.prototype.isPrototypeOf(beagle));
+
 
 // Object Orientated Programming = Q14/26 - Remember to Set the Constructor Property when Changing the Prototype
 // NOTES: Define the constructor property on the Dog prototype. 
@@ -98,6 +153,7 @@ Dog.prototype = {
 let buster = new Dog('Buster');
 console.log(buster.constructor === Object);
 
+
 // Object Orientated Programming = Q13/26 - Change the Protoype to a New Object Orient
 // NOTES: Protype properties have the console.log in them.
 // 
@@ -118,6 +174,7 @@ let buster = new Dog('Buster')
 
 console.log(buster);
 buster.describe();
+
 
 // Object Orientated Programming = Q12/26 - Understand the Constructor Property
 // NOTES: Write a joinDogFraternity function that takes a candidate parameter and, using the constructor property, return true if the candidate is a Dog, otherwise return false.
@@ -182,6 +239,7 @@ console.log(beagle);
 console.log(ownProps);
 console.log(prototypeProps);
 
+
 // Object Orientated Programming = Q10/26 - Use Prototype Properties to Reduce Duplicate Code
 // NOTES: Added a numLegs property to the prototype of Dog
 function Dog(name) {
@@ -193,6 +251,7 @@ Dog.protoype.numLegs = 4;
 // Only change code above this line
 let beagle = new Dog('Snoopy');
 console .log(beagle);
+
 
 // Object Orientated Programming = Q9/26 - Understand Own Properties
 // NOTES: 
