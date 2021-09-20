@@ -5,19 +5,19 @@
 
 
 
-// Object Orientated Programming = Q25/26 -
+// Object Orientated Programming = Q25/26 - 
 // NOTES:
 // TASK:
 
 
 
-// Object Orientated Programming = Q24/26 -
+// Object Orientated Programming = Q24/26 - 
 // NOTES:
 // TASK:
 
 
 
-// Object Orientated Programming = Q23/26 -
+// Object Orientated Programming = Q23/26 - 
 // NOTES:
 // TASK:
 
@@ -29,29 +29,43 @@
 
 
 
-// Object Orientated Programming = Q21/26 -
+// Object Orientated Programming = Q21/26 - 
 // NOTES:
 // TASK:
 
 
 
-// Object Orientated Programming = Q20/26 -
+// Object Orientated Programming = Q20/26 - 
 // NOTES:
 // TASK:
 
 
 
-// Object Orientated Programming = Q19/26 -
+// Object Orientated Programming = Q19/26 - 
 // NOTES:
 // TASK:
 
 
 
-// Object Orientated Programming = Q18/26 -
-// NOTES:
-// TASK: 
+// Object Orientated Programming = Q18/26 - Inherit Behaviors from a Supertype
+// NOTES: Inheritance
+// TASK: Use Object.create to make two instances of Animal named duck and beagle. 
+function Animal() { }
 
+Animal.prototype = {
+  constructor: Animal,
+  eat: function() {
+    console.log("nom nom nom");
+  }
+};
 
+// Only change code below this line
+
+let duck = Object.create(Animal.prototype); // Change this line
+let beagle = Object.create(Animal.prototype);; // Change this line
+duck.eat();
+beagle.eat();
+console.log(beagle instanceof Animal);
 
 
 // Object Orientated Programming = Q17/26 - Use Inheritance So You Don't Repeat Yourself
