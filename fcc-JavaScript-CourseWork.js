@@ -29,22 +29,72 @@
 
 
 
-// Object Orientated Programming = Q21/26 - 
+// Object Orientated Programming = Q21/26 - Add Methods After Inheritance
 // NOTES:
-// TASK:
+// TASK: Add all necessary code so the Dog object inherits from Animal and the Dog's prototype constructor is set to Dog.
+// Then add a bark() method to the Dog object so that beagle can both eat() and bark().The bark() method should print Woof! to the console.
+function Animal() { }
+Animal.prototype.eat = function() { console.log("nom nom nom"); };
+
+function Dog() { }
+
+// Only change code below this line
+Dog.prototype = Object.create(Animal.prototype);
+Dog.prototype.constructor = Dog;
+Dog.prototype.bark = function() {
+  console.log("Woof!");
+};
+// Only change code above this line
+
+let beagle = new Dog();
+// console.log(beagle instanceof Animal);
+// console.log(beagle.constructor);
+beagle.eat();
+beagle.bark();
 
 
-
-// Object Orientated Programming = Q20/26 - 
+// Object Orientated Programming = Q20/26 - Reset an Inherited Constructor Property
 // NOTES:
-// TASK:
+// TASK: Fix the code so duck.constructor and beagle.constructor return their respective constructors.
+function Animal() { }
+function Bird() { }
+function Dog() { }
+
+Bird.prototype = Object.create(Animal.prototype);
+Dog.prototype = Object.create(Animal.prototype);
+
+// Only change code below this line
+Bird.prototype.constructor = Bird;
+Dog.prototype.constructor = Dog;
 
 
+let duck = new Bird();
+let beagle = new Dog();
 
-// Object Orientated Programming = Q19/26 - 
+console.log(duck.constructor);
+console.log(beagle.constructor);
+
+
+// Object Orientated Programming = Q19/26 - Set the Child's Prototype to an Instance of the Parent
 // NOTES:
-// TASK:
+// TASK: Modify the code so that instances of Dog inherit from Animal.
+function Animal() { }
 
+Animal.prototype = {
+  constructor: Animal,
+  eat: function() {
+    console.log("nom nom nom");
+  }
+};
+
+function Dog() { }
+
+// Only change code below this line
+
+Dog.prototype = Object.create(Animal.prototype);
+let beagle = new Dog();
+beagle.eat();
+console.log(beagle instanceof Animal);
 
 
 // Object Orientated Programming = Q18/26 - Inherit Behaviors from a Supertype
