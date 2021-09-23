@@ -17,10 +17,21 @@
 
 
 
-// Object Orientated Programming = Q23/26 - 
-// TASK:
+// Object Orientated Programming = Q23/26 - Use a Mixin to Add Common Behavior Between Unrelated Objects
+// TASK: Create a mixin named glideMixin that defines a method named glide.
+// Then use the glideMixin to give both bird and boat the ability to glide.
 // NOTES:
+let bird = {
+  name: "Donald",
+  numLegs: 2
+};
 
+let boat = {
+  name: "Warrior",
+  type: "race-boat"
+};
+
+// Only change code below this line
 
 
 // Object Orientated Programming = Q22/26 - Override Inherited Methods
