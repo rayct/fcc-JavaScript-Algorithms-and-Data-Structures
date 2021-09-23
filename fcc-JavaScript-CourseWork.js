@@ -1,31 +1,31 @@
 // ============================== OBJECT ORIENTATED PROGRAMMING ============================ //
 // Object Orientated Programming = Q26/26 - 
-// NOTES:
 // TASK:
+// NOTES:
 
 
 
 // Object Orientated Programming = Q25/26 - 
-// NOTES:
 // TASK:
+// NOTES:
 
 
 
 // Object Orientated Programming = Q24/26 - 
-// NOTES:
 // TASK:
+// NOTES:
 
 
 
 // Object Orientated Programming = Q23/26 - 
-// NOTES:
 // TASK:
+// NOTES:
 
 
 
 // Object Orientated Programming = Q22/26 - Override Inherited Methods
-// NOTES:
 // TASK: Override the fly() method for Penguin so that it returns the string Alas, this is a flightless bird.
+// NOTES: Class name Bird changed to Penguin and the return string changed from 'I am flying' to 'Als, this is a flightless bird'.
 function Bird() { }
 
 Bird.prototype.fly = function() { // The fly method
@@ -38,7 +38,7 @@ Penguin.prototype.constructor = Penguin;
 
 // Only change code below this line
 
-Penguin.prototype.fly = function() {
+Penguin.prototype.fly = function() { 
   return "Alas, this is a flightless bird.";
 };
 
@@ -49,8 +49,8 @@ console.log(penguin.fly())
 
 
 // Object Orientated Programming = Q21/26 - Add Methods After Inheritance
-// NOTES:
 // TASK: Add all necessary code so the Dog object inherits from Animal and the Dog's prototype constructor is set to Dog.
+// NOTES:
 // Then add a bark() method to the Dog object so that beagle can both eat() and bark().The bark() method should print Woof! to the console.
 function Animal() { }
 Animal.prototype.eat = function() { console.log("nom nom nom"); };
