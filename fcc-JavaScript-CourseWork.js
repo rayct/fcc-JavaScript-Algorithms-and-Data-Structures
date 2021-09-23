@@ -25,7 +25,7 @@
 
 // Object Orientated Programming = Q22/26 - Override Inherited Methods
 // TASK: Override the fly() method for Penguin so that it returns the string Alas, this is a flightless bird.
-// NOTES: Class name Bird changed to Penguin and the return string changed from 'I am flying' to 'Als, this is a flightless bird'.
+// NOTES: Class name Bird changed to Penguin and the return string changed from 'I am flying' to 'Alas, this is a flightless bird'.
 function Bird() { }
 
 Bird.prototype.fly = function() { // The fly method
