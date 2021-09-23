@@ -23,10 +23,29 @@
 
 
 
-// Object Orientated Programming = Q22/26 -
+// Object Orientated Programming = Q22/26 - Override Inherited Methods
 // NOTES:
-// TASK:
+// TASK: Override the fly() method for Penguin so that it returns the string Alas, this is a flightless bird.
+function Bird() { }
 
+Bird.prototype.fly = function() { // The fly method
+  return 'I am flying'; 
+};
+
+function Penguin() { }
+Penguin.prototype = Object.create(Bird.prototype);
+Penguin.prototype.constructor = Penguin;
+
+// Only change code below this line
+
+Penguin.prototype.fly = function() {
+  return "Alas, this is a flightless bird.";
+};
+
+// Only change code above this line
+
+let penguin = new Penguin();
+console.log(penguin.fly())
 
 
 // Object Orientated Programming = Q21/26 - Add Methods After Inheritance
@@ -1386,7 +1405,6 @@ let ohRegex = /oh{3,6}\sno/i; // Change this line
 let result = ohRegex.test(ohStr);
 console.log(result);
 
-
 // Regular Expressions = Q24/33 - Match Non-Whitespace Characters
 // NOTES: Search for non-whitespace using \S, which is an uppercase s. 
 // This pattern will not match whitespace, carriage return, tab, form feed, and new line characters.
@@ -1530,12 +1548,14 @@ console.log(codingRegex); // Change this line
 let myString = "freeCodeCamp";
 let fccRegex = /freeCodeCamp/i; // Change this line
 let result = fccRegex.test(myString);
-console.log(fccRegex);
+  console.log(fccRegex);
+  
 // Regular Expressions = Q3/33 - Match a Literal String with Different Possibilities
 let petString = "James has a pet cat.";
 let petRegex = /dog|cat|bird|fish/; // Change this line
 let result = petRegex.test(petString);
-console.log(petRegex);
+  console.log(petRegex);
+  
 // Regular Expressions = Q2/33 - Match Literal Strings
 let waldoIsHiding = "Somewhere Waldo is hiding in this text.";
 let waldoRegex = /Waldo/; // Change this line
