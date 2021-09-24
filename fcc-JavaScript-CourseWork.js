@@ -51,7 +51,18 @@ let funModule = (function() {
   }
 }
 })();
+// DEMO
+function Bird(name) {
+  this.name = name;
+}
 
+let bigBird = new Bird('Big Bird');
+
+// bigBird.sing();
+
+funModule.singMixin(bigBird);
+
+bigBird.sing();
 // console.log(isCuteMixin);
 // console.log(singMixin);
 
