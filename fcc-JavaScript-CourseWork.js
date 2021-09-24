@@ -40,6 +40,7 @@ let funModule = (function() {
     isCuteMixin: function(obj){
       obj.isCute = function() {
         console.log('I am really cute');
+        return true;
       };
     },
 
