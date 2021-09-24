@@ -11,15 +11,49 @@
 
 
 
-// Object Orientated Programming = Q24/26 - 
-// TASK:
-// NOTES:
+// Object Orientated Programming = Q24/26 - Use Closure to Protect Properties Within an Object from Being Modified Externally
+// TASK: Change how weight is declared in the Bird function so it is a private variable. Then, create a method getWeight that returns the value of weight 15.
+// 1. The weight property should be a private variable and should be assigned the value of 15.
+// 2. Your code should create a method in Bird called getWeight that returns the value of the private variable weight.
+// 3. Your getWeight function should return the private variable weight.
+// NOTES: In JavaScript, a function always has access to the context in which it was created. This is called closure.
+// Solution 1
+function Bird() {
+  let.weight = 15; // Private Variable adds closure.!
+    this.getWeightCount = function() { // Method
+    return weight;
+  }
+}
 
 
+// Solution 2
+function Bird(name) {
+  let weight = 15;
+  this.name = name;
+
+  this.getWeight = function() {
+    return weight;
+  };
+
+}
+
+let newWeight = new Bird('New Weight');
+
+console.log(newWeight.getWeight());
+console.log(newWeight.name);
+
+newWeight.weight += 1;
+newWeight.name += '!';
+
+console.log(newWeight.getWeight());
+console.log(newWeight.name);
 
 // Object Orientated Programming = Q23/26 - Use a Mixin to Add Common Behavior Between Unrelated Objects
 // TASK: Create a mixin named glideMixin that defines a method named glide.
 // Then use the glideMixin to give both bird and boat the ability to glide.
+// 1. Your code should declare a glideMixin variable that is a function.
+// 2. Your code should use the glideMixin on the bird object to give it the glide method.
+// 3. Your code should use the glideMixin on the boat object to give it the glide method.
 // NOTES:
 let bird = {
   name: "Donald",
@@ -32,6 +66,18 @@ let boat = {
 };
 
 // Only change code below this line
+// function glideMixin(obj) {} = Refactored
+let glideMixin = function(obj) {
+  obj.glide = function() {
+    console.log("I'm " + this.name + " and I'm Gliding, wooosh!");
+  }
+};
+glideMixin(bird);
+glideMixin(boat);
+
+(bird.glide());
+(boat.glide());
+// Only change code above this line
 
 
 // Object Orientated Programming = Q22/26 - Override Inherited Methods
