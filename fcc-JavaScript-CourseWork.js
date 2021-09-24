@@ -1,14 +1,38 @@
 // ============================== OBJECT ORIENTATED PROGRAMMING ============================ //
-// Object Orientated Programming = Q26/26 - 
-// TASK:
+// Object Orientated Programming = Q26/26 - Use an IIFE to Create a Module
+// TASK: Create a module named funModule to wrap the two mixins isCuteMixin and singMixin.
+// funModule should return an object.
+// 1. funModule should be defined and return an object.
+// 2. funModule.isCuteMixin should access a function.
+// 3. funModule.singMixin should access a function.
 // NOTES:
+let isCuteMixin = function(obj) {
+  obj.isCute = function() {
+    return true;
+  };
+};
+let singMixin = function(obj) {
+  obj.sing = function() {
+    console.log("Singing to an awesome tune");
+  };
+};
 
 
+// Object Orientated Programming = Q25/26 - Understand the Immediately Invoked Function Expression (IIFE)
+// TASK: Rewrite the function makeNest and remove its call so instead it's an anonymous immediately invoked function expression (IIFE).
+// 1. The function should be anonymous.
+// 2. Your function should have parentheses at the end of the expression to call it immediately.
+// NOTES: Anonymous Function
+function makeNest() {
+  console.log('A cozy nest is ready');
+}
 
-// Object Orientated Programming = Q25/26 - 
-// TASK:
-// NOTES:
+makeNest();
 
+// Solution Below = Function Called Immediately
+(function() {
+  console.log("A cozy nest is ready");
+})();
 
 
 // Object Orientated Programming = Q24/26 - Use Closure to Protect Properties Within an Object from Being Modified Externally
