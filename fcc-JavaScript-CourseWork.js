@@ -1,3 +1,19 @@
+// ============================== FUNCTIONAL PROGRAMMING ============================ //
+// TASK: 
+// SOLUTION BELOW: 
+
+
+
+
+
+
+
+
+
+
+
+
+
 // ============================== OBJECT ORIENTATED PROGRAMMING ============================ //
 // Object Orientated Programming = Q26/26 - Use an IIFE to Create a Module
 // TASK: Create a module named funModule to wrap the two mixins isCuteMixin and singMixin.
