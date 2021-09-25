@@ -1,4 +1,89 @@
 // ============================== FUNCTIONAL PROGRAMMING ============================ //
+// Functional Programming = Q26/26 -
+
+// Functional Programming = Q25/26 - 
+
+// Functional Programming = Q24/26 - 
+
+// Functional Programming = Q23/26 - 
+
+// Functional Programming = Q22/26 - 
+
+// Functional Programming = Q21/26 - 
+
+// Functional Programming = Q20/26 - 
+
+// Functional Programming = Q19/26 - 
+
+// Functional Programming = Q18/26 - 
+
+// Functional Programming = Q17/26 - 
+
+// Functional Programming = Q16/26 - 
+
+// Functional Programming = Q15/26 - 
+
+// Functional Programming = Q14/26 - 
+
+// Functional Programming = Q13/26 - 
+
+// Functional Programming = Q12/26 - 
+
+// Functional Programming = Q11/26 - 
+
+// Functional Programming = Q10/26 - 
+
+// Functional Programming = Q9/26 - 
+
+// Functional Programming = Q8/26 - 
+
+// Functional Programming = Q7/26 - 
+
+// Functional Programming = Q6/26 - 
+
+// Functional Programming = Q5/26 - 
+
+// Functional Programming = Q4/26 - 
+
+// Functional Programming = Q3/26 - 
+
+// Functional Programming = Q2/26 - Understanding Functional Programming Terminology
+// TASK: Prepare 27 cups of green tea and 13 cups of black tea and store them in tea4GreenTeamFCC and tea4BlackTeamFCC variables, respectively.
+// Note that the getTea function has been modified so it now takes a function as the first argument.
+// Note: The data (the number of cups of tea) is supplied as the last argument.
+
+// Function that returns a string representing a cup of green tea
+const prepareGreenTea = () => 'greenTea';
+
+// Function that returns a string representing a cup of black tea
+const prepareBlackTea = () => 'blackTea';
+
+/*
+Given a function (representing the tea type) and number of cups needed, the
+following function returns an array of strings (each representing a cup of
+a specific type of tea).
+*/
+const getTea = (prepareTea, numOfCups) => {
+  const teaCups = [];
+
+  for(let cups = 1; cups <= numOfCups; cups += 1) {
+    const teaCup = prepareTea();
+    teaCups.push(teaCup);
+  }
+  return teaCups;
+};
+
+// Only change code below this line
+const tea4GreenTeamFCC = null;
+const tea4BlackTeamFCC = null;
+// Only change code above this line
+
+console.log(
+  tea4GreenTeamFCC,
+  tea4BlackTeamFCC
+);
+
+
 // Functional Programming = Q1/26 - Learn About Functional Programming
 // TASK: In the code editor, the prepareTea and getTea functions are already defined for you. 
 // Call the getTea function to get 40 cups of tea for the team, and store them in the tea4TeamFCC variable.
@@ -44,6 +129,7 @@ following function returns an array of strings (each representing a cup of
   // SOLUTION BELOW: 
 // Only change code below this line
 const tea4TeamFCC = getTea(40);
+console.log(tea4TeamFCC);
 // Only change code above this line
 
 
