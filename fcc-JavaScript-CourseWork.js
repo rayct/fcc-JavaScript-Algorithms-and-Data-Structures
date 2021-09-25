@@ -1,17 +1,50 @@
 // ============================== FUNCTIONAL PROGRAMMING ============================ //
-// TASK: 
-// SOLUTION BELOW: 
+// Functional Programming = Q1/26 - Learn About Functional Programming
+// TASK: In the code editor, the prepareTea and getTea functions are already defined for you. 
+// Call the getTea function to get 40 cups of tea for the team, and store them in the tea4TeamFCC variable.
+// Function that returns a string representing a cup of green tea
+// NOTES: Types of Functions
+// There are four main types of functions.
 
+// 1. First Class Functions
+// In JavaScript all functions are first class functions.
+// That means they can be treated like any other variable.
+// First class functions are functions that can be assigned as values to variables, returned from other functions, and passed as arguments to other functions.
 
+// 2. Callback Functions
+// Callback functions are functions that are passed into other functions as arguments and are called by the function in which they are passed.
+// Simply, callback functions are functions that we write as arguments in other functions.
+// We can't invoke callback functions. They are invoked when the main function in which they were passed as arguments is called.
 
+// 3. Higher Order functions
+// Higher order functions are functions that receive other functions as arguments or return a function.
+// These types of functions receive other functions as arguments or return functions.
 
+// 4. Asynchronous Functions
+// Asynchronous functions are functions that don't have a name and cannot be reused.
+// These functions are normally written when we need to carry out something once and in only one place.
+// 
+const prepareTea = () => 'greenTea';
 
-
-
-
-
-
-
+/*
+Given a function (representing the tea type) and number of cups needed, the
+following function returns an array of strings (each representing a cup of
+  a specific type of tea).
+  */
+ const getTea = (numOfCups) => {
+   const teaCups = [];
+   
+   for(let cups = 1; cups <= numOfCups; cups += 1) {
+     const teaCup = prepareTea();
+     teaCups.push(teaCup);
+    }
+    return teaCups;
+  };
+  
+  // SOLUTION BELOW: 
+// Only change code below this line
+const tea4TeamFCC = getTea(40);
+// Only change code above this line
 
 
 // ============================== OBJECT ORIENTATED PROGRAMMING ============================ //
