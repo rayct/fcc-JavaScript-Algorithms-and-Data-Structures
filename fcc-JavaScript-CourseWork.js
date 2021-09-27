@@ -41,7 +41,20 @@
 
 // Functional Programming = Q6/26 - 
 
-// Functional Programming = Q5/26 - 
+// Functional Programming = Q5/26 - Pass Arguments to Avoid External Dependence in a Function
+// TASK: Write the incrementer function so it takes an argument, and then returns a result after increasing the value by one.
+// 1. Your function incrementer should not change the value of fixedValue (which is 4).
+// 2. Your incrementer function should take an argument.
+// 3. Your incrementer function should return a value that is one larger than the fixedValue value.
+// The global variable
+var fixedValue = 4;
+
+// Only change code below this line
+function incrementer () {
+
+
+  // Only change code above this line
+}
 
 // Functional Programming = Q4/26 - Avoid Mutations and Side Effects Using Functional Programming
 // TASK: Fill in the code for the function incrementer so it returns the value of the global variable fixedValue increased by one.
@@ -53,10 +66,12 @@ var fixedValue = 4;
 
 function incrementer () {
   // Only change code below this line
-
+  return fixedValue +1;
 
   // Only change code above this line
 }
+var newValue = incrementer();
+console.log(fixedValue);
 
 
 // Functional Programming = Q3/26 - Understand the Hazards of Using Imperative Code
