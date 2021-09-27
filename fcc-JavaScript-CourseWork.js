@@ -85,7 +85,7 @@ Window.prototype.tabClose = function (index) {
   // Solution 1.
   // var tabsBeforeIndex = this.tabs.splice(0, index); // Get the tabs before the tab
   // var tabsAfterIndex = this.tabs.splice(index = 1); // Get the tabs after the tab
-  // Slution 2
+  // Solution 2
   var tabsBeforeIndex = this.tabs.slice(0, index); // Get the tabs before the tab
   var tabsAfterIndex = this.tabs.slice(index + 1); // Get the tabs after the tab
 
