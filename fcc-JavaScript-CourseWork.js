@@ -43,7 +43,21 @@
 
 // Functional Programming = Q5/26 - 
 
-// Functional Programming = Q4/26 - 
+// Functional Programming = Q4/26 - Avoid Mutations and Side Effects Using Functional Programming
+// TASK: Fill in the code for the function incrementer so it returns the value of the global variable fixedValue increased by one.
+// 1. Your function incrementer should not change the value of fixedValue (which is 4).
+// 2. Your incrementer function should return a value that is one larger than the fixedValue value.
+// 3. Your incrementer function should return a value based on the global fixedValue variable value.
+// The global variable
+var fixedValue = 4;
+
+function incrementer () {
+  // Only change code below this line
+
+
+  // Only change code above this line
+}
+
 
 // Functional Programming = Q3/26 - Understand the Hazards of Using Imperative Code
 // TASK: Change Window.prototype.tabClose so that it removes the correct tab.
@@ -68,11 +82,14 @@ Window.prototype.tabOpen = function (tab) {
 Window.prototype.tabClose = function (index) {
 
   // Only change code below this line
+  // Solution 1.
+  // var tabsBeforeIndex = this.tabs.splice(0, index); // Get the tabs before the tab
+  // var tabsAfterIndex = this.tabs.splice(index = 1); // Get the tabs after the tab
+  // Slution 2
+  var tabsBeforeIndex = this.tabs.slice(0, index); // Get the tabs before the tab
+  var tabsAfterIndex = this.tabs.slice(index + 1); // Get the tabs after the tab
 
-  var tabsBeforeIndex = this.tabs.splice(0, index); // Get the tabs before the tab
-  var tabsAfterIndex = this.tabs.splice(index + 1); // Get the tabs after the tab
-
-  this.tabs = tabsBeforeIndex.concat(tabsAfterIndex); // Join them together
+  this.tabs = tabsAfterIndex.concat(tabsAfterIndex); // Join them together
 
   // Only change code above this line
 
@@ -89,7 +106,7 @@ var finalTabs = socialWindow
   .tabOpen() // Open a new tab for cat memes
   .join(videoWindow.tabClose(2)) // Close third tab in video window, and join
   .join(workWindow.tabClose(1).tabOpen());
-console.log(finalTabs.tabs);
+  console.log(finalTabs.tabs);
 
 
 // Functional Programming = Q2/26 - Understanding Functional Programming Terminology
