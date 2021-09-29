@@ -39,7 +39,11 @@
 
 // Functional Programming = Q7/26 - 
 
-// Functional Programming = Q6/26 - 
+// Functional Programming = Q6/26 - Refactor Global Variables Out of Functions
+// TASK: Rewrite the code so the global array bookList is not changed inside either function.
+// The add function should add the given bookName to the end of the array passed to it and return a new array (list).
+// The remove function should remove the given bookName from the array passed to it.
+// NOTES: Both functions should return an array, and any new parameters should be added before the bookName parameter.
 
 // Functional Programming = Q5/26 - Pass Arguments to Avoid External Dependence in a Function
 // TASK: Write the incrementer function so it takes an argument, and then returns a result after increasing the value by one.
@@ -50,11 +54,14 @@
 var fixedValue = 4;
 
 // Only change code below this line
-function incrementer () {
+function incrementer (numToIncrement) {
 
+  return numToIncrement +1;
 
   // Only change code above this line
 }
+console.log(fixedValue);
+
 
 // Functional Programming = Q4/26 - Avoid Mutations and Side Effects Using Functional Programming
 // TASK: Fill in the code for the function incrementer so it returns the value of the global variable fixedValue increased by one.
