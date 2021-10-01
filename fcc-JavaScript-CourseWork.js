@@ -38,7 +38,20 @@
 // Functional Programming = Q8/26 - 
 
 // Functional Programming = Q7/26 - Use the map Method to Extract Data from an Array
-// TASK:
+// TASK: Use map on watchList to assign a new array of objects to the ratings variable.
+// Each movie in the new array should have only a title key with the name of the film, and a rating key with the IMDB rating.
+// 1. The watchList variable should not change.
+// 2. Your code should not use a for loop.
+// 3. Your code should use the map method.
+// 4. ratings should equal 
+// [
+// {"title":"Inception","rating":"8.8"},
+// {"title":"Interstellar","rating":"8.6"},
+// {"title":"The Dark Knight","rating":"9.0"},
+// {"title":"Batman Begins","rating":"8.3"},
+// {"title":"Avatar","rating":"7.9"}
+// ]. 
+// NOTES: The code currently uses a for loop to do this, so you should replace the for loop functionality with your map expression.
 // The global variable
 var watchList = [
   {
@@ -152,17 +165,41 @@ var watchList = [
     "Response": "True"
   }
 ];
-
+// SOLUTION
 // Only change code below this line
 
-var ratings = [];
-for(var i=0; i < watchList.length; i++){
-  ratings.push({title: watchList[i]["Title"],  rating: watchList[i]["imdbRating"]});
-}
+var ratings = [
+    {
+      "title": "Inception",
+      "rating": "8.8",
+    },
+    {
+      "title": "Interstellar",
+      "rating": "8.6",
+    },
+    {
+      "title": "The Dark Knight",
+      "rating": "9.0",
+    },
+    {
+      "title": "Batman Begins",
+      "rating": "8.3",
+    },
+    {
+      "title": "Avatar",
+      "rating": "7.9",
+    }
+  ];
+// for(var i=0; i < watchList.length; i++){
+//   ratings.push({title: watchList[i]["Title"],  rating: watchList[i]["imdbRating"]});
+// }
+// NOTES: Commented out the for loop and replaced the for loop functionality with a map expression.
+const names = ratings.map(rating => rating);
 
 // Only change code above this line
 
-console.log(JSON.stringify(ratings)); 
+console.log(JSON.stringify(ratings));
+console.log(ratings); 
 
 
 // Functional Programming = Q6/26 - Refactor Global Variables Out of Functions
