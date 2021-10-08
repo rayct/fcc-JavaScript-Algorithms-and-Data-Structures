@@ -1,36 +1,63 @@
 // ============================== FUNCTIONAL PROGRAMMING ============================ //
 // Functional Programming = Q26/26 -
-
+// TASK: 
+// NOTES:
 // Functional Programming = Q25/26 - 
-
+// TASK: 
+// NOTES:
 // Functional Programming = Q24/26 - 
-
+// TASK: 
+// NOTES:
 // Functional Programming = Q23/26 - 
-
+// TASK: 
+// NOTES:
 // Functional Programming = Q22/26 - 
-
+// TASK: 
+// NOTES:
 // Functional Programming = Q21/26 - 
-
+// TASK: 
+// NOTES:
 // Functional Programming = Q20/26 - 
-
+// TASK: 
+// NOTES:
 // Functional Programming = Q19/26 - 
-
+// TASK: 
+// NOTES:
 // Functional Programming = Q18/26 - 
-
+// TASK: 
+// NOTES:
 // Functional Programming = Q17/26 - 
-
+// TASK: 
+// NOTES:
 // Functional Programming = Q16/26 - 
-
+// TASK: 
+// NOTES:
 // Functional Programming = Q15/26 - 
-
+// TASK: 
+// NOTES:
 // Functional Programming = Q14/26 - 
-
+// TASK: 
+// NOTES:
 // Functional Programming = Q13/26 - 
+// TASK: 
+// NOTES:
+// Functional Programming = Q12/26 - Remove Elements from an Array Using slice Instead of splice
+// TASK: Rewrite the function nonMutatingSplice by using slice instead of splice.
+// It should limit the provided cities array to a length of 3, and return a new array with only the first three items.
+// NOTES:
+function nonMutatingSplice(cities) {
+  // Only change code below this line
+  return cities.splice(3);
 
-// Functional Programming = Q12/26 - 
+  // Only change code above this line
+}
+var inputCities = ["Chicago", "Delhi", "Islamabad", "London", "Berlin"];
+nonMutatingSplice(inputCities);
+
 
 // Functional Programming = Q11/26 - Return Part of an Array Using the slice Method
-// TASK:
+// TASK: Use the slice method in the sliceArray function to return part of the anim array given the provided beginSlice and endSlice indices.
+// The function should return an array.
 // NOTES:
 functionsliceArray(anim, beginSlice, endSlice) {
   // Only change code below this line
@@ -42,7 +69,7 @@ functionsliceArray(anim, beginSlice, endSlice) {
 
 
   // Only change code above this line
-}
+};
 var inputAnim = ['Cat', 'Dog', 'Tiger', 'Zebra', 'Ant'];
 sliceArray(inputAnim, 1, 3);
 console.log(inputAnim);
