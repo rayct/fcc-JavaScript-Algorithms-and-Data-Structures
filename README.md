@@ -222,7 +222,6 @@ Passed
 # Use Recursion to Create a Range of Numbers
 Passed
 
-
 <!-- Course 2 ES6 - JavaScript Algorithms and Data Structures - 31 Questions -->
 # Explore Differences Between the var and let Keywords
 Passed
@@ -288,6 +287,15 @@ Passed
 Passed
 
 <!-- Course 3 Regular Expressions - JavaScript Algorithms and Data Structures - 33 Questions -->
+Course Passed!
+
+<!-- Course 4 Functional Programming - JavaScript Algorithms and Data Structures - 26 Questions-->
+# Functional Programming = Q1/26 - Learn About Functional Programming
+Passed
+# 
+
+
+
 
 
 
