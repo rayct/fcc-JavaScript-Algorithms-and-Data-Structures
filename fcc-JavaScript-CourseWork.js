@@ -1,58 +1,112 @@
-// ============================== FUNCTIONAL PROGRAMMING ============================ //
+// ============================== FUNCTIONAL PROGRAMMING IN JAVASCRIPT ============================ //
 // Functional Programming = Q26/26 -
 // TASK: 
 // NOTES:
-// Functional Programming = Q25/26 - 
+
+
+// Functional Programming = Q25/26 -
 // TASK: 
 // NOTES:
-// Functional Programming = Q24/26 - 
+
+
+// Functional Programming = Q24/26 -
 // TASK: 
 // NOTES:
-// Functional Programming = Q23/26 - 
+
+
+// Functional Programming = Q23/26 -
 // TASK: 
 // NOTES:
-// Functional Programming = Q22/26 - 
+
+
+// Functional Programming = Q22/26 -
 // TASK: 
 // NOTES:
-// Functional Programming = Q21/26 - 
+
+
+// Functional Programming = Q21/26 -
 // TASK: 
 // NOTES:
-// Functional Programming = Q20/26 - 
+
+
+// Functional Programming = Q20/26 -
 // TASK: 
 // NOTES:
-// Functional Programming = Q19/26 - 
+
+
+// Functional Programming = Q19/26 -
 // TASK: 
 // NOTES:
-// Functional Programming = Q18/26 - 
+
+// Functional Programming = Q18/26 -
 // TASK: 
 // NOTES:
-// Functional Programming = Q17/26 - 
+
+// Functional Programming = Q17/26 -
 // TASK: 
 // NOTES:
-// Functional Programming = Q16/26 - 
+
+
+// Functional Programming = Q16/26 -
 // TASK: 
 // NOTES:
+
+
 // Functional Programming = Q15/26 - 
 // TASK: 
 // NOTES:
-// Functional Programming = Q14/26 - 
+
+
+// Functional Programming = Q14/26 - Add Elements to the End of an Array Using concat Instead of push
 // TASK: 
 // NOTES:
-// Functional Programming = Q13/26 - 
-// TASK: 
+function nonMutatingPush(original, newItem) {
+  // Only change code below this line
+  
+  return original.push(newItem);
+
+  // Only change code above this line
+}
+var first = [1, 2, 3];
+var second = [4, 5];
+nonMutatingPush(first, second);
+
+
+// Functional Programming = Q13/26 - Combine Two Arrays Using the concat Method
+// TASK: Use the concat method in the nonMutatingConcat function to concatenate attach to the end of original.
+// The function should return the concatenated array.
 // NOTES:
+function nonMutatingConcat(original, attach) {
+  
+  // Only change code below this line
+  // Solution 1
+  // let newArray = [1, 2, 3].concat([4, 5]);
+  // return newArray;
+
+  // Solution 2
+  return original.concat(attach);
+
+  // Only change code above this line
+}
+var first = [1, 2, 3];
+var second = [4, 5];
+nonMutatingConcat(first, second);
+
+
 // Functional Programming = Q12/26 - Remove Elements from an Array Using slice Instead of splice
 // TASK: Rewrite the function nonMutatingSplice by using slice instead of splice.
 // It should limit the provided cities array to a length of 3, and return a new array with only the first three items.
 // NOTES:
 function nonMutatingSplice(cities) {
   // Only change code below this line
-  return cities.splice(3);
+
+  return cities.slice(0, 3);
 
   // Only change code above this line
 }
 var inputCities = ["Chicago", "Delhi", "Islamabad", "London", "Berlin"];
-nonMutatingSplice(inputCities);
+console.log(nonMutatingSplice(inputCities));
+console.log(inputCities, '<= should not change');
 
 
 // Functional Programming = Q11/26 - Return Part of an Array Using the slice Method
