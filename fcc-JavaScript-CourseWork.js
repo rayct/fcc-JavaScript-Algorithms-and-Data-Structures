@@ -1,4 +1,4 @@
-// ============================== FUNCTIONAL PROGRAMMING IN JAVASCRIPT ============================ //
+// ============================== FUNCTIONAL PROGRAMMING IN JAVASCRIPT - HIGHER ORDER FUNCTIONS ============================ //
 // Functional Programming = Q26/26 -
 // TASK: 
 // NOTES:
@@ -34,22 +34,74 @@
 // NOTES:
 
 
-// Functional Programming = Q19/26 -
-// TASK: 
+// Functional Programming = Q19/26 - Split a String into an Array Using the split Method
+// TASK: Use the split method inside the splitify function to split str into an array of words.
+// The function should return the array.
+// Note that the words are not always separated by spaces, and the array should not contain punctuation.
 // NOTES:
+function splitify(str) {
+ // Only change code below this line
 
-// Functional Programming = Q18/26 -
-// TASK: 
+  
+  
+  
+// Only change code above this line 
+}
+splitify('Hello World,I-am code');
+
+
+// Functional Programming = Q18/26 - Return a Sorted Array Without Changing the Original Array
+// TASK: Use the sort method in the nonMutatingSort function to sort the elements of an array in ascending order.
+// The function should return a new array, and not mutate the globalArray variable.
 // NOTES:
+var globalArray = [5, 6, 3, 2, 9];
+function nonMutatingSort(arr) {
+  // Add your code below this line
+  return [].concat(arr).sort(function (a, b) {
+    // return [].concat(arr).sort((a, b) => { // ES6
+    return a - b;
+  });
+  // Add your code above this line
+}
+console.log(nonMutatingSort([1, 30, 4, 21, 100000]));
 
-// Functional Programming = Q17/26 -
+
+// Functional Programming = Q17/26 - Sort an Array Alphabetically using the sort Method
 // TASK: 
-// NOTES:
+// NOTES: The sort method sorts the elements of an array according to the callback function.
+function alphabeticalOrder(arr) {
+  // Only change code below this line
+
+  return arr.sort(function (a, b) {
+    // return arr.sort((a, b) => { // ES6
+    return a === b ? 0 : a > b ? 1 : -1;
+  });
+  // Only change code above this line
+}
+console.log(alphabeticalOrder(["a", "d", "c", "a", "z", "g"]));
 
 
-// Functional Programming = Q16/26 -
-// TASK: 
-// NOTES:
+// Functional Programming = Q16/26 - Use Higher-Order Functions map, filter, or reduce to Solve a Complex Problem
+// TASK: Complete the code for the squareList function using any combination of map(), filter(), and reduce().
+// The function should return a new array containing the squares of only positive integers(decumal numbers are not integers) when an array of real numbers is passed to it.
+// NOTES: An example of an array of real numbers is [-3, 4.8, 5, 3, -3.2]. 
+// Your function should not use any kind of for or while loops or the forEach() function.
+const squareList = arr => {
+  // Only change code below this line
+  // let result = []; ES6 Refactored
+  // let positiveIntegersSquared = arr.filter(function (num) {
+  let positiveIntegersSquared = arr.filter(num => { // ES6
+    if (Number.isInteger(num) && num > 0) return num;
+    // }).map(function (num) {
+    }).map(num => { return num * num; }); // ES6 
+
+
+  return positiveIntegersSquared;
+  // Only change code above this line
+};
+
+const squaredIntegers = squareList([4, 5.6, -9.8, 3.14, 42, 6, 8.34, -2]);
+console.log(squaredIntegers);
 
 
 // Functional Programming = Q15/26 - Use the reduce Method to Analyze Data
