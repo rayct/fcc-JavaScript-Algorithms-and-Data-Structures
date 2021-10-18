@@ -24,14 +24,49 @@
 // NOTES:
 
 
-// Functional Programming = Q21/26 -
-// TASK: 
+// Functional Programming = Q21/26 - Apply Functional Programming to Convert Strings to URL Slugs
+// TASK: Fill in the urlSlug function so it converts a string title and returns the hyphenated version for the URL.
+// You can use any of the methods covered in this section, and don't use replace. Here are the requirements:
+// 1. The input is a string with spaces and title-cased words
+// 2. The output is a string with the spaces between words replaced by a hyphen(-)
+// 3. The ouput should be all lower-cased letters
+// 4. The output should not have any spaces
 // NOTES:
+// Only change code below this line
+var globalTitle = 'Winter is Coming';
+
+function urlSlug(title) {
+  let slug = title.slice();
+  return slug.toLowerCase().split(/\W+/).filter((item) => item.length > 0).join("-");
+
+}
+console.log(globalTitle);
+// Only change code above this line
 
 
-// Functional Programming = Q20/26 -
-// TASK: 
+// Functional Programming = Q20/26 - Combine an Array into a String Using the join Method
+// TASK: Use the join method (among others) inside the sentensify function to make a sentence from the words in the string str.
+// The function should return a string.For example, I - like - Star - Wars would be converted to I like Star Wars.
+// For this challenge, do not use the replace method.
 // NOTES:
+function sentensify(str) {
+  // Only change code below this line
+
+  let newResult = str.split(/\W/); // <= /\W/ = NON Alpha Numeric characters
+  let joinedResult = newResult.join(' ');
+  return joinedResult;
+
+  // Only change code above this line
+}
+console.log(sentensify("May-the-force-be-with-you")); // <= Output: May the force be with you
+
+// Another Solution to the above challenge.
+function sentensify(str) {
+  return str.split(/\W/).join('');
+ }
+let globalString = 'The.force.is.strong.with.this.one';
+console.log(sentensify(globalString));
+console.log(globalString);
 
 
 // Functional Programming = Q19/26 - Split a String into an Array Using the split Method
@@ -41,13 +76,15 @@
 // NOTES:
 function splitify(str) {
  // Only change code below this line
-
   
+return str.split(/\W/); // <= Solution 1
   
-  
+//  let newArray = str.split(/\W/); // <= Solution 2
+//  return newArray;
+ 
 // Only change code above this line 
 }
-splitify('Hello World,I-am code');
+console.log(splitify('Hello World,I-am code'));
 
 
 // Functional Programming = Q18/26 - Return a Sorted Array Without Changing the Original Array
@@ -2533,7 +2570,8 @@ console.log(result);
 // Regular Expressions = Q15/33 - Find One or More Criminals in a Hunt
 // NOTES:  plus + sign to look for characters that occur one or more times.
 let reCriminals = /C+/; // Change this line
-console.log(reCriminals);
+  console.log(reCriminals);
+  
 
 // Regular Expressions = Q14/33 - Find Characters with Lazy Matching
 let text = "<h1>Winter is coming</h1>";
@@ -2543,6 +2581,7 @@ console.log(result);
 // In regular expressions, a greedy match finds the longest possible part of a string that fits the regex pattern and returns it as a match.
 // The alternative is called a lazy match, which finds the smallest possible part of the string that satisfies the regex pattern.
 
+  
 // Regular Expressions = Q13/33 - Match Characters that Occur Zero or More Times
 // Only change code below this line
 let chewieRegex = /Aa*/; // Change this line = * Matches characters that occur zero or more times.
@@ -2550,65 +2589,76 @@ let chewieRegex = /Aa*/; // Change this line = * Matches characters that occur z
 let result = chewieQuote.match(chewieRegex);
 console.log(result);
 
+  
 // Regular Expressions = Q12/33 - Match Characters that Occur One or More Times, plus + sign to look for characters that occur one or more times
 let difficultSpelling = "Mississippi";
 let myRegex = /s+/g; // Change this line
 let result = difficultSpelling.match(myRegex);
 console.log(result);
 
+  
 // Regular Expressions = Q11/33 - Match Single Characters Not Specified eg: negated character sets.
 let quoteSample = "3 blind mice";
 let myRegex = /[^aeiou,3]/gi; // Change this line
 let result = quoteSample.match(myRegex);
 console.log(result);
 
+  
 // Regular Expressions = Q10/33 - Match Numbers and Letters of the Alphabet
 let quoteSample = "Blueberry 3.141592653s are delicious.";
 let myRegex = /[h-s2-6]/gi; // Change this line
 let result = quoteSample.match(myRegex); // Change this line
 console.log(result);
 
+  
 // Regular Expressions = Q9/33 - Match Letters of the Alphabet
 let quoteSample = "The quick brown fox jumps over the lazy dog.";
 let alphabetRegex = /[a-z]gi/; // Change this line
 let result = quoteSample.match(alphabetRegex); // Change this line
 console.log(result);
 
+  
 // Regular Expressions = Q8/33 - Match Single Character with Multiple Possibilities
 let quoteSample = "Beware of bugs in the above code; I have only proved it correct, not tried it.";
 let vowelRegex = /[aeiou]/gi; // Change this line = Using Global Flags g and i.
 let result = quoteSample.match(vowelRegex); // Change this line
 console.log(vowelRegex);
 
+  
 // Regular Expressions = Q7/33 - Match Anything with Wildcard Period
 let exampleStr = "Let's have fun with regular expressions!";
 let unRegex = /un./; // Change this line = The wildcard character . will match any one character.
 let result = unRegex.test(exampleStr);
 console.log(unRegex);
 
+  
 // Regular Expressions = Q6/33 - Find More Than the First Match
 let twinkleStar = "Twinkle, twinkle, little star";
 let startRegex = /Twinkle/gi; // g-flag Extracts a pattern more than once, i-flag ignores case sensitivety
 let result = twinkleStar.match(starRegex);
 console.log(starRegex);
 
+  
 // Regular Expressions = Q5/33 - Extract Matches
 let extractStr = "Extract the word 'coding' from this string.";
 let codingRegex = /coding/; // Change this line
 let result = extractStr.match(codingRegex); // Change this line
 console.log(codingRegex); // Change this line
 
+  
 // Regular Expressions = Q4/33 - Ignore Case While Matching
 let myString = "freeCodeCamp";
 let fccRegex = /freeCodeCamp/i; // Change this line
 let result = fccRegex.test(myString);
-  console.log(fccRegex);
+console.log(fccRegex);
   
+
 // Regular Expressions = Q3/33 - Match a Literal String with Different Possibilities
 let petString = "James has a pet cat.";
 let petRegex = /dog|cat|bird|fish/; // Change this line
 let result = petRegex.test(petString);
-  console.log(petRegex);
+console.log(petRegex);
+
   
 // Regular Expressions = Q2/33 - Match Literal Strings
 let waldoIsHiding = "Somewhere Waldo is hiding in this text.";
@@ -2616,12 +2666,14 @@ let waldoRegex = /Waldo/; // Change this line
 let result = waldoRegex.test(waldoIsHiding);
 console.log(result);
 
+  
 // Regular Expressions = Q1/33 - Using the Test Method
 let myString = "Hello, World!";
 let myRegex = /Hello/;
 let result = myRegex.test(myString);
 console.log(myRegex);
 
+  
 // ============================== ES6 ================================ //
 
 // ES6 = Q31 - Handle a Rejected Promise with catch - ES6 Completed
