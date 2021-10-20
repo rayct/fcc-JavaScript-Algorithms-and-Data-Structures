@@ -1,27 +1,70 @@
 // ============================== FUNCTIONAL PROGRAMMING IN JAVASCRIPT - HIGHER ORDER FUNCTIONS ============================ //
-// Functional Programming = Q26/26 -
+// Functional Programming = Q24/26 - Introduction to Currying and Partial Application
 // TASK: 
 // NOTES:
+function add(x) {
+  // Only change code below this line
 
 
-// Functional Programming = Q25/26 -
+  // Only change code above this line
+}
+add(10)(20)(30);
+
+
+// Functional Programming = Q23/26 - Use the some Method to Check that Any Elements in an Array Meet a Criteria
 // TASK: 
 // NOTES:
+// Solution 1
+function checkPositive(arr) {
+  // Only change code below this line
+  
+  let result = arr.some(function(value) {
+    console.log(value);
+    return value > 0;
+  });
+  return result;
+
+  // Only change code above this line
+}
+console.log(checkPositive([1, 2, 3, -4, 5]));
+
+// Solution 2 - Refactored ES6
+function checkPositive(arr) {
+  // Only change code below this line
+  
+  return arr.some(v => { return v > 0; });
+
+  // Only change code above this line
+}
+console.log(checkPositive([1, 2, 3, -4, 5]));
 
 
-// Functional Programming = Q24/26 -
-// TASK: 
+// Functional Programming = Q22/26 - Use the every Method to Check that Every Element in an Array Meets a Criteria
+// TASK: Use the every method inside the checkPositive function to check if every element in arr is positive.
+// The function should return a Boolean value.
 // NOTES:
+// Solution 1. Refactored Solution
+function checkPositive(arr) {
+  // Only change code below this line
 
+  return arr.every(v => { return v > 0; });
 
-// Functional Programming = Q23/26 -
-// TASK: 
-// NOTES:
+  // Only change code above this line
+}
+checkPositive([1, 2, 3, -4, 5]);
 
+// Solution 2. Long way.
+function checkPositive(arr) {
+  // Only change code below this line
 
-// Functional Programming = Q22/26 -
-// TASK: 
-// NOTES:
+  let result = arr.every(function(value) {
+    return value > 0;
+  });
+  return result;
+
+  // Only change code above this line
+}
+checkPositive([1, 2, 3, -4, 5]);
 
 
 // Functional Programming = Q21/26 - Apply Functional Programming to Convert Strings to URL Slugs
@@ -813,7 +856,7 @@ Window.prototype.join = function (otherWindow) {
 };
 
 // When you open a new tab at the end
-Window.prototype.tabOpen = function (tab) {
+Window.prototype.tabOpen = function (_tab) {
   this.tabs.push('new tab'); // Let's open a new tab for now
   return this;
 };
@@ -2736,7 +2779,7 @@ const makeServerRequest = new Promise((resolve, reject) => {
 });
 
 //  ES6 = Q28 - Create a JavaScript Promise
-const makeServerRequest = new Promise((reolve, reject) => {
+const makeServerRequest = new Promise((_reolve, _reject) => {
 
 });
 

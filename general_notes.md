@@ -22,3 +22,12 @@ for (count = 2; count >= 0; --count )
 To Learn List of 2021
   # TypeScript
   frank raymond turner jksjdhfj tiuir  rturner rueJKLJKL;FDSAFSAFSAFDDSSFFDSAJKLJKLSA;LL
+
+  Programming Languages list in order of learning languages 2021
+  1. JavaScript
+  2. Python
+  3. Go
+  4. C#
+  4. Swift
+  5. Kotlin
+  6. Java
