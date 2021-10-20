@@ -1,14 +1,145 @@
+// ============================== INTERMEDIATE ALGORITHM SCRIPTING ============================ //
+// Intermediate Algorithm Scripting = Q21/21 - 
+// TASK: 
+// NOTES: 
+
+
+// Intermediate Algorithm Scripting = Q20/21 - 
+// TASK: 
+// NOTES: 
+
+
+// Intermediate Algorithm Scripting = Q19/21 - 
+// TASK: 
+// NOTES: 
+
+
+// Intermediate Algorithm Scripting = Q18/21 - 
+// TASK: 
+// NOTES: 
+
+
+// Intermediate Algorithm Scripting = Q17/21 - 
+// TASK: 
+// NOTES: 
+
+
+// Intermediate Algorithm Scripting = Q16/21 - 
+// TASK: 
+// NOTES: 
+
+
+// Intermediate Algorithm Scripting = Q15/21 - 
+// TASK: 
+// NOTES: 
+
+
+// Intermediate Algorithm Scripting = Q14/21 - 
+// TASK: 
+// NOTES: 
+
+
+// Intermediate Algorithm Scripting = Q13/21 - 
+// TASK: 
+// NOTES: 
+
+
+// Intermediate Algorithm Scripting = Q12/21 - 
+// TASK: 
+// NOTES: 
+
+
+// Intermediate Algorithm Scripting = Q11/21 - 
+// TASK: 
+// NOTES: 
+
+
+// Intermediate Algorithm Scripting = Q10/21 - 
+// TASK: 
+// NOTES: 
+
+
+// Intermediate Algorithm Scripting = Q9/21 - 
+// TASK: 
+// NOTES: 
+
+
+// Intermediate Algorithm Scripting = Q8/21 - 
+// TASK: 
+// NOTES: 
+
+
+// Intermediate Algorithm Scripting = Q7/21 - 
+// TASK: 
+// NOTES: 
+
+
+// Intermediate Algorithm Scripting = Q6/21 - 
+// TASK: 
+// NOTES: 
+
+
+// Intermediate Algorithm Scripting = Q5/21 - 
+// TASK: 
+// NOTES: 
+
+
+// Intermediate Algorithm Scripting = Q4/21 - 
+// TASK: 
+// NOTES: 
+
+
+// Intermediate Algorithm Scripting = Q3/21 - 
+// TASK: 
+// NOTES: 
+
+
+// Intermediate Algorithm Scripting = Q2/21 - 
+// TASK: 
+// NOTES: 
+
+
+// Intermediate Algorithm Scripting = Q1/21 - Sum All Numbers in a Range
+// TASK: We'll pass you an array of two numbers.
+// Return the sum of those two numbers plus the sum of all the numbers between them.
+// The lowest number will not always come first.
+// NOTES: For example, sumAll([4,1]) should return 10 because sum of all the numbers between 1 and 4 (both inclusive) is 10.
+function sumAll(arr) {
+  return 1;
+}
+
+sumAll([1, 4]);
+
+
 // ============================== FUNCTIONAL PROGRAMMING IN JAVASCRIPT - HIGHER ORDER FUNCTIONS ============================ //
 // Functional Programming = Q24/26 - Introduction to Currying and Partial Application
-// TASK: 
+// TASK: Fill in the body of the add function so it uses currying to add parameters x, y, and z.
 // NOTES:
+// Solution 1
 function add(x) {
   // Only change code below this line
 
+  return function (y) {
+    return function (z) {
+      return x + y + z;
+
+    }
+  }
 
   // Only change code above this line
 }
-add(10)(20)(30);
+console.log(add(10)(20)(30)); // <= Output will be 60
+
+// Solution 2
+function add(x) {
+  // Only change code below this line
+
+  return  y => z => y + x + z; // Curried ES6 using arrow functions
+
+  // Only change code above this line
+}
+console.log(add(10)(20)(30)); // <= Output will be 60
+
 
 
 // Functional Programming = Q23/26 - Use the some Method to Check that Any Elements in an Array Meet a Criteria
