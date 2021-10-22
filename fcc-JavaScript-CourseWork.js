@@ -94,9 +94,28 @@
 // NOTES: 
 
 
-// Intermediate Algorithm Scripting = Q2/21 - 
+// Intermediate Algorithm Scripting = Q2/21 - Diff Two Arrays
 // TASK: 
 // NOTES: 
+function diffArray(arr1, arr2) {
+  var newArr = [];
+ 
+  for (var i=0; i<arr1.length;i++){
+     if (arr2.indexOf(arr1[i])===-1){
+       newArr.push(arr1[i])
+      } 
+  
+}
+  for (var x=0; x<arr2.length;x++){
+    if(arr1.indexOf(arr2[x])===-1){
+      newArr.push(arr2[x]);
+    }
+}
+
+return newArr; 
+} 
+
+console.log(diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]));
 
 
 // Intermediate Algorithm Scripting = Q1/21 - Sum All Numbers in a Range
@@ -105,10 +124,17 @@
 // The lowest number will not always come first.
 // NOTES: For example, sumAll([4,1]) should return 10 because sum of all the numbers between 1 and 4 (both inclusive) is 10.
 function sumAll(arr) {
-  return 1;
+  let minNum = Math.min(arr[0], arr[1]);
+  let maxNum = Math.max(arr[0], arr[1]);
+  var result = 0;
+
+  for (var i = minNum; i <= maxNum; i += 1) {
+    result += i;
+  }
+  return result;
 }
 
-sumAll([1, 4]);
+console.log(sumAll([1, 15]));
 
 
 // ============================== FUNCTIONAL PROGRAMMING IN JAVASCRIPT - HIGHER ORDER FUNCTIONS ============================ //
