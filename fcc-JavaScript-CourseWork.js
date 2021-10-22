@@ -96,7 +96,7 @@
 
 // Intermediate Algorithm Scripting = Q2/21 - Diff Two Arrays
 // TASK: 
-// NOTES: 
+// NOTES: Using two for loops and two if statements to find the diff in two arrays
 function diffArray(arr1, arr2) {
   var newArr = [];
  
