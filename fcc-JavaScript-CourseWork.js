@@ -79,19 +79,129 @@
 // NOTES: 
 
 
-// Intermediate Algorithm Scripting = Q5/21 - 
-// TASK: 
+// Intermediate Algorithm Scripting = Q5/21 - Spinal Tap Case
+// TASK: Convert a string to spinal case. Spinal case is all-lowercase-words-joined-by-dashes.
 // NOTES: 
+function spinalCase(str) {
 
 
-// Intermediate Algorithm Scripting = Q4/21 - 
-// TASK: 
+
+  
+  return str;
+}
+console.log(spinalCase('This is Spinal Tap'));
+
+// Intermediate Algorithm Scripting = Q4/21 - Wherefore art thou
+// TASK: Make a function that looks through an array of objects (first argument) and returns an array of all objects that have matching name and value pairs (second argument).
+// Each name and value pair of the source object has to be present in the object from the collection if it is to be included in the returned array.
+// NOTES:
+// Solution 1:
+function whatIsInAName(collection, source) {
+  // What's in a name?
+  var arr = [];
+  // Only change code below this line
+  var sourceKeys = Object.keys(source);
+  arr = collection.filter(function(obj) {
+    return sourceKeys.every(function(sourceKeys) {
+      return obj.hasOwnProperty(sourceKeys) && obj[sourceKeys] === source[sourceKeys];
+    });
+  });
+  
+  // Only change code above this line
+  return arr;
+}
+
+
+// Solution 2: 
+function whatIsInAName(collection, source) {
+  var arr = [];
+  // Only change code below this line
+  
+  // function below converts an object sent into an array of stringified concatenated key-value pairs
+  function convertObj(object) {
+    let arrOfKeyValuePairs = [];
+    for (const [key, value] of Object.entries(object)) {
+      arrOfKeyValuePairs.push(`${key}${value}`);
+    }
+    return arrOfKeyValuePairs;
+  }
+  
+  // check whether an array within the collection array contains all elements of the source array
+  function checkIfIncludesEvery(collectionArray, sourceArray) {
+    return sourceArray.every(element => collectionArray.includes(element));
+  }
+  
+  // convert the source object into an array of stringified concatenated key-value pairs
+  let sourceObjArray = convertObj(source);
+  
+  // for each array within the collection array check whether it contains all elements of the source array and if so, then push the corresponding object to the final return arr
+  for (let j = 0; j < collection.length; j++) {    
+    if (checkIfIncludesEvery(convertObj(collection[j]), sourceObjArray)) {
+      arr.push(collection[j]);
+    }
+  }
+  
+  return arr;
+} 
+
+
+console.log(whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], { last: "Capulet" }));
+// Solution 3:
+function whatIsInAName(collection, source) {
+  var arr = [];
+  // Only change code below this line
+  var n=0;
+  
+  var l = Object.keys(source);
+  var nb = l.length;
+  for(var j in collection){
+    var res = 0;
+    for (var i in source) {
+      if (source.hasOwnProperty(i)) {
+        var valeur = source[i];
+        var s = new Object();
+        var d = collection[j].hasOwnProperty(i);
+        
+    for(var k in collection[j]){
+      if(k === i){
+          if(collection[j][k] === valeur){
+            res++;
+            if(res === nb){
+              s = collection[j];
+              arr[n] = s;
+                n++;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Only change code above this line
+  return arr;
+}
+
+console.log(whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], { last: "Capulet" }));
+
+
+// Intermediate Algorithm Scripting = Q3/21 - Seek and Destroy
+// TASK: Remove all elements from the initial array that are of the same value as these arguments.
 // NOTES: 
+function destroyer(arr) {
+  const result = Array.prototype.slice.call(arguments);
+  const [first, ...rest] = result;
 
+  const fileList = first.filter(function (event) {
+    // const fileList = first.filter(event => { // Refactored to ES6 arrow function
+  return rest.indexOf(event) === -1;
+ })
 
-// Intermediate Algorithm Scripting = Q3/21 - 
-// TASK: 
-// NOTES: 
+ return fileList;
+}
+  
+console.log(destroyer(["possum", "trollo", 12, "safari", "hotdog", 92, 65, "grandma", "bugati", "trojan", "yacht"],
+  "yacht", "possum", "trollo", "safari", "hotdog", "grandma", "bugati", "trojan"));
 
 
 // Intermediate Algorithm Scripting = Q2/21 - Diff Two Arrays
@@ -102,13 +212,13 @@ function diffArray(arr1, arr2) {
   var newArr = [];
  
   for (var i=0; i < arr1.length; i += 1){
-     if (arr2.indexOf(arr1[i])===-1){
+     if (arr2.indexOf(arr1[i])=== -1){
        newArr.push(arr1[i])
       } 
   
 }
   for (var x=0; x<arr2.length; x += 1){
-    if(arr1.indexOf(arr2[x])===-1){
+    if(arr1.indexOf(arr2[x])=== -1){
       newArr.push(arr2[x]);
     }
 }
