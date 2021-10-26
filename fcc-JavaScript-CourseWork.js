@@ -81,15 +81,29 @@
 
 // Intermediate Algorithm Scripting = Q5/21 - Spinal Tap Case
 // TASK: Convert a string to spinal case. Spinal case is all-lowercase-words-joined-by-dashes.
-// NOTES: 
+// NOTES: A regular expression is a sequence of characters that forms a search pattern.
+// When you search for data in a text, you can use this search pattern to describe what you are searching for.
+// A regular expression can be a single character, or a more complicated pattern.
+// Regular expressions can be used to perform all types of text search and text replace operations.
+// Solution 1 
 function spinalCase(str) {
-
-
-
-  
-  return str;
+  return str.replace(/(?!^)([A-Z])/g, ' $1')
+            .replace(/[_\s]+(?=[a-zA-Z])/g, '-')
+            .toLowerCase();
 }
-console.log(spinalCase('This is Spinal Tap'));
+
+console.log(spinalCase('ThisIsSpinalTap'));
+
+// Solution 2
+function spinalCase(str) {
+  let camelCaseHandled = str.replace(/([a-z])([A-Z])/g, '$1 $2');
+  let spacesAndDashedHandled = camelCaseHandled.replace(/\s|_/g, '-')
+  return spacesAndDashedHandled.toLowerCase();
+}
+  let result = spinalCase('thisIsSpinalTap');
+  console.log(result);
+
+
 
 // Intermediate Algorithm Scripting = Q4/21 - Wherefore art thou
 // TASK: Make a function that looks through an array of objects (first argument) and returns an array of all objects that have matching name and value pairs (second argument).
