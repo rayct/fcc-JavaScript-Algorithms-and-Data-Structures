@@ -74,9 +74,41 @@
 // NOTES: 
 
 
-// Intermediate Algorithm Scripting = Q6/21 - 
-// TASK: 
+// Intermediate Algorithm Scripting = Q6/21 - Pig Latin
+// TASK: Translate the provided string to Pig Latin.
+// Input strings are guaranteed to be English words in all lowercase.
 // NOTES: 
+function translatePigLatin(str) {
+  let regex = /[bcdfghjklmnpqrstvwxyz]{1,}/;
+  let vowelRegex = /[aeiou]{1,}/;
+  let found = str.match(regex);
+  if (str.search(vowelRegex) == 0) {
+    return str += 'way';
+  } else if (str.search(regex) == 0) {
+    let newStr = str.replace(regex, '');
+    return newStr + found + 'ay';
+  }
+}
+
+translatePigLatin('consonant'); // 'onsonantcay'
+
+// Solution 2
+function translatePigLatin(str) {
+  let pigs = 'aeiou'.split('');
+
+  for (let i = 0; i < str.length; i += 1) {
+    let individualLetter = str[i];
+    if (pigs.indexOf(individualLetter) != -1 && i === 0) {
+      return str + 'way';
+    }
+    if (pigs.indexOf(individualLetter) != -1 && i === 0) {
+      return str.slice(i) + str.slice(0, i) + 'ay';
+    }
+  }
+  return str + 'ay';
+}
+let result = translatePigLatin(consonant);
+console.log(result);
 
 
 // Intermediate Algorithm Scripting = Q5/21 - Spinal Tap Case
@@ -158,8 +190,8 @@ function whatIsInAName(collection, source) {
   return arr;
 } 
 
-
 console.log(whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], { last: "Capulet" }));
+
 // Solution 3:
 function whatIsInAName(collection, source) {
   var arr = [];
