@@ -77,7 +77,8 @@
 // Intermediate Algorithm Scripting = Q6/21 - Pig Latin
 // TASK: Translate the provided string to Pig Latin.
 // Input strings are guaranteed to be English words in all lowercase.
-// NOTES: 
+// NOTES:
+// Solution 1 
 function translatePigLatin(str) {
   let regex = /[bcdfghjklmnpqrstvwxyz]{1,}/;
   let vowelRegex = /[aeiou]{1,}/;
