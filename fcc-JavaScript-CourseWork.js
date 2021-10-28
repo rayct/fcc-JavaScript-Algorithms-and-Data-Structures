@@ -1,83 +1,96 @@
 // ============================== INTERMEDIATE ALGORITHM SCRIPTING ============================ //
 // Intermediate Algorithm Scripting = Q21/21 - 
 // TASK: 
-// NOTES: 
+// NOTE: 
 
 
 // Intermediate Algorithm Scripting = Q20/21 - 
 // TASK: 
-// NOTES: 
+// NOTE: 
 
 
 // Intermediate Algorithm Scripting = Q19/21 - 
 // TASK: 
-// NOTES: 
+// NOTE: 
 
 
 // Intermediate Algorithm Scripting = Q18/21 - 
 // TASK: 
-// NOTES: 
+// NOTE: 
 
 
 // Intermediate Algorithm Scripting = Q17/21 - 
 // TASK: 
-// NOTES: 
+// NOTE: 
 
 
 // Intermediate Algorithm Scripting = Q16/21 - 
 // TASK: 
-// NOTES: 
+// NOTE: 
 
 
 // Intermediate Algorithm Scripting = Q15/21 - 
 // TASK: 
-// NOTES: 
+// NOTE: 
 
 
 // Intermediate Algorithm Scripting = Q14/21 - 
 // TASK: 
-// NOTES: 
+// NOTE: 
 
 
 // Intermediate Algorithm Scripting = Q13/21 - 
 // TASK: 
-// NOTES: 
+// NOTE: 
 
 
 // Intermediate Algorithm Scripting = Q12/21 - 
 // TASK: 
-// NOTES: 
+// NOTE: 
 
 
 // Intermediate Algorithm Scripting = Q11/21 - 
 // TASK: 
-// NOTES: 
+// NOTE: 
 
 
 // Intermediate Algorithm Scripting = Q10/21 - 
 // TASK: 
-// NOTES: 
+// NOTE: 
 
 
 // Intermediate Algorithm Scripting = Q9/21 - 
 // TASK: 
-// NOTES: 
+// NOTE: 
 
 
 // Intermediate Algorithm Scripting = Q8/21 - 
 // TASK: 
-// NOTES: 
+// NOTE: 
 
 
-// Intermediate Algorithm Scripting = Q7/21 - 
-// TASK: 
-// NOTES: 
+// Intermediate Algorithm Scripting = Q7/21 - Search and Replace
+// TASK: Perform a search and replace on the sentence using the arguments provided and return the new sentence.
+// First argument is the sentence to perform the search and replace on.
+// Second argument is the word that you will be replacing (before).
+// Third argument is what you will be replacing the second argument with (after).
+
+// NOTE: Preserve the case of the first character in the original word when you are replacing it.
+// For example if you mean to replace the word Book with the word dog, it should be replaced as Dog
+function myReplace(str, before, after) {
+
+
+
+  return str;
+}
+myReplace("A quick brown fox jumped over the lazy dog", "jumped", "leaped");
+
 
 
 // Intermediate Algorithm Scripting = Q6/21 - Pig Latin
 // TASK: Translate the provided string to Pig Latin.
 // Input strings are guaranteed to be English words in all lowercase.
-// NOTES:
+// NOTE:
 // Solution 1 
 function translatePigLatin(str) {
   let regex = /[bcdfghjklmnpqrstvwxyz]{1,}/;
@@ -111,10 +124,31 @@ function translatePigLatin(str) {
 let result = translatePigLatin(consonant);
 console.log(result);
 
+// Solution 3 <= Refactored
+function translatePigLatin(str) {
+  let pigs = 'aeiou'.split('');
+  function isPigs(letter) {
+    return pigs.indexOf(letter);
+  }
+
+  for (let i = 0; i < str.length; i += 1) {
+    let individualLetter = str[i];
+    if (isPigs(individualLetter) != -1 && i === 0) {
+      return str + 'way';
+    }
+    if (isPigs(individualLetter) != -1) {
+      return str.slice(i) + str.slice(0, i) + 'ay';
+    }
+  }
+  return str + 'ay';
+}
+let result = translatePigLatin(california);
+console.log(result);
+
 
 // Intermediate Algorithm Scripting = Q5/21 - Spinal Tap Case
 // TASK: Convert a string to spinal case. Spinal case is all-lowercase-words-joined-by-dashes.
-// NOTES: A regular expression is a sequence of characters that forms a search pattern.
+// NOTE: A regular expression is a sequence of characters that forms a search pattern.
 // When you search for data in a text, you can use this search pattern to describe what you are searching for.
 // A regular expression can be a single character, or a more complicated pattern.
 // Regular expressions can be used to perform all types of text search and text replace operations.
@@ -141,7 +175,7 @@ function spinalCase(str) {
 // Intermediate Algorithm Scripting = Q4/21 - Wherefore art thou
 // TASK: Make a function that looks through an array of objects (first argument) and returns an array of all objects that have matching name and value pairs (second argument).
 // Each name and value pair of the source object has to be present in the object from the collection if it is to be included in the returned array.
-// NOTES:
+// NOTE:
 // Solution 1:
 function whatIsInAName(collection, source) {
   // What's in a name?
@@ -234,7 +268,7 @@ console.log(whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercu
 
 // Intermediate Algorithm Scripting = Q3/21 - Seek and Destroy
 // TASK: Remove all elements from the initial array that are of the same value as these arguments.
-// NOTES: 
+// NOTE: 
 function destroyer(arr) {
   const result = Array.prototype.slice.call(arguments);
   const [first, ...rest] = result;
@@ -253,7 +287,7 @@ console.log(destroyer(["possum", "trollo", 12, "safari", "hotdog", 92, 65, "gran
 
 // Intermediate Algorithm Scripting = Q2/21 - Diff Two Arrays
 // TASK: 
-// NOTES: Using two for loops and two if statements to find the diff in two arrays
+// NOTE: Using two for loops and two if statements to find the diff in two arrays
 // Solution 1
 function diffArray(arr1, arr2) {
   var newArr = [];
@@ -317,7 +351,7 @@ console.log(diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]));
 // TASK: We'll pass you an array of two numbers.
 // Return the sum of those two numbers plus the sum of all the numbers between them.
 // The lowest number will not always come first.
-// NOTES: For example, sumAll([4,1]) should return 10 because sum of all the numbers between 1 and 4 (both inclusive) is 10.
+// NOTE: For example, sumAll([4,1]) should return 10 because sum of all the numbers between 1 and 4 (both inclusive) is 10.
 function sumAll(arr) {
   let minNum = Math.min(arr[0], arr[1]);
   let maxNum = Math.max(arr[0], arr[1]);
@@ -335,7 +369,7 @@ console.log(sumAll([1, 15]));
 // ============================== FUNCTIONAL PROGRAMMING IN JAVASCRIPT - HIGHER ORDER FUNCTIONS ============================ //
 // Functional Programming = Q24/26 - Introduction to Currying and Partial Application
 // TASK: Fill in the body of the add function so it uses currying to add parameters x, y, and z.
-// NOTES:
+// NOTE:
 // Solution 1
 function add(x) {
   // Only change code below this line
@@ -365,7 +399,7 @@ console.log(add(10)(20)(30)); // <= Output will be 60
 
 // Functional Programming = Q23/26 - Use the some Method to Check that Any Elements in an Array Meet a Criteria
 // TASK: 
-// NOTES:
+// NOTE:
 // Solution 1
 function checkPositive(arr) {
   // Only change code below this line
@@ -394,7 +428,7 @@ console.log(checkPositive([1, 2, 3, -4, 5]));
 // Functional Programming = Q22/26 - Use the every Method to Check that Every Element in an Array Meets a Criteria
 // TASK: Use the every method inside the checkPositive function to check if every element in arr is positive.
 // The function should return a Boolean value.
-// NOTES:
+// NOTE:
 // Solution 1. Refactored Solution
 function checkPositive(arr) {
   // Only change code below this line
@@ -426,7 +460,7 @@ checkPositive([1, 2, 3, -4, 5]);
 // 2. The output is a string with the spaces between words replaced by a hyphen(-)
 // 3. The ouput should be all lower-cased letters
 // 4. The output should not have any spaces
-// NOTES:
+// NOTE:
 // Only change code below this line
 var globalTitle = 'Winter is Coming';
 
@@ -443,7 +477,7 @@ console.log(globalTitle);
 // TASK: Use the join method (among others) inside the sentensify function to make a sentence from the words in the string str.
 // The function should return a string.For example, I - like - Star - Wars would be converted to I like Star Wars.
 // For this challenge, do not use the replace method.
-// NOTES:
+// NOTE:
 function sentensify(str) {
   // Only change code below this line
 
@@ -468,7 +502,7 @@ console.log(globalString);
 // TASK: Use the split method inside the splitify function to split str into an array of words.
 // The function should return the array.
 // Note that the words are not always separated by spaces, and the array should not contain punctuation.
-// NOTES:
+// NOTE:
 function splitify(str) {
  // Only change code below this line
   
@@ -485,7 +519,7 @@ console.log(splitify('Hello World,I-am code'));
 // Functional Programming = Q18/26 - Return a Sorted Array Without Changing the Original Array
 // TASK: Use the sort method in the nonMutatingSort function to sort the elements of an array in ascending order.
 // The function should return a new array, and not mutate the globalArray variable.
-// NOTES:
+// NOTE:
 var globalArray = [5, 6, 3, 2, 9];
 function nonMutatingSort(arr) {
   // Add your code below this line
@@ -500,7 +534,7 @@ console.log(nonMutatingSort([1, 30, 4, 21, 100000]));
 
 // Functional Programming = Q17/26 - Sort an Array Alphabetically using the sort Method
 // TASK: 
-// NOTES: The sort method sorts the elements of an array according to the callback function.
+// NOTE: The sort method sorts the elements of an array according to the callback function.
 function alphabeticalOrder(arr) {
   // Only change code below this line
 
@@ -516,7 +550,7 @@ console.log(alphabeticalOrder(["a", "d", "c", "a", "z", "g"]));
 // Functional Programming = Q16/26 - Use Higher-Order Functions map, filter, or reduce to Solve a Complex Problem
 // TASK: Complete the code for the squareList function using any combination of map(), filter(), and reduce().
 // The function should return a new array containing the squares of only positive integers(decumal numbers are not integers) when an array of real numbers is passed to it.
-// NOTES: An example of an array of real numbers is [-3, 4.8, 5, 3, -3.2]. 
+// NOTE: An example of an array of real numbers is [-3, 4.8, 5, 3, -3.2]. 
 // Your function should not use any kind of for or while loops or the forEach() function.
 const squareList = arr => {
   // Only change code below this line
@@ -538,7 +572,7 @@ console.log(squaredIntegers);
 
 // Functional Programming = Q15/26 - Use the reduce Method to Analyze Data
 // TASK: 
-// NOTES: A variable watchlist that holds an array of 5 objects with info on 5 movies.
+// NOTE: A variable watchlist that holds an array of 5 objects with info on 5 movies.
 // The global variable
 // The global variable
 var watchList = [
@@ -685,7 +719,7 @@ console.log(getRating(watchList));
 // Functional Programming = Q14/26 - Add Elements to the End of an Array Using concat Instead of push
 // TASK: Change the nonMutatingPush function so it uses concat to add newItem to the end of original instead of push.
 // The function should return an array.
-// NOTES: Functional programming is all about creating and using non-mutating functions.
+// NOTE: Functional programming is all about creating and using non-mutating functions.
 function nonMutatingPush(original, newItem) {
   // Only change code below this line
 
@@ -708,7 +742,7 @@ console.log(second);
 // Functional Programming = Q13/26 - Combine Two Arrays Using the concat Method
 // TASK: Use the concat method in the nonMutatingConcat function to concatenate attach to the end of original.
 // The function should return the concatenated array.
-// NOTES:
+// NOTE:
 function nonMutatingConcat(original, attach) {
   
   // Only change code below this line
@@ -729,7 +763,7 @@ nonMutatingConcat(first, second);
 // Functional Programming = Q12/26 - Remove Elements from an Array Using slice Instead of splice
 // TASK: Rewrite the function nonMutatingSplice by using slice instead of splice.
 // It should limit the provided cities array to a length of 3, and return a new array with only the first three items.
-// NOTES:
+// NOTE:
 function nonMutatingSplice(cities) {
   // Only change code below this line
 
@@ -745,7 +779,7 @@ console.log(inputCities, '<= should not change');
 // Functional Programming = Q11/26 - Return Part of an Array Using the slice Method
 // TASK: Use the slice method in the sliceArray function to return part of the anim array given the provided beginSlice and endSlice indices.
 // The function should return an array.
-// NOTES:
+// NOTE:
 functionsliceArray(anim, beginSlice, endSlice) {
   // Only change code below this line
 
@@ -766,7 +800,7 @@ console.log(inputAnim);
 // TASK: Write your own Array.prototype.myFilter(), which should behave exactly like Array.prototype.filter().
 // You should not use the built -in filter method.
 // The Array instance can be accessed in the myFilter method using this.
-// NOTES: 
+// NOTE: 
 // The global variable
 var s = [23, 65, 98, 5];
 
@@ -792,7 +826,7 @@ console.log(new_s);
 // Functional Programming = Q9/26 - Use the filter Method to Extract Data from an Array
 // TASK: Use a combination of filter and map on watchList to assign a new array of objects with only title and rating keys.
 // The new array should only include objects where imdbRating is greater than or equal to 8.0.
-// NOTES: The rating values are saved as strings in the object and you may need to convert them into numbers to perform mathematical operations on them.
+// NOTE: The rating values are saved as strings in the object and you may need to convert them into numbers to perform mathematical operations on them.
 // The global variable
 var watchList = [
   {
@@ -978,7 +1012,7 @@ console.log(new_s);
 // {"title":"Batman Begins","rating":"8.3"},
 // {"title":"Avatar","rating":"7.9"}
 // ]. 
-// NOTES: The code currently uses a for loop to do this, so you should replace the for loop functionality with your map expression.
+// NOTE: The code currently uses a for loop to do this, so you should replace the for loop functionality with your map expression.
 // The global variable
 var watchList = [
   {
@@ -1095,7 +1129,7 @@ var watchList = [
 // for(var i=0; i < watchList.length; i++){
 //   ratings.push({title: watchList[i]["Title"],  rating: watchList[i]["imdbRating"]});
 // }
-// NOTES: Commented out the for loop and replaced the for loop functionality with a map expression.
+// NOTE: Commented out the for loop and replaced the for loop functionality with a map expression.
 
 // A REFACTORED SOLUTION
 
@@ -1121,7 +1155,7 @@ console.log(JSON.stringify(ratings));
 // TASK: Rewrite the code so the global array bookList is not changed inside either function.
 // The add function should add the given bookName to the end of the array passed to it and return a new array (list).
 // The remove function should remove the given bookName from the array passed to it.
-// NOTES: Both functions should return an array, and any new parameters should be added before the bookName parameter.
+// NOTE: Both functions should return an array, and any new parameters should be added before the bookName parameter.
 // The global variable
 var bookList = ["The Hound of the Baskervilles", 
 "On The Electrodynamics of Moving Bodies", 
@@ -1325,7 +1359,7 @@ console.log(
 // TASK: In the code editor, the prepareTea and getTea functions are already defined for you. 
 // Call the getTea function to get 40 cups of tea for the team, and store them in the tea4TeamFCC variable.
 // Function that returns a string representing a cup of green tea
-// NOTES: Types of Functions
+// NOTE: Types of Functions
 // There are four main types of functions.
 
 // 1. First Class Functions
@@ -1377,7 +1411,7 @@ console.log(tea4TeamFCC);
 // 1. funModule should be defined and return an object.
 // 2. funModule.isCuteMixin should access a function.
 // 3. funModule.singMixin should access a function.
-// NOTES: Note that you have an immediately invoked function expression (IIFE) that returns an object motionModule.
+// NOTE: Note that you have an immediately invoked function expression (IIFE) that returns an object motionModule.
 // This returned object contains all of the mixin behaviors as properties of the object.
 // The advantage of the module pattern is that all of the motion behaviors can be packaged into a single object that can then be used by other parts of your code.
 let isCuteMixin = function(obj) {
@@ -1427,7 +1461,7 @@ bigBird.sing();
 // TASK: Rewrite the function makeNest and remove its call so instead it's an anonymous immediately invoked function expression (IIFE).
 // 1. The function should be anonymous.
 // 2. Your function should have parentheses at the end of the expression to call it immediately.
-// NOTES: Anonymous Function
+// NOTE: Anonymous Function
 function makeNest() {
   console.log('A cozy nest is ready');
 }
@@ -1445,7 +1479,7 @@ makeNest();
 // 1. The weight property should be a private variable and should be assigned the value of 15.
 // 2. Your code should create a method in Bird called getWeight that returns the value of the private variable weight.
 // 3. Your getWeight function should return the private variable weight.
-// NOTES: In JavaScript, a function always has access to the context in which it was created. This is called closure.
+// NOTE: In JavaScript, a function always has access to the context in which it was created. This is called closure.
 // Solution 1
 function Bird() {
   let.weight = 15; // Private Variable adds closure.!
@@ -1483,7 +1517,7 @@ console.log(newWeight.name);
 // 1. Your code should declare a glideMixin variable that is a function.
 // 2. Your code should use the glideMixin on the bird object to give it the glide method.
 // 3. Your code should use the glideMixin on the boat object to give it the glide method.
-// NOTES:
+// NOTE:
 let bird = {
   name: "Donald",
   numLegs: 2
@@ -1511,7 +1545,7 @@ glideMixin(boat);
 
 // Object Orientated Programming = Q22/26 - Override Inherited Methods
 // TASK: Override the fly() method for Penguin so that it returns the string Alas, this is a flightless bird.
-// NOTES: Class name Bird changed to Penguin and the return string changed from 'I am flying' to 'Alas, this is a flightless bird'.
+// NOTE: Class name Bird changed to Penguin and the return string changed from 'I am flying' to 'Alas, this is a flightless bird'.
 function Bird() { }
 
 Bird.prototype.fly = function() { // The fly method
@@ -1536,7 +1570,7 @@ console.log(penguin.fly())
 
 // Object Orientated Programming = Q21/26 - Add Methods After Inheritance
 // TASK: Add all necessary code so the Dog object inherits from Animal and the Dog's prototype constructor is set to Dog.
-// NOTES:
+// NOTE:
 // Then add a bark() method to the Dog object so that beagle can both eat() and bark().The bark() method should print Woof! to the console.
 function Animal() { }
 Animal.prototype.eat = function() { console.log("nom nom nom"); };
@@ -1559,7 +1593,7 @@ beagle.bark();
 
 
 // Object Orientated Programming = Q20/26 - Reset an Inherited Constructor Property
-// NOTES:
+// NOTE:
 // TASK: Fix the code so duck.constructor and beagle.constructor return their respective constructors.
 function Animal() { }
 function Bird() { }
@@ -1581,7 +1615,7 @@ console.log(beagle.constructor);
 
 
 // Object Orientated Programming = Q19/26 - Set the Child's Prototype to an Instance of the Parent
-// NOTES:
+// NOTE:
 // TASK: Modify the code so that instances of Dog inherit from Animal.
 function Animal() { }
 
@@ -1603,7 +1637,7 @@ console.log(beagle instanceof Animal);
 
 
 // Object Orientated Programming = Q18/26 - Inherit Behaviors from a Supertype
-// NOTES: Inheritance
+// NOTE: Inheritance
 // TASK: Use Object.create to make two instances of Animal named duck and beagle. 
 function Animal() { }
 
@@ -1624,7 +1658,7 @@ console.log(beagle instanceof Animal);
 
 
 // Object Orientated Programming = Q17/26 - Use Inheritance So You Don't Repeat Yourself
-// NOTES: There's a principle in programming called Don't Repeat Yourself (DRY).
+// NOTE: There's a principle in programming called Don't Repeat Yourself (DRY).
 // The reason repeated code is a problem is because any change requires fixing code in multiple places.
 // This usually means more work for programmers and more room for errors.
 
@@ -1661,7 +1695,7 @@ console.log(Cat.prototype);
 
  
 // Object Orientated Programming = Q16/26 - Understand the Prototype Chain
-// NOTES:
+// NOTE:
 function Dog(name) {
   this.name = name;
 }
@@ -1675,7 +1709,7 @@ console.log(Object.prototype.isPrototypeOf(Dog.prototype));
 
 
 // Object Orientated Programming = Q15/26 - Understand Where an Object’s Prototype Comes From
-// NOTES:
+// NOTE:
 // Solution 1
 function Dog(name) {
   this.name = name;
@@ -1707,7 +1741,7 @@ console.log(Dog.prototype.isPrototypeOf(beagle));
 
 
 // Object Orientated Programming = Q14/26 - Remember to Set the Constructor Property when Changing the Prototype
-// NOTES: Define the constructor property on the Dog prototype. 
+// NOTE: Define the constructor property on the Dog prototype. 
 function Dog(name) {
   this.name = name;
 }
@@ -1728,7 +1762,7 @@ console.log(buster.constructor === Object);
 
 
 // Object Orientated Programming = Q13/26 - Change the Protoype to a New Object Orient
-// NOTES: Protype properties have the console.log in them.
+// NOTE: Protype properties have the console.log in them.
 // 
 function Dog(name) {
   this.name = name;
@@ -1750,7 +1784,7 @@ buster.describe();
 
 
 // Object Orientated Programming = Q12/26 - Understand the Constructor Property
-// NOTES: Write a joinDogFraternity function that takes a candidate parameter and, using the constructor property, return true if the candidate is a Dog, otherwise return false.
+// NOTE: Write a joinDogFraternity function that takes a candidate parameter and, using the constructor property, return true if the candidate is a Dog, otherwise return false.
 // SOLUTION 1.
 function Dog(name) {
   this.name = name;
@@ -1788,7 +1822,7 @@ console.log(buster.constructor === Dog);
 
 
 // Object Orientated Programming = Q11/26 - Iterate Over All Properties
-// NOTES: 
+// NOTE: 
 function Dog(name) {
   this.name = name;
 }
@@ -1814,7 +1848,7 @@ console.log(prototypeProps);
 
 
 // Object Orientated Programming = Q10/26 - Use Prototype Properties to Reduce Duplicate Code
-// NOTES: Added a numLegs property to the prototype of Dog
+// NOTE: Added a numLegs property to the prototype of Dog
 function Dog(name) {
   this.name = name;
 }
@@ -1827,7 +1861,7 @@ console .log(beagle);
 
 
 // Object Orientated Programming = Q9/26 - Understand Own Properties
-// NOTES: 
+// NOTE: 
 function Bird(name) { //  Start of the Object
   this.name = name; // Property 1
   this.numLegs = 2; // Property 2
@@ -1844,9 +1878,9 @@ for (let property in canary) {
 console.log(ownProps);
 
 // Object Orientated Programming = Q8/26 - Verify an Object's Constructor with instanceof
-// NOTES: 1. myHouse should have a numBedrooms attribute set to a number.
-// NOTES: 2. You should verify that myHouse is an instance of House using the instanceof operator.
-// NOTES: 3. Anytime a constructor function creates a new object, that object is said to be an instance of its constructor.
+// NOTE: 1. myHouse should have a numBedrooms attribute set to a number.
+// NOTE: 2. You should verify that myHouse is an instance of House using the instanceof operator.
+// NOTE: 3. Anytime a constructor function creates a new object, that object is said to be an instance of its constructor.
 // JavaScript gives a convenient way to verify this with the instanceof operator.
 // instanceof allows you to compare an object to a constructor, returning true or false based on whether or not that object was created with the constructor.
 function House(numBedrooms) {
@@ -1858,7 +1892,7 @@ myHouse instanceof House;
 console.log(myHouse);
 
 // Object Orientated Programming = Q7/26 - Extend Constructors to Receive Arguments
-// NOTES:
+// NOTE:
 function Dog(name, color) {
   this.name = name;
   this.color = color;
@@ -1868,7 +1902,7 @@ let terrier = new Dog();
 console.log(terrier);
 
 // Object Orientated Programming = Q6/26 - Use a Constructor to Create Objects
-// NOTES: 
+// NOTE: 
 function Dog() {
   this.name = "Rupert";
   this.color = "brown";
@@ -1879,7 +1913,7 @@ let hound = new Dog();
 console.log(hound);
 
 // Object Orientated Programming = Q5/26 - Define a Consturctor Function
-// NOTES: Constructors are functions that create new objects. They define properties and behaviors that will belong to the new object.
+// NOTE: Constructors are functions that create new objects. They define properties and behaviors that will belong to the new object.
 // Think of them as a blueprint for the creation of new objects
 function Dog() {
   this.name = 'Buster';
@@ -1889,7 +1923,7 @@ function Dog() {
 console.log('Dog');
 
 // Object Orientated Programming = Q4/26 - Make Code More Reusable with the this Keyword
-// NOTES: Modify the dog.sayLegs method to remove any references to dog.
+// NOTE: Modify the dog.sayLegs method to remove any references to dog.
 let dog = {
   name: "Spot",
   numLegs: 4,
@@ -1899,7 +1933,7 @@ let dog = {
 console.log(dog.sayLegs());
 
 // Object Orientated Programming = Q3/26 - Create a Method on an Object
-// NOTES: Objects can have a special type of property, called a method.
+// NOTE: Objects can have a special type of property, called a method.
 // Methods are properties that are functions. This adds different behavior to an object.
 
 let dog = {
@@ -1912,7 +1946,7 @@ let dog = {
 console.log(dog.sayLegs());
 
 // Object Orientated Programming = Q2/26 - Use Dot Notation to Access the Properties of an Object
-// NOTES: 
+// NOTE: 
 let dog = {
   name: "Spot",
   numLegs: 4
@@ -1922,7 +1956,7 @@ console.log(dog.name);
 console.log(dog.numLegs);
 
 // Object Orientated Programming = Q1/26 - Create a Basic JavaScript Object
-// NOTES: Below is an Example of a JavaScript Object with two propertie/value pairs.
+// NOTE: Below is an Example of a JavaScript Object with two propertie/value pairs.
 let dog = {
   name: 'Buster',
   numLegs: 4
@@ -1932,7 +1966,7 @@ console.log(dog);
 
 // ============================== BASIC ALGORITHM SCRIPTING ================================ //
 // Basic Algorithm Scripting = Q16/16 - Chunky Monkey
-// NOTES: Write a function that splits an array (first argument) into groups the length of size (second argument) and returns them as a two-dimensional array.
+// NOTE: Write a function that splits an array (first argument) into groups the length of size (second argument) and returns them as a two-dimensional array.
 function chunkArrayInGroups(arr, size) {
   let result = [];
 
@@ -1947,7 +1981,7 @@ function chunkArrayInGroups(arr, size) {
 console.log(chunkArrayInGroups(["a", "b", "c", "d"], 2));
 
 // Basic Algorithm Scripting = Q15/16 - Mutations
-// NOTES: 
+// NOTE: 
 // Mutations - Solution 1
 function mutation(arr) {
   let firstElement = arr[0].toLowerCase();
@@ -1984,7 +2018,7 @@ function mutation(arr) {
 console.log(mutation(["hello", "hey"]));
 
 // Basic Algorithm Scripting = Q14/16 - Where do I Belong
-// NOTES: Return the lowest index at which a value (second argument) should be inserted into an array (first argument) once it has been sorted.
+// NOTE: Return the lowest index at which a value (second argument) should be inserted into an array (first argument) once it has been sorted.
 // The returned value should be a number.
 // For example, getIndexToIns([1,2,3,4], 1.5) should return 1 because it is greater than 1 (index 0), but less than 2 (index 1).
 // Likewise, getIndexToIns([20,3,5], 19) should return 2 because once the array has been sorted it will look like [3,5,20] and 19 is less than 20 (index 2) and greater than 5 (index 1).
@@ -2005,7 +2039,7 @@ function getIndexToIns(arr, num) {
 console.log(getIndexToIns([40, 60], 50));
 
 // Basic Algorithm Scripting = Q13/16 - Falsy Bouncer
-// NOTES: 
+// NOTE: 
 function bouncer(arr) {
   return arr.filter(Boolean);
 }
@@ -2013,7 +2047,7 @@ function bouncer(arr) {
 console.log(bouncer([7, "ate", "", false, 9]));
 
 // Basic Algorithm Scripting = Q12/16 - Slice and Splice
-// NOTES: You are given two arrays and an index.
+// NOTE: You are given two arrays and an index.
 // Copy each element of the first array into the second array, in order.
 // Begin inserting elements at index n of the second array.
 // Return the resulting array. The input arrays should remain the same after the function runs.
@@ -2029,7 +2063,7 @@ let splicedArr = [...arr2];
 console.log(frankenSplice([1, 2, 3], [4, 5, 6], 1));
 
 // Basic Algorithm Scripting = Q11/16 - Title Case a Sentence Case
-// NOTES: Return the provided string with the first letter of each word capitalized.
+// NOTE: Return the provided string with the first letter of each word capitalized.
 // Make sure the rest of the word is in lower case.
 function titleCase(str) {
   let result = '';
@@ -2054,7 +2088,7 @@ function titleCase(str) {
 console.log(titleCase("I'm a little tea pot"));
 
 // Basic Algorithm Scripting = 10/16 - Boo who
-// NOTES: Check if a value is classified as a boolean primitive. Return true or false.
+// NOTE: Check if a value is classified as a boolean primitive. Return true or false.
 // Boolean primitives are true and false.
 function booWho(bool) {
   if (typeof bool == 'boolean') {
@@ -2068,7 +2102,7 @@ function booWho(bool) {
 console.log(booWho(typeof true));
 
 // Basic Algorithm Scripting = Q9/16 - Finders Keepers
-// NOTES: A function that looks through an array arr and returns the first element in it that passes a 'truth test'.
+// NOTE: A function that looks through an array arr and returns the first element in it that passes a 'truth test'.
 // This means that given an element x, the 'truth test' is passed if func(x) is true.
 // If no element passes the test, return undefined.
 function findElement(arr, func) {
@@ -2090,7 +2124,7 @@ console.log(findElement([1, 2, 3, 4], num => num % 2 === 0));
 // console.log(findElement([1, 3, 5, 9], function(num) { return num % 2 === 0; }));
 
 // Basic Algorithm Scripting = Q8/16 - Truncate a String
-// NOTES:
+// NOTE:
 function truncateString(str, num) {
   if (num >= str.length) {
     return str;
@@ -2102,7 +2136,7 @@ function truncateString(str, num) {
 }
 
 // Basic Algorithm Scripting = Q7/16 - Repeat a String Repeat a String
-// NOTES:
+// NOTE:
 function repeatStringNumTimes(str, num) {
   if(num <= 0) {
     return '';
@@ -2119,7 +2153,7 @@ function repeatStringNumTimes(str, num) {
 console.log(repeatStringNumTimes("abc", 3));
 
 // Basic Algorithm Scripting = Q6/16 - Confirm the Ending
-// NOTES:
+// NOTE:
 function confirmEnding(str, target) {
   let targetLength = target.length;
   let targetMatch = str.slice(str.length - targetLength);
@@ -2133,7 +2167,7 @@ function confirmEnding(str, target) {
 console.log(confirmEnding("Bastian", "n"));
 
 // Basic Algorithm Scripting = Q5/16 - Return Largest Numbers in Arrays
-// NOTES:
+// NOTE:
 function largestOfFour(arr) {
   let result = [];
   for (let i = 0; i < arr.length; i += 1) {
@@ -2152,7 +2186,7 @@ function largestOfFour(arr) {
 console.log(largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]));
 
 // Basic Algorithm Scripting = Q4/16 - Find the Longest Word in a String
-// NOTES: 
+// NOTE: 
 function findLongestWordLength(str) {
   let longestWord = "";
   let words = str.split(" ");
@@ -2171,7 +2205,7 @@ function findLongestWordLength(str) {
 console.log(findLongestWordLength("The quick brown fox jumped over the lazy dog"));
 
 // Basic Algorithm Scripting = Q3/16 - Factorialize a Number
-// NOTES: Using A WHile Loop and a FOR Loop
+// NOTE: Using A WHile Loop and a FOR Loop
 
 // ====== FOR LOOP ===== //
 function factorialize(num) {
@@ -2199,7 +2233,7 @@ function factorialize(num) {
 console.log(factorialize(10));
 
 // Basic Algorithm Scripting = Q2/16 - Reverse a String
-// NOTES: 
+// NOTE: 
 function reverseString(str) {
   return str.split("").reverse().join(['']);
 }
@@ -2217,7 +2251,7 @@ function reverseString(str) {
   console.log(reverseString("hello"));
 
 // Basic Algorithm Scripting = Q1/16 - Convert Celsius to Fahrenheit
-// NOTES: 
+// NOTE: 
 function convertToF(celsius) {
   let fahrenheit = celsius * 9/5 + 32;
   return fahrenheit;
@@ -2235,7 +2269,7 @@ console.log(convertToF(30));
 
 // ============================== BASIC DATA STRUCTURES ================================ //
 // Basic Data Structures = Q20/20 -  Modify an Array Stored in an Object
-// NOTES: 
+// NOTE: 
 let user = {
   name: 'Kenneth',
   age: 28,
@@ -2266,7 +2300,7 @@ function addFriend(userObj, friend) {
 console.log(addFriend(user, 'Pete'));
 
 // Basic Data Structures = Q19/20 - Generate an Array of All Object Keys with Object.keys()
-// NOTES: Finished writing the getArrayOfUsers function so that it returns an array containing all the properties in the object it receives as an argument.
+// NOTE: Finished writing the getArrayOfUsers function so that it returns an array containing all the properties in the object it receives as an argument.
 let users = {
   Alan: {
     age: 27,
@@ -2295,7 +2329,7 @@ function getArrayOfUsers(obj) {
 console.log(getArrayOfUsers(users));
 
 // Basic Data Structures = Q18/20 - Iterate Through the Keys of an Object with a for...in Statement
-// NOTES: 
+// NOTE: 
 function countOnline(usersObj) {
   // Only change code below this line
   let onlineUsers = 0;
@@ -2322,7 +2356,7 @@ console.log(countOnline(exampleUsers));
   // Only change code above this line
 
 // Basic Data Structures = Q17/20 - Check if an Object has a Property
-// NOTES:
+// NOTE:
 let users = {
   Alan: {
     age: 27,
@@ -2360,7 +2394,7 @@ function isEveryoneHere(userObj) {
 console.log(isEveryoneHere(users));
 
 // Basic Data Structures = Q16/20 - Use the delete Keyword to Remove Object Properties
-// NOTES:
+// NOTE:
 let foods = {
   apples: 25,
   oranges: 32,
@@ -2379,7 +2413,7 @@ delete foods.strawberries;
 console.log(foods['oranges']);
 
 // Basic Data Structures = Q15/20 - Access Property Names with Bracket Notation
-// NOTES: 
+// NOTE: 
 let foods = {
   apples: 25,
   oranges: 32,
@@ -2398,7 +2432,7 @@ function checkInventory(scannedItem) {
 console.log(checkInventory("apples"));
 
 // Basic Data Structures = Q14/20 - Modify an Object Nested Within an Object
-// NOTES: Object properties can be nested to an arbitrary depth, and their values can be any type of data supported by JavaScript, including arrays and even other objects.
+// NOTE: Object properties can be nested to an arbitrary depth, and their values can be any type of data supported by JavaScript, including arrays and even other objects.
 // Consider the following
 // nestedObject has three properties: id (value is a number), date (value is a string), and data (value is an object with its nested structure).
 // While structures can quickly become complex, we can still use the same notations to access the information we need.
@@ -2437,7 +2471,7 @@ console.log(userActivity.data);
 
 // ===================================================================
 // Basic Data Structures = Q13/20 - Add Key-Value Pairs to JavaScript Objects
-// NOTES: At their most basic, objects are just collections of key-value pairs. In other words, they are pieces of data (values) mapped to unique identifiers called properties (keys).
+// NOTE: At their most basic, objects are just collections of key-value pairs. In other words, they are pieces of data (values) mapped to unique identifiers called properties (keys).
 // Object Notation
 // Bracket notation is required if your property has a space in it or if you want to use a variable to name the property. 
 // The property is enclosed in quotes to denote it as a string and will be added exactly as shown.
@@ -2466,7 +2500,7 @@ console.log(foods['strawberries']);
 
 
 // Basic Data Structures = Q12/20 - Create complex multi-dimensional arrays or Nested Arrays
-// NOTES:
+// NOTE:
 let myNestedArray = [
   // Only change code below this line
   ['unshift', false, 1, 2, 3, 'complex', 'nested'],
@@ -2491,7 +2525,7 @@ let myNestedArray = [
 console.log(myNestedArray.length);
 
 // Basic Data Structures = Q11/20 - Iterate Through All an Array's Items Using For Loops
-// NOTES: 
+// NOTE: 
 //  Shortcut way
 // for (let i = 0; i < arr.length; i++) {
     // if (!arr[i].includes(elem)) {
@@ -2515,7 +2549,7 @@ function filteredArray(arr, elem) {
 console.log(filteredArray([[3, 2, 3], [1, 6, 3], [3, 13, 26], [19, 3, 9]], 3));
 
 // Basic Data Structures = Q10/20 - Check For The Presence of an Element With indexOf()
-// NOTES: Since arrays can be changed, or mutated, at any time, there's no guarantee about where a particular piece of data will be on a given array, or if that element even still exists.
+// NOTE: Since arrays can be changed, or mutated, at any time, there's no guarantee about where a particular piece of data will be on a given array, or if that element even still exists.
 // Luckily, JavaScript provides us with another built -in method, indexOf(), that allows us to quickly and easily check for the presence of an element on an array.
 // indexOf() takes an element as a parameter, and when called, it returns the position, or index, of that element, or - 1 if the element does not exist on the array. 
 function quickCheck(arr, elem) {
@@ -2532,7 +2566,7 @@ function quickCheck(arr, elem) {
 console.log(quickCheck(['squash', 'onions', 'shallots'], 'mushrooms'));
 
 // Basic Data Structures = Q9/20 - Combine Arrays with the Spread Operator
-// NOTES: Another huge advantage of the spread operator is the ability to combine arrays, or to insert all the elements of one array into another, at any index.
+// NOTE: Another huge advantage of the spread operator is the ability to combine arrays, or to insert all the elements of one array into another, at any index.
 // With more traditional syntaxes, we can concatenate arrays, but this only allows us to combine arrays at the end of one, and at the start of another.
 // Spread syntax makes the following operation extremely simple:
 function spreadOut() {
@@ -2544,7 +2578,7 @@ function spreadOut() {
 console.log(spreadOut());
 
 // Basic Data Structures = Q8/20 - Copy an Array with the Spread Operator
-// NOTES: In practice, we can use the spread operator to copy an array
+// NOTE: In practice, we can use the spread operator to copy an array
 function copyMachine(arr, num) {
   let newArr = [];
   while (num >= 1) {
@@ -2560,7 +2594,7 @@ console.log(copyMachine([true, false, true], 2));
 // console.log(copyMachine([1, 2 ,3], 5));
 
 // Basic Data Structures = Q7/20 - Copy Array Items Using Splice
-// NOTES:
+// NOTE:
 function forecast(arr) {
   // Only change code below this line
 
@@ -2571,7 +2605,7 @@ function forecast(arr) {
 console.log(forecast(['cold', 'rainy', 'warm', 'sunny', 'cool', 'thunderstorms']));
 
 // Basic Data Structures = Q6/20 - Add Items Using Splice
-// NOTES: You can use the third parameter, comprised of one or more element(s), to add to the array.
+// NOTE: You can use the third parameter, comprised of one or more element(s), to add to the array.
 // This can be incredibly useful for quickly switching out an element, or a set of elements, for another.
 function htmlColorNames(arr) {
   // Only change code below this line
@@ -2587,7 +2621,7 @@ function htmlColorNames(arr) {
 console.log(htmlColorNames(['DarkGoldenRod', 'WhiteSmoke', 'LavenderBlush', 'PaleTurquoise', 'FireBrick']));
 
 // Basic Data Structures = Q5/20 - Remove Items Using Splice
-// NOTES: 
+// NOTE: 
 const arr = [2, 4, 5, 1, 7, 5, 2, 1];
 // Only change code below this line
 let newArray = arr.splice(1, 4);
@@ -2595,7 +2629,7 @@ let newArray = arr.splice(1, 4);
 console.log(arr);
 
 // Basic Data Structures = Q4/20 - Remove Items from an Array with pop() and shift()
-// NOTES: 
+// NOTE: 
 function popShift(arr) {
   let popped = arr.pop(); // Change this line
   let shifted = arr.shift(); // Change this line
@@ -2605,7 +2639,7 @@ function popShift(arr) {
 console.log(popShift(['challenge', 'is', 'not', 'complete']));
 
 // Basic Data Structures = Q3/20 - Add Items to an Array with push() and unshift()
-// NOTES: Push() method adds elements to the end of an array, and unshift() adds elements to the beginning. Consider the following:
+// NOTE: Push() method adds elements to the end of an array, and unshift() adds elements to the beginning. Consider the following:
 function mixedNumbers(arr) {
   // Only change code below this line
   arr.push(7, 'VIII', 9);
@@ -2667,7 +2701,7 @@ function myFunc() {
 }
 
 // Debugging = Q11/12 - Use Caution When Reinitializing Variables Inside a Loop.
-// NOTES: This error occurs due to the row[] array being declared as a global variable outside of the nested for loop.
+// NOTE: This error occurs due to the row[] array being declared as a global variable outside of the nested for loop.
 function zeroArray(m, n) {
   // Creates a 2-D array with m rows and n columns of zeroes
   let newArray = [];
@@ -2722,7 +2756,7 @@ let result = getNine();
 console.log(result);
 
 // Debugging = Q7/12 - Catch Use of Assignment Operator Instead of Equality Operator
-// NOTES: Branching programs, i.e. ones that do different things if certain conditions are met, rely on if, else if, and else statements in JavaScript.
+// NOTE: Branching programs, i.e. ones that do different things if certain conditions are met, rely on if, else if, and else statements in JavaScript.
 // The condition sometimes takes the form of testing whether a result is equal to a value.
 // This logic is spoken (in English, at least) as "if x equals y, then ..." which can literally translate into code using the =, or assignment operator.
 // This leads to unexpected control flow in your program.
@@ -2739,7 +2773,7 @@ if(x == y) {
 console.log(result);
 
 // Debugging = Q6/12 - Catch Mixed Usage of Single and Double Quotes
-// NOTES: JavaScript allows the use of both single (') and double (") quotes to declare a string.
+// NOTE: JavaScript allows the use of both single (') and double (") quotes to declare a string.
 // Deciding which one to use generally comes down to personal preference, with some exceptions.
 // Having two choices is great when a string has contractions or another piece of text that's in quotes.
 // Just be careful that you don't close the string too early, which causes a syntax error.
@@ -2751,13 +2785,13 @@ let innerHtml = "<p>Click here to <a href=\"#Home\">return home</a></p>";
 console.log(innerHtml);
 
 // Debugging = Q5/12 - Catch Unclosed Parentheses, Brackets, Braces and Quotes
-// NOTES:
+// NOTE:
 let myArray = [1, 2, 3];
 let arraySum = myArray.reduce((previous, current ) => previous + current);
 console.log(`Sum of array values is: ${arraySum}`);
 
 // Debugging = Q4/12 - Catch Misspelled Variable and Function Names
-// NOTES: The console.log() and typeof methods are the two primary ways to check intermediate values and types of program output.
+// NOTE: The console.log() and typeof methods are the two primary ways to check intermediate values and types of program output.
 // Now it's time to get into the common forms that bugs take.
 // One syntax-level issue that fast typers can commiserate with is the humble spelling error.
 // Transposed, missing, or mis-capitalized characters in a variable or function name will have the browser looking for an object that doesn't exist - and complain in the form of a reference error.
@@ -2769,7 +2803,7 @@ let netWorkingCapital = receivables - payables;
 console.log(`Net working capital is: ${netWorkingCapital}`);
 
 // Debugging = Q3/12 - Use typeof to Check the Type of a Variable
-// NOTES: 
+// NOTE: 
 // You can use typeof to check the data structure, or type, of a variable. This is useful in debugging when working with multiple data types.
 // If you think you're adding two numbers, but one is actually a string, the results can be unexpected.
 // Type errors can lurk in calculations or function calls.
@@ -2782,13 +2816,13 @@ console.log(typeof seven); // Number
 console.log(typeof three); // String
 
 // Debugging = Q2/12 - Understanding the Differences between the freeCodeCamp and Browser Console
-// NOTES: 
+// NOTE: 
 let output = "(Get this to log once in the freeCodeCamp console and twice in the browser console";
 console.clear();
 console.log(output);
 
 // Debugging = Q1/12 - Use the JavaScript Console to Check the Value of a Variable
-// NOTES: Placing it at strategic points in your code can show you the intermediate values of variables.
+// NOTE: Placing it at strategic points in your code can show you the intermediate values of variables.
 // It's good practice to have an idea of what the output should be before looking at what it is.
 // Having check points to see the status of your calculations throughout your code will help narrow down where the problem is.
 let a = 5;
@@ -2800,7 +2834,7 @@ console.log(a);
 
 // ============================== REGEX ================================ //
 // Regular Expressions = Q33/33 - Remove Whitespace from Start to End
-// NOTES: Sometimes whitespace characters around strings are not wanted but are there.
+// NOTE: Sometimes whitespace characters around strings are not wanted but are there.
 // Typical processing of strings is to remove the whitespace at the start and end of it.
 let hello = "   Hello, World!  ";
 let wsRegex = /^\s+|\s+$/g; // Change this line
@@ -2808,7 +2842,7 @@ let result = hello.replace(wsRegex, ""); // Change this line
 console.log(result);
 
 // Regular Expressions = Q32/33 - Use Capture Groups to Search and Replace
-// NOTES: Searching is useful. However, you can make searching even more powerful when it also changes (or replaces) the text you match.
+// NOTE: Searching is useful. However, you can make searching even more powerful when it also changes (or replaces) the text you match.
 // You can search and replace text in a string using .replace() on a string.
 // The inputs for .replace() is first the regex pattern you want to search for. 
 // The second parameter is the string to replace the match or a function to do something.
@@ -2819,7 +2853,7 @@ let result = str.replace(fixRegex, replaceText);
 console.log(result);
 
 // Regular Expressions = Q31/33 - Reuse Patterns Using Capture Groups
-// NOTES: Capture groups can be used to find repeated substrings.
+// NOTE: Capture groups can be used to find repeated substrings.
 // Capture groups are constructed by enclosing the regex pattern to be captured in parentheses.
 // In this case, the goal is to capture a word consisting of alphanumeric characters so the capture group will be \w+ enclosed by parentheses: /(\w+)/.
 // The substring matched by the group is saved to a temporary "variable", which can be accessed within the same regex using a backslash and the number of the capture group (e.g. \1).
@@ -2830,7 +2864,7 @@ let result = reRegex.test(repeatNum);
 console.log(result);
 
 // Regular Expressions = Q30/33 - Check For Mixed Grouping of Characters
-// NOTES: Use .* to allow for middle names.
+// NOTE: Use .* to allow for middle names.
 let myString = "Eleanor Roosevelt";
 let myRegex = /(Eleanor|Franklin).*Roosevelt/; // Change this line
 let result = myRegex.test(myString); // Change this line
@@ -2838,7 +2872,7 @@ console.log(result);
 // After passing the challenge experiment with myString and see how the grouping works
 
 // Regular Expressions = Q29/33 - Positive and Negative Lookahead
-// NOTES: Lookaheads are patterns that tell JavaScript to look-ahead in your string to check for patterns further along.
+// NOTE: Lookaheads are patterns that tell JavaScript to look-ahead in your string to check for patterns further along.
 // This can be useful when you want to search for multiple patterns over the same string.
 // There are two kinds of lookaheads: positive lookahead and negative lookahead.
 // A positive lookahead will look to make sure the element in the search pattern is there, but won't actually match it.
@@ -2852,7 +2886,7 @@ let result = pwRegex.test(sampleWord);
 console.log(result);
 
 // Regular Expressions = Q28/33 - Check for All or None
-// NOTES: Sometimes the patterns you want to search for may have parts of it that may or may not exist. However, it may be important to check for them nonetheless.
+// NOTE: Sometimes the patterns you want to search for may have parts of it that may or may not exist. However, it may be important to check for them nonetheless.
 // You can specify the possible existence of an element with a question mark, 
 // You can think of this symbol as saying the previous element is optional.
 // For example, there are slight differences in American and British English and you can use the question mark to match both spellings.
@@ -2862,7 +2896,7 @@ let result = favRegex.test(favWord);
 console.log(result);
 
 // Regular Expressions = Q27/33 - Specify Exact Number of Matches =
-// NOTES: Sometimes you only want a specific number of matches.
+// NOTE: Sometimes you only want a specific number of matches.
 // To specify a certain number of patterns, just have that one number between the curly brackets.
 // For example, to match only the word hah with the letter a 3 times, your regex would be /ha{3}h/.
 let timStr = "Timmmmber";
@@ -2871,7 +2905,7 @@ let result = timRegex.test(timStr);
 console.log(result);
 
 // Regular Expressions = Q26/33 - Specify Only the Lower Number of Matches
-// NOTES: You can specify the lower and upper number of patterns with quantity specifiers using curly brackets.
+// NOTE: You can specify the lower and upper number of patterns with quantity specifiers using curly brackets.
 // Sometimes you only want to specify the lower number of patterns with no upper limit.
 // To only specify the lower number of patterns, keep the first number followed by a comma.
 //  For example, to match only the string hah with the letter a appearing at least 3 times, your regex would be /ha{3,}h/.
@@ -2881,7 +2915,7 @@ let result = haRegex.test(haStr);
 console.log(result);
 
 // Regular Expressions = Q25/33 - Specify Upper and Lower Number of Matches
-// NOTES: You can specify the lower and upper number of patterns with quantity specifiers. 
+// NOTE: You can specify the lower and upper number of patterns with quantity specifiers. 
 // Quantity specifiers are used with curly brackets({ and }).
 // You put two numbers between the curly brackets - for the lower and upper number of patterns.
 // For example, to match only the letter a appearing between 3 and 5 times in the string ah, your regex would be /a{3,5}h/.
@@ -2892,7 +2926,7 @@ let result = ohRegex.test(ohStr);
 console.log(result);
 
 // Regular Expressions = Q24/33 - Match Non-Whitespace Characters
-// NOTES: Search for non-whitespace using \S, which is an uppercase s. 
+// NOTE: Search for non-whitespace using \S, which is an uppercase s. 
 // This pattern will not match whitespace, carriage return, tab, form feed, and new line characters.
 // You can think of it being similar to the character class [^ \r\t\f\n\v].
 let sample = "Whitespace is important in separating words";
@@ -2901,7 +2935,7 @@ let result = sample.match(countNonWhiteSpace);
 console.log(result);
 
 // Regular Expressions = Q23/33 - Match Whitespace
-// NOTES: You can search for whitespace using \s, which is a lowercase s. 
+// NOTE: You can search for whitespace using \s, which is a lowercase s. 
 // This pattern not only matches whitespace, but also carriage return, tab, form feed, and new line characters.
 // You can think of it as similar to the character class [\r\t\f\n\v].
 let sample = "Whitespace is important in separating words";
@@ -2910,14 +2944,14 @@ let result = sample.match(countWhiteSpace);
 console.log(result);
 
 // Regular Expressions = Q22/33 - Restrict Possible Usernames
-// NOTES: 
+// NOTE: 
 let username = "JackOfAllTrades";
 let userCheck = /^[a-z]([a-z]+|[0-9]\d+)\d*$/i; // Change this line
 let result = userCheck.test(username);
 console.log(result);
 
 // Regular Expressions = Q21/33 - Match All Non-Numbers
-// NOTES: You can also search for non-digits using a similar shortcut that uses an uppercase D instead.
+// NOTE: You can also search for non-digits using a similar shortcut that uses an uppercase D instead.
 // The shortcut to look for non-digit characters is \D.
 // This is equal to the character class [^ 0 - 9], which looks for a single character that is not a number between zero and nine.
 let movieName = "2001: A Space Odyssey";
@@ -2926,7 +2960,7 @@ let result = movieName.match(noNumRegex).length;
 console.log(result);
 
 // Regular Expressions = Q20/33 - Match All Numbers
-// NOTES: The shortcut to look for digit characters is \d, with a lowercase d.
+// NOTE: The shortcut to look for digit characters is \d, with a lowercase d.
 // This is equal to the character class [0 - 9], which looks for a single character of any number between zero and nine.
 let movieName = "2001: A Space Odyssey";
 let numRegex = /\d/g; // Change this line
@@ -2934,7 +2968,7 @@ let result = movieName.match(numRegex).length;
 console.log(result);
 
 // Regular Expressions = Q19/33 - Match Everything But Letters and Numbers
-// NOTES: The shorthand character class \W to count the number of non-alphanumeric characters in various quotes and strings.
+// NOTE: The shorthand character class \W to count the number of non-alphanumeric characters in various quotes and strings.
 // You can search for the opposite of the \w with \W. 
 // Note, the opposite pattern uses a capital letter.
 // This shortcut is the same as [^ A - Za - z0 -9_].
@@ -2944,7 +2978,7 @@ let result = quoteSample.match(nonAlphabetRegex).length;
 console.log(result);
 
 // Regular Expressions = Q18/33 - Match All Letters and Numbers
-// NOTES: \w = This character class matches upper and lowercase letters plus numbers.
+// NOTE: \w = This character class matches upper and lowercase letters plus numbers.
 let quoteSample = "The five boxing wizards jump quickly.";
 let alphabetRegexV2 = /\w/g; // Change this line
 let result = quoteSample.match(alphabetRegexV2).length;
@@ -2963,7 +2997,7 @@ let result = calRegex.test(rickyAndCal);
 console.log(result);
 
 // Regular Expressions = Q15/33 - Find One or More Criminals in a Hunt
-// NOTES:  plus + sign to look for characters that occur one or more times.
+// NOTE:  plus + sign to look for characters that occur one or more times.
 let reCriminals = /C+/; // Change this line
   console.log(reCriminals);
   
