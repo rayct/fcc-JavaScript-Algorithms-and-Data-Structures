@@ -73,6 +73,7 @@
 function fearNotLetter(str) {
   let alpha = 'abcdefghijklmnopqrstuvwxyz'
   let startPos = alpha.indexOf(str[0]);
+  
   for (let i = startPos; i < startPos + str.length; i += 1) {
     if (alpha[i] != str[i - startPos]) {
       return alpha[i];
