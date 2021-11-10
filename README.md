@@ -286,13 +286,14 @@ Passed
 # Handle a Rejected Promise with catch
 Passed
 
-<!-- Course 3 Regular Expressions - JavaScript Algorithms and Data Structures - 33 Questions -->
+<!-- Course 3 - JavaScript Algorithms and Data Structures - Regular Expressions - 33 Questions -->
 Course Passed!
 
-<!-- Course 4 Functional Programming - JavaScript Algorithms and Data Structures - 26 Questions-->
-# Functional Programming = Q1/26 - Learn About Functional Programming
-Passed
-# 
+<!-- Course 4 - JavaScript Algorithms and Data Structures - Functional Programming - 26 Questions-->
+Course Passed!
+
+<!-- Course 5 - JavaScript Algorithms and Data Structures - Intermediate Algorithm Scripting - 21 Questions -->
+
 
 
 
