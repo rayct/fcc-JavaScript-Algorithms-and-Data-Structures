@@ -31,3 +31,15 @@ To Learn List of 2021
   4. Swift
   5. Kotlin
   6. Java
+
+  Dude you can be humble as humble can be. You could have even brought in the knee pads, listerine and become real good at un-buckling belts.
+  
+  Anna@2021\2879 <= Tailored Scaffolding Comp Hse
+  AnnA2021AoN2878  Web Filing
+
+  Flutter - raywenderlich.com
+  EjK_@@2021AoN\EsN
+
+  cPanel
+  3nkh;xvfZ(Eu_AoN\287
+   

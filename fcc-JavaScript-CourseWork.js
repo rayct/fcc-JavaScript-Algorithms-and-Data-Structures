@@ -59,14 +59,41 @@
 // NOTE: 
 
 
-// Intermediate Algorithm Scripting = Q9/21 - 
+// Intermediate Algorithm Scripting = Q9/21 - Missing Letters
 // TASK: 
 // NOTE: 
 
 
-// Intermediate Algorithm Scripting = Q8/21 - 
-// TASK: 
+// Intermediate Algorithm Scripting = Q8/21 - DNA Pairing
+// TASK: // The DNA strand is missing the pairing element.
+// Take each character, get its pair, and return the results as a 2d array.
+// Base pairs are a pair of AT and CG. Match the missing element to the provided character.
+// Return the provided character as the first element in each array.
+// For example, for the input GCG, return [["G", "C"], ["C","G"], ["G", "C"]]
+// The character and its pair are paired up in an array, and all the arrays are grouped into one encapsulating array. 
 // NOTE: 
+function pairElement(str) {
+
+function calculatePair(initial) {
+  if (initial === 'A') {
+    return 'T';
+  } else if (initial === 'T') {
+    return 'A';
+  } else if (initial === 'G') {
+    return 'C';
+  } else if (initial === 'C') {
+    return 'G';
+  }
+}
+
+  return str.split('').map(initialPair => {
+    let pair = [initialPair, calculatePair(initialPair)];
+    return pair;
+  });
+
+}
+// Test here
+console.log(pairElement("GCG"));
 
 
 // Intermediate Algorithm Scripting = Q7/21 - Search and Replace
@@ -77,15 +104,26 @@
 
 // NOTE: Preserve the case of the first character in the original word when you are replacing it.
 // For example if you mean to replace the word Book with the word dog, it should be replaced as Dog
+// Solution
 function myReplace(str, before, after) {
-
-
+  // Find index where before is on string
+  var index = str.indexOf(before);
+  // Check to see if the first letter is uppercase or not
+  if (str[index] === str[index].toUpperCase()) {
+    // Change the after word to be capitalized before we use it.
+    after = after.charAt(0).toUpperCase() + after.slice(1);
+  } else {
+    // Change the after word to be uncapitalized before we use it.
+    after = after.charAt(0).toLowerCase() + after.slice(1);
+  }
+  // Now replace the original str with the edited one.
+  str = str.replace(before, after);
 
   return str;
 }
-myReplace("A quick brown fox jumped over the lazy dog", "jumped", "leaped");
 
-
+// test here
+myReplacemyReplace("I think we should look up there", "up", "Down");
 
 // Intermediate Algorithm Scripting = Q6/21 - Pig Latin
 // TASK: Translate the provided string to Pig Latin.
@@ -2835,7 +2873,7 @@ console.log(a);
 // ============================== REGEX ================================ //
 // Regular Expressions = Q33/33 - Remove Whitespace from Start to End
 // NOTE: Sometimes whitespace characters around strings are not wanted but are there.
-// Typical processing of strings is to remove the whitespace at the start and end of it.
+// Typical processing of strings is to remove the whitespace at the start and end of it .
 let hello = "   Hello, World!  ";
 let wsRegex = /^\s+|\s+$/g; // Change this line
 let result = hello.replace(wsRegex, ""); // Change this line
@@ -2849,7 +2887,7 @@ console.log(result);
 let str = "one two three";
 let fixRegex = /(\w+)\s(\w+)\s(\w+)/; // Change this line
 let replaceText = "$3 $2 $1"; // Change this line
-let result = str.replace(fixRegex, replaceText);
+let result = str.replace(fixRegex, replaceText)
 console.log(result);
 
 // Regular Expressions = Q31/33 - Reuse Patterns Using Capture Groups
