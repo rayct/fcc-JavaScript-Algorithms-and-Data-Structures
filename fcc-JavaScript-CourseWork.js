@@ -60,8 +60,41 @@
 
 
 // Intermediate Algorithm Scripting = Q9/21 - Missing Letters
-// TASK: 
-// NOTE: 
+// TASK: Find the missing letter in the passed letter range and return it.
+// If all letters are present in the range, return undefined.
+// TEST CASES:
+// fearNotLetter("abce") should return the string d.
+// fearNotLetter("abcdefghjklmno") should return the string i.
+// fearNotLetter("stvwx") should return the string u.
+// fearNotLetter("bcdf") should return string e.
+// fearNotLetter("abcdefghijklmnopqrstuvwxyz") should return string undefined.
+// NOTE:
+// Solution:
+function fearNotLetter(str) {
+  let alpha = 'abcdefghijklmnopqrstuvwxyz'
+  let startPos = alpha.indexOf(str[0]);
+  for (let i = startPos; i < startPos + str.length; i += 1) {
+    if (alpha[i] != str[i - startPos]) {
+      return alpha[i];
+    };
+  }
+}
+console.log(fearNotLetter("abcdefghijklmnopqrstuvwxyz")); 
+
+// A more Simpler and refined Solution:
+function fearNotLetter(str) {
+  let alpha = 'abcdefghijklmnopqrstuvwxyz'
+    let startPos = alpha.indexOf(str[0]);
+    let accurateAlpha = alpha.slice(startPos);
+
+    for (let i = 0; i < str.length; i += 1) {
+    if (str[i] != accurateAlpha[i]) {
+      return accurateAlpha[i];
+    }
+  }
+}
+
+console.log(fearNotLetter("abce"));
 
 
 // Intermediate Algorithm Scripting = Q8/21 - DNA Pairing
