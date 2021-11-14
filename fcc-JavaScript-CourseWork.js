@@ -2,46 +2,54 @@
 // Intermediate Algorithm Scripting = Q21/21 - 
 // TASK: 
 // NOTE: 
-
+// Solution:
 
 // Intermediate Algorithm Scripting = Q20/21 - 
 // TASK: 
 // NOTE: 
-
+// Solution:
 
 // Intermediate Algorithm Scripting = Q19/21 - 
 // TASK: 
 // NOTE: 
-
+// Solution:
 
 // Intermediate Algorithm Scripting = Q18/21 - 
 // TASK: 
 // NOTE: 
-
+// Solution:
 
 // Intermediate Algorithm Scripting = Q17/21 - 
 // TASK: 
 // NOTE: 
-
+// Solution:
 
 // Intermediate Algorithm Scripting = Q16/21 - 
 // TASK: 
 // NOTE: 
-
+// Solution:
 
 // Intermediate Algorithm Scripting = Q15/21 - 
 // TASK: 
 // NOTE: 
-
+// Solution:
 
 // Intermediate Algorithm Scripting = Q14/21 - 
 // TASK: 
 // NOTE: 
+// Solution:
 
+// Intermediate Algorithm Scripting = Q13/21 - Sum All Primes
+// TASK: Rewrite sumPrimes so it returns the sum of all prime numbers that are less than or equal to num
+// NOTE: A prime number is a whole number greater than 1 with exactly two divisors: 1 and itself. 
+// For example, 2 is a prime number because it is only divisible by 1 and 2.
+// In contrast, 4 is not prime since it is divisible by 1, 2 and 4.
+// Solution:
+function sumPrimes(num) {
+  return num;
+}
 
-// Intermediate Algorithm Scripting = Q13/21 - 
-// TASK: 
-// NOTE: 
+sumPrimes(10);
 
 
 // Intermediate Algorithm Scripting = Q12/21 - Sum All Odd Fibonacci Numbers
@@ -60,13 +68,56 @@
 // sumFibs(4) should return 5.
 // sumFibs(75024) should return 60696.
 // sumFibs(75025) should return 135721.
-// Solution:
+// Solution: 1
 function sumFibs(num) {
-  return num;
+  let fibSeq = [0, 1];
+  let counter = fibSeq[fibSeq.length - 2] +
+    fibSeq[fibSeq.length - 1]
+  while (counter <= num) {
+    fibSeq.push(counter);
+    counter = fibSeq[fibSeq.length - 2] +
+      fibSeq[fibSeq.length - 1]
+
+  }
+  let sumOfFibNum = 0;
+  fibSeq.forEach(num => {
+    if (num % 2 != 0) {
+      sumOfFibNum += num;
+    }
+  });
+  return sumOfFibNum;
 }
 
-sumFibs(4);
+let result = sumFibs(75024);
+console.log(result);
 
+// Solution: 2 - Refactored
+function sumFibs(num) {
+  let fibSeq = [0, 1];
+  let sumOfFibNum = 1;
+  let counter = iterateUpFibSeq(counter)
+
+  function iterateUpFibSeq(counter) {
+    return fibSeq[fibSeq.length - 2] +
+      fibSeq[fibSeq.length - 1]
+  }
+
+  function isOdd(counter) {
+    return counter % 2 != 0
+  }
+
+  while (counter <= num) {
+    fibSeq.push(counter);
+    if (isOdd(counter)) {
+      sumOfFibNum += counter;
+    }
+    counter = iterateUpFibSeq(counter)
+  }
+  return sumOfFibNum;
+}
+
+let result = sumFibs(75025);
+console.log(result);
 
 
 // Intermediate Algorithm Scripting = Q11/21 - Convert HTML Entities

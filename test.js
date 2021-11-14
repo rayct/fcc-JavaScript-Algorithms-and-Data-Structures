@@ -1,27 +1,21 @@
-// function convertHTML(str) {
-function convertChar(letter) {
-  if (letter === "&") {
-    return "&amp;";
-  } else if (letter === "<") {
-    return "&lt;";
-  } else if (letter === ">") {
-    return "&gt;";
-  } else if (letter === '"') {
-    return "&quot;";
-  } else if (letter === "'") {
-    return "&apos;";
+function sumFibs(num) {
+  let fibSeq = [0, 1];
+  let counter = fibSeq[fibSeq.length - 2] +
+    fibSeq[fibSeq.length - 1]
+  while (counter <= num) {
+    fibSeq.push(counter);
+    counter = fibSeq[fibSeq.length - 2] +
+      fibSeq[fibSeq.length - 1]
+
   }
+  let sumOfFibNum = 0;
+  fibSeq.forEach(num => {
+    if (num % 2 != 0) {
+      sumOfFibNum += num;
+    }
+  });
+  return sumOfFibNum;
 }
 
-function convertHTML(str) {
-  let charactersToCheckFor = ['&', '<', '>', '"', "'"];
-  for (let i = 0; i < str.length; i += 1) {
-    if (charactersToCheckFor.indexOf(str[i]) != -1) {
-      str = str.slice(0, i) + convertChar(str[i]) + str.slice(i + 1);
-    };
-  }
-  return str;
-
-}
-let result = convertHTML("Dolce & Gabbana");
+let result = sumFibs(75024);
 console.log(result);
