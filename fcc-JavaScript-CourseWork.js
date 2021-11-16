@@ -44,9 +44,44 @@
 // NOTE: A prime number is a whole number greater than 1 with exactly two divisors: 1 and itself. 
 // For example, 2 is a prime number because it is only divisible by 1 and 2.
 // In contrast, 4 is not prime since it is divisible by 1, 2 and 4.
-// Solution:
+// Solution: 1
 function sumPrimes(num) {
   return num;
+}
+
+function isPrime(singleNum) {
+  let counter = 2;
+  while (counter < singleNum) {
+    if (singleNum % counter === 0) {
+      return false;
+    }
+    counter += 1;
+  }
+  return true;
+}
+
+sumPrimes(4);
+console.log(isPrime(37));
+
+// Solution: 2
+function sumPrimes(num) {
+  let sum = 0;
+  for (let j = 1; j <= num; j++) {
+    if (isPrime(j)) {
+      sum += j;
+    }
+  }
+  return sum;
+}
+
+function isPrime(n) {
+  if (n <= 1) return false;
+  for (let i = 2; i <= (n / 2); i++) {
+    if (n % i === 0) {
+      return false;
+    }
+  }
+  return true;
 }
 
 sumPrimes(10);
