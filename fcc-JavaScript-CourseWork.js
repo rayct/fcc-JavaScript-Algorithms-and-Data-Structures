@@ -46,7 +46,20 @@
 // In contrast, 4 is not prime since it is divisible by 1, 2 and 4.
 // Solution: 1
 function sumPrimes(num) {
-  return num;
+  if (num <= 1) {
+    return 'Numbers lower than 0 not welcome'
+  }
+
+  let counter = 2;
+  let sum = 0;
+
+  while (counter <= num) {
+    if (isPrime(counter)) {
+      sum += counter;
+    }
+    counter += 1;
+  }
+  return sum;
 }
 
 function isPrime(singleNum) {
@@ -60,13 +73,14 @@ function isPrime(singleNum) {
   return true;
 }
 
-sumPrimes(4);
-console.log(isPrime(37));
+let result = sumPrimes(977);
+console.log(result);
+console.log(isPrime(977));
 
 // Solution: 2
 function sumPrimes(num) {
   let sum = 0;
-  for (let j = 1; j <= num; j++) {
+  for (let j = 1; j <= num; j += 1) {
     if (isPrime(j)) {
       sum += j;
     }
@@ -76,7 +90,7 @@ function sumPrimes(num) {
 
 function isPrime(n) {
   if (n <= 1) return false;
-  for (let i = 2; i <= (n / 2); i++) {
+  for (let i = 2; i <= (n / 2); i += 1) {
     if (n % i === 0) {
       return false;
     }
