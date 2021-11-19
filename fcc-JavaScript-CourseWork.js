@@ -34,10 +34,86 @@
 // NOTE: 
 // Solution:
 
-// Intermediate Algorithm Scripting = Q14/21 - 
+
+
+// Intermediate Algorithm Scripting = Q14/21 - Smallest Common Multiple
 // TASK: 
-// NOTE: 
-// Solution:
+// NOTE: 6*1 = 0 with no remainder so it is evenly divisible.
+// Solution: 1
+function smallestCommons(arr) {
+  arr = arr.sort((a, b) => b - a);
+  let [high, low] = arr;
+  let multiple = high;
+
+  for (let i = low; i < high; i += 1) {
+    if (multiple % i !== 0) {
+      multiple += high;
+      i = low - 1;
+    } else if (i == high) {
+      return multiple;
+    }
+  }
+  return multiple;
+}
+
+let result = smallestCommons([1, 5]);
+console.log(result);
+
+// Solution: 2
+function smallestCommons(arr) {
+  let lowerNum, higherNum;
+  if (arr[0] > arr[1]) {
+    lowerNum = arr[1];
+    higherNum = arr[0];
+  } else {
+    lowerNum = arr[0];
+    higherNum = arr[1];
+  }
+  let range = getRange(lowerNum, higherNum);
+  // console.log(range);
+
+  let multiple = 1;
+  while (multiple < 100000) {
+    let higherComMult = (lowerNum * multiple) * higherNum;
+
+
+    let trueCount = 0;
+    for (let i = 0; i < range.length; i += 1) {
+      // console.log(higherComMult, range);
+
+      if (higherComMult % range[i] === 0) {
+        trueCount += 1;
+
+        // console.log('true count = ', trueCount, 'Range length = ', range.length);
+        if (trueCount === range.length) {
+          return higherComMult;
+        }
+      }
+    }
+
+    multiple += 1;
+  }
+
+  return arr;
+}
+
+function getRange(lowN, highN) {
+  let resultRange = [];
+  for (let i = lowN; i <= highN; i += 1) {
+    resultRange.push(i);
+  }
+  return resultRange;
+}
+let result = smallestCommons([1, 3]);
+console.log(result);
+// TESTS
+// smallestCommons([1, 5]) should return a number.
+// smallestCommons([1, 5]) should return 60.
+// smallestCommons([5, 1]) should return 60.
+// smallestCommons([2, 10]) should return 2520.
+// smallestCommons([1, 13]) should return 360360.
+// smallestCommons([23, 18]) should return 6056820.
+
 
 // Intermediate Algorithm Scripting = Q13/21 - Sum All Primes
 // TASK: Rewrite sumPrimes so it returns the sum of all prime numbers that are less than or equal to num
