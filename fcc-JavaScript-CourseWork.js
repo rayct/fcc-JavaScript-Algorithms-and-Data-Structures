@@ -1,21 +1,155 @@
 // ============================== INTERMEDIATE ALGORITHM SCRIPTING ============================ //
-// Intermediate Algorithm Scripting = Q21/21 - 
-// TASK: 
-// NOTES: 
-// Solution:
+// Intermediate Algorithm Scripting = Q21/21 - Map the Debris
+// TASK: Return a new array that transforms the elements' average altitude into their orbital periods (in seconds).
+// NOTES:
+// Need to find the formula for orbital periods, make sure the output is in seconds
+// Most probably will get a decimal, we need to round up to the next whole number
+// Will have to utilize Math object, as they have built in properties which would be useful Math.round() to round
+// Need to figure out how to calculate
+// Remove avgAlt and add in orbitalPeriod
+// From a lot of searching, the proper formula is T = 2*pi*sqrt(r^3/GM); r = earthRadius+avgAlt
+// Can use `Math.PI` and also `Math.sqrt()`
+// Can map through `arr`, calculating the formula, deleting `avgAlt` then adding the new key-value pair
+// Make sure to return arr! 
 
-// Intermediate Algorithm Scripting = Q20/21 - 
-// TASK: 
-// NOTES: 
-// Solution:
+// Solution: 1
 
-// Intermediate Algorithm Scripting = Q19/21 - 
-// TASK: 
-// NOTES: 
-// Solution:
+function orbitalPeriod(arr) {
+  var GM = 398600.4418;
+  var earthRadius = 6367.4447;
+  arr.map(obj => {
+    let oP = Math.round(2 * Math.PI * Math.sqrt(Math.pow(earthRadius + obj.avgAlt, 3) / GM));
+    delete obj.avgAlt;
+    obj.orbitalPeriod = oP;
+  })
+  return arr;
+}
+
+orbitalPeriod([{ name: "sputnik", avgAlt: 35873.5553 }]);
+
+// TESTS
+// orbitalPeriod([{name : "sputnik", avgAlt : 35873.5553}]) should return [{name: "sputnik", orbitalPeriod: 86400}].
+// orbitalPeriod([{name: "iss", avgAlt: 413.6}, {name: "hubble", avgAlt: 556.7}, {name: "moon", avgAlt: 378632.553}]) should return [{name : "iss", orbitalPeriod: 5557}, {name: "hubble", orbitalPeriod: 5734}, {name: "moon", orbitalPeriod: 2377399}].
+
+
+
+// Intermediate Algorithm Scripting = Q20/21 - Make a Person
+// TASK: Fill in the object constructor with the following methods below:
+
+// NOTES:
+// We have to complete this object constructor.They have defined what methods they want.
+// We can start by listing them out within the object constructor Our input, 'firstAndLast' is a string of a first and last name
+// We can split(' ') the names into their own variables getFirst / Last / Full will just return the variables
+// When it comes to the set methods, they take in an input of a string
+// We can set those inputs to our current variables and return them
+// Solution: 1
+
+var Person = function (firstAndLast) {
+  // Complete the method below and implement the others similarly
+
+  let [firstName, lastName] = firstAndLast.split(' ');
+
+  this.getFirstName = function () {
+    return firstName;
+  };
+
+  this.getLastName = function () {
+    return lastName;
+  };
+
+  this.getFullName = function () {
+    return `${firstName} ${lastName}`;
+  };
+
+  this.setFirstName = function (first) {
+    firstName = first;
+    return firstName;
+  };
+
+  this.setLastName = function (last) {
+    lastName = last;
+    return lastName;
+  };
+
+  this.setFullName = function (firstAndLast) {
+    firstName = firstAndLast.split(' ')[0];
+    lastName = firstAndLast.split(' ')[1];
+    return `${firstName} ${lastName}`;
+  };
+};
+
+var bob = new Person('Bob Ross');
+let result = bob.getFullName();
+console.log(result);
+
+// TESTS
+// Object.keys(bob).length should return 6.
+// bob instanceof Person should return true.
+// bob.firstName should return undefined.
+// bob.lastName should return undefined.
+// bob.getFirstName() should return "Bob".
+// bob.getLastName() should return "Ross".
+// bob.getFullName() should return "Bob Ross".
+// bob.getFullName() should return "Haskell Ross" after bob.setFirstName("Haskell").
+// bob.getFullName() should return "Haskell Curry" after bob.setLastName("Curry").
+// bob.getFullName() should return "Haskell Curry" after bob.setFullName("Haskell Curry").
+// bob.getFirstName() should return "Haskell" after bob.setFullName("Haskell Curry").
+// bob.getLastName() should return "Curry" after bob.setFullName("Haskell Curry").
+
+
+
+// Intermediate Algorithm Scripting = Q19/21 - Arguments Optional
+// TASK:
+
+// NOTES:
+// Confusing problem.We are given at least one input, number or string We have to return a number or undefined
+// We can turn arguments object into an array.Looking at the tests, it will always be 1 - 2 args
+// We want to sum if all are arguments are numbers
+// If there is a string or non number, we want to return undefined
+// We can make a function to check if the type is a number otherwise we will return undefined 
+// We can use a few if/else ifs
+// We can first check if there are two arguments, and both numbers, can add them and return that value
+// If there is just one argument and its not a number, we will return undefined
+// If there is not a second argument, we will return a function (like the instructions), passing in a newArg.
+// We will check if that is a number.if so, add it to arg 1
+// Solution: 1
+
+function addTogether() {
+  let [arg1, arg2] = arguments;
+
+  function isNum(num) {
+    return Number.isInteger(num);
+  }
+
+  if (!isNum(arg1)) {
+    return undefined;
+  } else if (isNum(arg1) && isNum(arg2)) {
+    return arg1 + arg2;
+  } else if (!arg2) {
+    return function (newArg) {
+      if (isNum(newArg)) {
+        return arg1 + newArg;
+      }
+    }
+  }
+
+}
+
+let result = addTogether(2, 3);
+console.log(result);
+
+// TESTS
+// addTogether(2, 3) should return 5.
+// addTogether(2)(3) should return 5.
+// addTogether("http://bit.ly/IqT6zt") should return undefined.
+// addTogether(2, "3") should return undefined.
+// addTogether(2)([3]) should return undefined.
+
+
 
 // Intermediate Algorithm Scripting = Q18/21 - Everything Be True
 // TASK: 
+
 // NOTES: We have two arguments as input.An array of objects, and a string.
 // The string is a key within the objects.We need to output a boolean value, true or false.
 // We need to check every object 's properties, if they have `pre` and then if the value is truthy So
