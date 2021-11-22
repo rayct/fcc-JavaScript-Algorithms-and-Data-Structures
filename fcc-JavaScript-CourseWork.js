@@ -36,6 +36,7 @@
 // If it is an array, we can use the ... operator to deconstruct the array
 // A recursive method
 // Return the new flat array
+
 // Solution: 1
 function steamrollArray(arr) {
   let flattened = [];
