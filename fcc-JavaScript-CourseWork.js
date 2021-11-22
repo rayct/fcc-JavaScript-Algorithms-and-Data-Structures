@@ -14,15 +14,80 @@
 // NOTES: 
 // Solution:
 
-// Intermediate Algorithm Scripting = Q18/21 - 
+// Intermediate Algorithm Scripting = Q18/21 - Everything Be True
 // TASK: 
-// NOTES: 
-// Solution:
+// NOTES: We have two arguments as input.An array of objects, and a string.
+// The string is a key within the objects.We need to output a boolean value, true or false.
+// We need to check every object 's properties, if they have `pre` and then if the value is truthy So
+// if the value is not an empty string, 0, undefined, NaN, null
+// Luckily JS comes with a built in object, `Boolean` We can map through the array, checking if the object property exists and
+// if its truthy or not Since we are mapping, we 'll return an array of T and F We can just check with `includes()`
+// if there is a false value, then we will return false.
 
-// Intermediate Algorithm Scripting = Q17/21 - 
-// TASK: 
-// NOTES: 
-// Solution:
+// Solution: 1
+function truthCheck(collection, pre) {
+  let checkedArr = collection.map(obj => {
+    return obj.hasOwnProperty(pre) && Boolean(obj[pre]);
+  })
+
+  return checkedArr.includes(false) ? false : true;
+}
+
+let result = truthCheck([{
+  "user": "Tinky-Winky",
+  "sex": "male"
+}, {
+  "user": "Dipsy",
+  "sex": "male"
+}, {
+  "user": "Laa-Laa",
+  "sex": "female"
+}, {
+  "user": "Po",
+  "sex": "female"
+}], "sex");
+console.log(result);
+
+// TESTS
+// truthCheck([{"user": "Tinky-Winky", "sex": "male"}, {"user": "Dipsy", "sex": "male"}, {"user": "Laa-Laa", "sex": "female"}, {"user": "Po", "sex": "female"}], "sex") should return true.
+// truthCheck([{"user": "Tinky-Winky", "sex": "male"}, {"user": "Dipsy"}, {"user": "Laa-Laa", "sex": "female"}, {"user": "Po", "sex": "female"}], "sex") should return false.
+// truthCheck([{"user": "Tinky-Winky", "sex": "male", "age": 0}, {"user": "Dipsy", "sex": "male", "age": 3}, {"user": "Laa-Laa", "sex": "female", "age": 5}, {"user": "Po", "sex": "female", "age": 4}], "age") should return false.
+// truthCheck([{"name": "Pete", "onBoat": true}, {"name": "Repeat", "onBoat": true}, {"name": "FastForward", "onBoat": null}], "onBoat") should return false
+// truthCheck([{"name": "Pete", "onBoat": true}, {"name": "Repeat", "onBoat": true, "alias": "Repete"}, {"name": "FastForward", "onBoat": true}], "onBoat") should return true
+// truthCheck([{"single": "yes"}], "single") should return true
+// truthCheck([{"single": ""}, {"single": "double"}], "single") should return false
+// truthCheck([{"single": "double"}, {"single": undefined}], "single") should return false
+// truthCheck([{"single": "double"}, {"single": NaN}], "single") should return false
+
+
+
+// Intermediate Algorithm Scripting = Q17/21 - Binary Agents
+// TASK: Return an English translated sentence of the passed binary string.
+// The binary string will be space separated.
+// NOTES: Our input is a string (sentence) of binary items
+// We need to output a string, converting the binary to alphabets
+// Like other problems, we can `split(' ')` the `str` into an array
+// There is a string method, `fromCharCode()` we will use
+// fromCharCode() will convert the digits to letters
+// We will also use parseInt() on each item in the array, converting from radix 2
+// `parseInt(binaryItem, 2)`
+// All of this can be chained together
+// Then join() back into a string, we have an sentence in English
+
+// Solution: 1
+function binaryAgent(str) {
+  return str.split(' ')
+    .map(b => String.fromCharCode(parseInt(b, 2)))
+    .join('');
+}
+
+let result = binaryAgent("01000001 01110010 01100101 01101110 00100111 01110100 00100000 01100010 01101111 01101110 01100110 01101001 01110010 01100101 01110011 00100000 01100110 01110101 01101110 00100001 00111111");
+console.log(result);
+
+// TESTS
+// binaryAgent("01000001 01110010 01100101 01101110 00100111 01110100 00100000 01100010 01101111 01101110 01100110 01101001 01110010 01100101 01110011 00100000 01100110 01110101 01101110 00100001 00111111") should return "Aren't bonfires fun!?"
+// binaryAgent("01001001 00100000 01101100 01101111 01110110 01100101 00100000 01000110 01110010 01100101 01100101 01000011 01101111 01100100 01100101 01000011 01100001 01101101 01110000 00100001") should return "I love FreeCodeCamp!"
+
 
 // Intermediate Algorithm Scripting = Q16/21 - Steamroller
 // TASK: Flatten a nested array. You must account for varying levels of nesting.
@@ -52,7 +117,11 @@ function steamrollArray(arr) {
   return flattened;
 }
 
-let result = steamrollArray([1, [2], [3, [[4]]]]);
+let result = steamrollArray([1, [2],
+  [3, [
+    [4]
+  ]]
+]);
 console.log(result);
 
 // TESTS
