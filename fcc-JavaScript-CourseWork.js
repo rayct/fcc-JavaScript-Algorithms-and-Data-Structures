@@ -89,6 +89,7 @@ console.log(result);
 // binaryAgent("01001001 00100000 01101100 01101111 01110110 01100101 00100000 01000110 01110010 01100101 01100101 01000011 01101111 01100100 01100101 01000011 01100001 01101101 01110000 00100001") should return "I love FreeCodeCamp!"
 
 
+
 // Intermediate Algorithm Scripting = Q16/21 - Steamroller
 // TASK: Flatten a nested array. You must account for varying levels of nesting.
 // NOTES: Read carefully. We are given an array of some subarrays
@@ -130,6 +131,7 @@ console.log(result);
 // steamrollArray([1, [], [3, [[4]]]]) should return [1, 3, 4].
 // steamrollArray([1, {}, [3, [[4]]]]) should return [1, {}, 3, 4].
 // Your solution should not use the Array.prototype.flat() or Array.prototype.flatMap() methods.
+
 
 
 // Intermediate Algorithm Scripting = Q15/21 - Drop It
@@ -263,6 +265,7 @@ console.log(result);
 // smallestCommons([23, 18]) should return 6056820.
 
 
+
 // Intermediate Algorithm Scripting = Q13/21 - Sum All Primes
 // TASK: Rewrite sumPrimes so it returns the sum of all prime numbers that are less than or equal to num
 // NOTES: A prime number is a whole number greater than 1 with exactly two divisors: 1 and itself. 
@@ -323,6 +326,7 @@ function isPrime(n) {
 }
 
 sumPrimes(10);
+
 
 
 // Intermediate Algorithm Scripting = Q12/21 - Sum All Odd Fibonacci Numbers
@@ -393,6 +397,7 @@ let result = sumFibs(75025);
 console.log(result);
 
 
+
 // Intermediate Algorithm Scripting = Q11/21 - Convert HTML Entities
 // TASK: Convert the characters &, <, >, " (double quote), and ' (apostrophe), in a string to their corresponding HTML entities.
 // NOTES: 
@@ -423,6 +428,7 @@ function convertHTML(str) {
 }
 let result = convertHTML("Dolce & Gabbana");
 console.log(result);
+
 
 
 // Intermediate Algorithm Scripting = Q10/21 - Sorted Union
@@ -472,6 +478,7 @@ let result = uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]);
 console.log(result)
 
 
+
 // Intermediate Algorithm Scripting = Q9/21 - Missing Letters
 // TASK: Find the missing letter in the passed letter range and return it.
 // If all letters are present in the range, return undefined.
@@ -511,6 +518,7 @@ function fearNotLetter(str) {
 console.log(fearNotLetter("abce"));
 
 
+
 // Intermediate Algorithm Scripting = Q8/21 - DNA Pairing
 // TASK: // The DNA strand is missing the pairing element.
 // Take each character, get its pair, and return the results as a 2d array.
@@ -543,6 +551,7 @@ function pairElement(str) {
 console.log(pairElement("GCG"));
 
 
+
 // Intermediate Algorithm Scripting = Q7/21 - Search and Replace
 // TASK: Perform a search and replace on the sentence using the arguments provided and return the new sentence.
 // First argument is the sentence to perform the search and replace on.
@@ -571,6 +580,8 @@ function myReplace(str, before, after) {
 
 // test here
 myReplacemyReplace("I think we should look up there", "up", "Down");
+
+
 
 // Intermediate Algorithm Scripting = Q6/21 - Pig Latin
 // TASK: Translate the provided string to Pig Latin.
@@ -630,6 +641,7 @@ function translatePigLatin(str) {
 }
 let result = translatePigLatin(california);
 console.log(result);
+
 
 
 // Intermediate Algorithm Scripting = Q5/21 - Spinal Tap Case
