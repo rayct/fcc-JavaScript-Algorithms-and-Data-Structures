@@ -11,7 +11,7 @@ function palindrome(str) {
       // 1) Lowercase the input
       .toLowerCase()
       // 2) Strip out non-alphanumeric characters
-      .match(/[a-z0-9]/g);
+      .match(/[a-z0-9]/g); // <= RegEx
       
   // 3) return string === reversedString
   return alphanumericOnly.join('') ===
