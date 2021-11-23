@@ -1,3 +1,53 @@
+// ============================== INTERMEDIATE ALGORITHM SCRIPTING - PROJECTS ============================ //
+// Intermediate Algorithm Scripting Projects = Project 1/4 -  Palindrome Cheaker
+// Task: Return true if the given string is a palindrome. Otherwise, return false.
+// Notes: A palindrome is a word or sentence that's spelled the same way both forward and backward, ignoring punctuation, case, and spacing.
+// You'll need to remove all non-alphanumeric characters (punctuation, spaces and symbols) and turn everything into the same case (lower or upper case) in order to check for palindromes.
+// We'll pass strings with varying formats, such as racecar, RaceCar, and race CAR among others.
+// We'll also pass strings with special symbols, such as 2A3*3a2, 2A3 3a2, and 2_A3*3#A2.
+// Solution:
+function palindrome(str) {
+  const alphanumericOnly = str
+      // 1) Lowercase the input
+      .toLowerCase()
+      // 2) Strip out non-alphanumeric characters
+      .match(/[a-z0-9]/g);
+      
+  // 3) return string === reversedString
+  return alphanumericOnly.join('') ===
+      alphanumericOnly.reverse().join('');
+}
+
+
+
+let result = palindrome("eye");
+console.log(result)
+
+
+// ============================== INTERMEDIATE ALGORITHM SCRIPTING - PROJECTS ============================ //
+// Intermediate Algorithm Scripting Projects = Project 2/4 -  
+// Task:
+// Notes:
+// Solution:
+
+
+// ============================== INTERMEDIATE ALGORITHM SCRIPTING - PROJECTS ============================ //
+// Intermediate Algorithm Scripting Projects = Project 3/4 -  
+// Task:
+// Notes:
+// Solution:
+
+
+// ============================== INTERMEDIATE ALGORITHM SCRIPTING - PROJECTS ============================ //
+// Intermediate Algorithm Scripting Projects = Project 4/4 -  
+// Task:
+// Notes:
+// Solution:
+
+
+
+
+
 // ============================== INTERMEDIATE ALGORITHM SCRIPTING ============================ //
 // Intermediate Algorithm Scripting = Q21/21 - Map the Debris
 // TASK: Return a new array that transforms the elements' average altitude into their orbital periods (in seconds).
