@@ -1,16 +1,16 @@
-function dropElements(arr, func) {
-    const arrLength = arr.length;
-    for (let i = 0; i < arrLength; i++) {
-        if (!func(arr[0])) {
-            arr.shift();
-        } else {
-            return arr;
-        }
-    }
-    return arr;
-}
-
-let result = dropElements([1, 2, 3], function (n) {
-    return n < 3;
-});
-console.log(result);
+function palindrome(str) {
+    const alphanumericOnly = str
+        // 1) Lowercase the input
+        .toLowerCase()
+        // 2) Strip out non-alphanumeric characters
+        .match(/[a-z0-9]/g); // <= RegEx
+        
+    // 3) return string === reversedString
+    return alphanumericOnly.join('') ===
+        alphanumericOnly.reverse().join('');
+  }
+  
+  
+  
+  let result = palindrome("eye");
+  console.log(result)
