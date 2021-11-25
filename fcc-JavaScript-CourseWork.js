@@ -142,6 +142,11 @@ console.log(result)
 // Notes: One of the simplest and most widely known ciphers is a Caesar cipher, also known as a shift cipher.
 // In a shift cipher the meanings of the letters are shifted by some set amount.
 // A common modern use is the ROT13 cipher, where the values of the letters are shifted by 13 places. Thus A ↔ N, B ↔ O and so on.
+// ROT13 replaces each letter by its partner 13 characters further along the alphabet.
+
+// =============================================== ROT 13 LOOKUP TABLE ========================================== //
+// Input   = A B C D E F G H I J K L M N O P Q R S T U V W X Y Z a b c d e f g h i j k l m n o p q r s t u v w x y z
+// Output  = N O P Q R S T U V W X Y Z A B C D E F G H I J K L M n o p q r s t u v w x y z a b c d e f g h i j k l m
 
 // Solution:
 function rot13(str) {
