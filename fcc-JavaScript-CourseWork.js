@@ -1,5 +1,5 @@
 // ============================== INTERMEDIATE ALGORITHM SCRIPTING - PROJECTS ============================ //
-// Intermediate Algorithm Scripting Projects = Project 1/4 -  Palindrome Cheaker
+// Intermediate Algorithm Scripting Projects = Project 1/5 -  Palindrome Cheaker
 // Task: Return true if the given string is a palindrome. Otherwise, return false.
 
 // Notes: A palindrome is a word or sentence that's spelled the same way both forward and backward, ignoring punctuation, case, and spacing.
@@ -9,14 +9,14 @@
 // Solution:
 function palindrome(str) {
   const alphanumericOnly = str
-      // 1) Lowercase the input
-      .toLowerCase()
-      // 2) Strip out non-alphanumeric characters
-      .match(/[a-z0-9]/g); // <= RegEx
-      
+    // 1) Lowercase the input
+    .toLowerCase()
+    // 2) Strip out non-alphanumeric characters
+    .match(/[a-z0-9]/g); // <= RegEx
+
   // 3) return string === reversedString
   return alphanumericOnly.join('') ===
-      alphanumericOnly.reverse().join('');
+    alphanumericOnly.reverse().join('');
 }
 
 
@@ -25,8 +25,9 @@ let result = palindrome("eye");
 console.log(result)
 
 
+
 // ============================== INTERMEDIATE ALGORITHM SCRIPTING - PROJECTS ============================ //
-// Intermediate Algorithm Scripting Projects = Project 2/4 -  Roman Numeral Converter
+// Intermediate Algorithm Scripting Projects = Project 2/5 -  Roman Numeral Converter
 // Task: Convert the given number into a roman numeral.
 // All letters will be uppercase.
 // Do not transform any non-alphabetic character (i.e. spaces, punctuation), but do pass them on.
@@ -44,7 +45,7 @@ console.log(result)
 // Basic Combinations
 // 1: I
 // 2: II
-// 3: II
+// 3: III
 // 4: IV
 // 5: V
 // 6: VI
@@ -69,16 +70,73 @@ console.log(result)
 // 700: DCC
 // 800: DCCC
 // 900: CM
+// 1000: M
 // Solution:
+function convertToRoman(num) {
+  const lookupTable = {
+    M: 1000,
+    CM: 900,
+    D: 500,
+    CD: 400,
+    C: 100,
+    XC: 90,
+    L: 50,
+    XL: 40,
+    X: 10,
+    IX: 9,
+    V: 5,
+    IV: 4,
+    I: 1,
 
+  };
+  let accumulator = ''; // Eg: Empty Bucket
 
+  for (const key in lookupTable) { // <= Loop through every key
+    const numberValue = lookupTable[key]; // <= Get number value using this syntax
 
+    while (numberValue <= num) {
+      num -= numberValue; // <= Take from One
+      accumulator += key; // <= Add to another
+    }
+  }
 
+  return accumulator;
+}
+
+let result = convertToRoman(12);
+console.log(result)
+// Test Cases:
+// convertToRoman(2) should return the string II.
+// convertToRoman(3) should return the string III.
+// convertToRoman(4) should return the string IV.
+// convertToRoman(5) should return the string V.
+// convertToRoman(9) should return the string IX.
+// convertToRoman(12) should return the string XII.
+// convertToRoman(16) should return the string XVI.
+// convertToRoman(29) should return the string XXIX.
+// convertToRoman(44) should return the string XLIV.
+// convertToRoman(45) should return the string XLV.
+// convertToRoman(68) should return the string LXVIII
+// convertToRoman(83) should return the string LXXXIII
+// convertToRoman(97) should return the string XCVII
+// convertToRoman(99) should return the string XCIX
+// convertToRoman(400) should return the string CD
+// convertToRoman(500) should return the string D
+// convertToRoman(501) should return the string DI
+// convertToRoman(649) should return the string DCXLIX
+// convertToRoman(798) should return the string DCCXCVIII
+// convertToRoman(891) should return the string DCCCXCI
+// convertToRoman(1000) should return the string M
+// convertToRoman(1004) should return the string MIV
+// convertToRoman(1006) should return the string MVI
+// convertToRoman(1023) should return the string MXXIII
+// convertToRoman(2014) should return the string MMXIV
+// convertToRoman(3999) should return the string MMMCMXCIX
 
 
 
 // ============================== INTERMEDIATE ALGORITHM SCRIPTING - PROJECTS ============================ //
-// Intermediate Algorithm Scripting Projects = Project 3/4 -  Caesars Cipher
+// Intermediate Algorithm Scripting Projects = Project 3/5 -  Caesars Cipher
 // Task: Write a function which takes a ROT13 encoded string as input and returns a decoded string.
 
 // Notes: One of the simplest and most widely known ciphers is a Caesar cipher, also known as a shift cipher.
@@ -86,11 +144,76 @@ console.log(result)
 // A common modern use is the ROT13 cipher, where the values of the letters are shifted by 13 places. Thus A ↔ N, B ↔ O and so on.
 
 // Solution:
+function rot13(str) {
+
+  return str;
+}
+
+rot13("SERR PBQR PNZC");
+// Test Cases:
+// rot13("SERR PBQR PNZC") should decode to the string FREE CODE CAMP
+// rot13("SERR CVMMN!") should decode to the string FREE PIZZA!
+// rot13("SERR YBIR?") should decode to the string FREE LOVE ?
+// rot13("GUR DHVPX OEBJA SBK WHZCF BIRE GUR YNML QBT.") should decode to the string THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG.
 
 
 
 // ============================== INTERMEDIATE ALGORITHM SCRIPTING - PROJECTS ============================ //
-// Intermediate Algorithm Scripting Projects = Project 4/4 -  Cash Register
+// Intermediate Algorithm Scripting Projects = Project 4/5 -  Telephone Number Validator
+// Task: For this challenge you will be presented with a string such as 800-692-7753 or 8oo-six427676;laskdjf.
+// Your job is to validate or reject the US phone number based on any combination of the formats provided above.
+// The area code is required.If the country code is provided, you must confirm that the country code is 1.
+// Return true if the string is a valid US phone number; otherwise return false.
+// Return true if the passed string looks like a valid US phone number.
+// NOTES: The user may fill out the form field any way they choose as long as it has the format of a valid US number.
+// The following are examples of valid formats for US numbers(refer to the tests below for other variants):
+// 555-555-5555
+// (555) 555 - 5555(555) 555 - 5555
+// 555 555 5555
+// 5555555555
+// 1 555 555 5555
+
+// Solution:
+function telephoneCheck(str) {
+  return true;
+}
+
+let result = telephoneCheck("555-555-5555");
+console.log(result);
+// Test Cases
+// telephoneCheck("555-555-5555") should return a boolean.
+// telephoneCheck("1 555-555-5555") should return true.
+// telephoneCheck("1 (555) 555-5555") should return true.
+// telephoneCheck("5555555555") should return true.
+// telephoneCheck("555-555-5555") should return true.
+// telephoneCheck("(555)555-5555") should return true.
+// telephoneCheck("1(555)555-5555") should return true.
+// telephoneCheck("555-5555") should return false.
+// telephoneCheck("5555555") should return false.
+// telephoneCheck("1 555)555-5555") should return false.
+// telephoneCheck("1 555 555 5555") should return true.
+// telephoneCheck("1 456 789 4444") should return true.
+// telephoneCheck("123**&!!asdf#") should return false.
+// telephoneCheck("55555555") should return false.
+// telephoneCheck("(6054756961)") should return false.
+// telephoneCheck("2 (757) 622-7382") should return false.
+// telephoneCheck("0 (757) 622-7382") should return false.
+// telephoneCheck("-1 (757) 622-7382") should return false.
+// telephoneCheck("2 757 622-7382") should return false.
+// telephoneCheck("10 (757) 622-7382") should return false.
+// telephoneCheck("27576227382") should return false.
+// telephoneCheck("(275)76227382") should return false.
+// telephoneCheck("2(757)6227382") should return false.
+// telephoneCheck("2(757)622-7382") should return false.
+// telephoneCheck("555)-555-5555") should return false.
+// telephoneCheck("(555-555-5555") should return false.
+// telephoneCheck("(555)5(55?)-5555") should return false.
+// telephoneCheck("55 55-55-555-5") should return false.
+
+
+
+// ============================== INTERMEDIATE ALGORITHM SCRIPTING - PROJECTS ============================ //
+// Intermediate Algorithm Scripting Projects = Project 5/5 -  Cash Register
 // Task: Design a cash register drawer function checkCashRegister() that accepts purchase price as the first argument (price), payment as the second argument (cash), and cash-in-drawer (cid) as the third argument.
 // The checkCashRegister() function should always return an object with a status key and a change key.
 // Return {status: "INSUFFICIENT_FUNDS", change: []} if cash-in-drawer is less than the change due, or if you cannot return the exact change.
@@ -100,8 +223,6 @@ console.log(result)
 // Notes: cid is a 2D array listing available currency.
 
 // Solution:
-
-
 
 
 
@@ -132,9 +253,12 @@ function orbitalPeriod(arr) {
   return arr;
 }
 
-console.log(orbitalPeriod([{ name: "sputnik", avgAlt: 35873.5553 }]));
+console.log(orbitalPeriod([{
+  name: "sputnik",
+  avgAlt: 35873.5553
+}]));
 
-// TESTS
+// Test Cases
 // orbitalPeriod([{name : "sputnik", avgAlt : 35873.5553}]) should return [{name: "sputnik", orbitalPeriod: 86400}].
 // orbitalPeriod([{name: "iss", avgAlt: 413.6}, {name: "hubble", avgAlt: 556.7}, {name: "moon", avgAlt: 378632.553}]) should return [{name : "iss", orbitalPeriod: 5557}, {name: "hubble", orbitalPeriod: 5734}, {name: "moon", orbitalPeriod: 2377399}].
 
