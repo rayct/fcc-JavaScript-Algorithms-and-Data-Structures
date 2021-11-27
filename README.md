@@ -293,24 +293,26 @@ Course Passed!
 Course Passed!
 
 <!-- Course 5 - JavaScript Algorithms and Data Structures - Intermediate Algorithm Scripting - 21 Questions -->
+Course Passed!
 
+<!-- JavaScript Algorithms and Data Structures - 5 JavaScript Certification Projects -->
+Intermediate Algorithm Scripting Projects = Project 1/5 -  Palindrome Cheaker
+Course Passed!
 
- INE = Qf83ok8BYWPIFpsM_287\!
- 
- 
- 
- 
- <!-- Keyboard School -->
+Intermediate Algorithm Scripting Projects = Project 2/5 -  Roman Numeral Converter
+Course Passed!
 
- eramiuoppop[y]
- 
+Intermediate Algorithm Scripting Projects = Project 3/5 -  Ceasers Cipher
+Course Passed!
 
+Intermediate Algorithm Scripting Projects = Project 4/5 -  Telephone Number Validator
+Course Passed!
 
+Intermediate Algorithm Scripting Projects = Project 5/5 -  Cash Register
+<!-- Course Passed! -->
 
+<!-- Student Name -->
+ Raymond Colin Turner
 
-
-
-
-
-
-
+ <!-- Date of Exam Pass -->
+ 27-11-2021
