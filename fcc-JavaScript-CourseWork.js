@@ -91,7 +91,7 @@ function convertToRoman(num) {
   };
   let accumulator = ''; // Eg: Empty Bucket
 
-  for (const key in lookupTable) { // <= Loop through every key
+  for (const key in lookupTable) { // <= Accumulator - Loop through every key
     const numberValue = lookupTable[key]; // <= Get number value using this syntax
 
     while (numberValue <= num) {
@@ -144,17 +144,42 @@ console.log(result)
 // A common modern use is the ROT13 cipher, where the values of the letters are shifted by 13 places. Thus A ↔ N, B ↔ O and so on.
 // ROT13 replaces each letter by its partner 13 characters further along the alphabet.
 
-// =============================================== ROT 13 LOOKUP TABLE ========================================== //
+// =============================================== ROT 13 CIPHER LOOKUP TABLE ========================================== //
 // Input   = A B C D E F G H I J K L M N O P Q R S T U V W X Y Z a b c d e f g h i j k l m n o p q r s t u v w x y z
 // Output  = N O P Q R S T U V W X Y Z A B C D E F G H I J K L M n o p q r s t u v w x y z a b c d e f g h i j k l m
 
 // Solution:
-function rot13(str) {
+const alphabet = [
+  'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M',
+  'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'
+];
 
-  return str;
+function rot13(str) { // LBH QVQ VG!
+  // Create the accumulator
+  let accumulator = '';
+  // loop through the string
+  for (let i = 0; i < str.length; i++) {
+    let char = str[i];
+    let isALetter = alphabet.includes(char);
+    // if the char is not letter, add to acc
+    if (isALetter === false) {
+      accumulator += char;
+    } else {
+      // else, rotate + or - 13, add to acc
+      let charIndex =
+        alphabet.findIndex((c) => c === char); // (c)  <= the comparison function
+
+      accumulator += alphabet[charIndex + 13] ||
+        alphabet[charIndex - 13];
+    }
+
+  }
+
+  return accumulator;
 }
 
-rot13("SERR PBQR PNZC");
+let result = rot13("SERR PBQR PNZC");
+console.log(result);
 // Test Cases:
 // rot13("SERR PBQR PNZC") should decode to the string FREE CODE CAMP
 // rot13("SERR CVMMN!") should decode to the string FREE PIZZA!
@@ -177,14 +202,55 @@ rot13("SERR PBQR PNZC");
 // 555 555 5555
 // 5555555555
 // 1 555 555 5555
-
-// Solution:
+// Solution: 1
 function telephoneCheck(str) {
-  return true;
+  const validPatterns = [
+    // 555-555-5555
+    /^\d{3}-\d{3}-\d{4}$/,
+    // 1 555-555-5555
+    /^1 \d{3}-\d{3}-\d{4}$/,
+    // (555) 555-5555
+    /^1 \(\d{3}\) \d{3}-\d{4}$/,
+    //  5555555555
+    /^\d{10}$/,
+    // (555) 555-5555
+    /^\(\d{3}\)\d{3}-\d{4}$/,
+    // 1 555 555 5555
+    /^1 \d{3} \d{3} \d{4}$/,
+    // 1 (555)555-5555
+    /^1\(\d{3}\)\d{3}-\d{4}$/
+  ]
+  // return regex.test(str);
+  // return true;
+  return validPatterns.some((pattern) => pattern.test(str));
+}
+// let result = telephoneCheck("555-555-5555");
+// console.log(result);
+
+// Solution: 2
+function telephoneCheck(str) {
+  const regex = /^\d{3}-\d{3}-\d{4}$/;
+
+  return regex.test(str);
+  // return true;
 }
 
 let result = telephoneCheck("555-555-5555");
 console.log(result);
+
+
+// Solution: 3
+// Long RegEx Version, but does run alot faster than the above.
+function telephoneCheck(str) {
+  const regex = /^1? ?(( ?\d{3}[- ]*)|(\( ?\d{3}[- ]*\) *))\d{3}[- ]?\d{4}$/; // <= A load of conditionals inside of one statement Eg: ? means optional
+
+  return regex.test(str);
+  // return true;
+}
+
+let result = telephoneCheck("555-555-5555");
+console.log(result);
+
 // Test Cases
 // telephoneCheck("555-555-5555") should return a boolean.
 // telephoneCheck("1 555-555-5555") should return true.
@@ -1685,8 +1751,6 @@ functionsliceArray(anim, beginSlice, endSlice) {
   return anim.slice(beginSlice, endSlice); // A more concise solution
 
   // return slicedResult;
-
-
   // Only change code above this line
 };
 var inputAnim = ['Cat', 'Dog', 'Tiger', 'Zebra', 'Ant'];
