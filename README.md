@@ -1,37 +1,37 @@
-* Course 1 - JavaScript-Algorithms-and-Data-Structures - Basic JavaScript - 111 Questions -->
-* 1. Comment Your JavaScript Code
+Course 1 - JavaScript-Algorithms-and-Data-Structures - Basic JavaScript - 111 Questions
+* Comment Your JavaScript Code
 * Passed
-* 2. Declare JavaScript Variables
+* Declare JavaScript Variables
 * Passed
-* 3. Storing Values with the Assignment Operator
+* Storing Values with the Assignment Operator
 * Passed
-* 4. Assigning the Value of One Variable to Another
+* Assigning the Value of One Variable to Another
 * Passed
-* 5. Initializing Variables with the Assignment Operator
+* Initializing Variables with the Assignment Operator
 * Passed
-* 6. Understanding Uninitialized Variables
+* Understanding Uninitialized Variables
 * Passed
-* 7. Understanding Case Sensitivity in Variables
+* Understanding Case Sensitivity in Variables
 * Passed
-* 8. Add Two Numbers with JavaScript
+* Add Two Numbers with JavaScript
 * Passed
-* 9. Subtract One Number from Another with JavaScript
+* Subtract One Number from Another with JavaScript
 * Passed
-* 10. Multiply Two Numbers with JavaScript
+* Multiply Two Numbers with JavaScript
 * Passed
-* 11. Divide One Number by Another with JavaScript
+* Divide One Number by Another with JavaScript
 * Passed
-* 12. Increment a Number with JavaScript
+* Increment a Number with JavaScript
 * Passed
-* 13. Decrement a Number with JavaScript
+* Decrement a Number with JavaScript
 * Passed
-* 14. Create Decimal Numbers with JavaScript
+* Create Decimal Numbers with JavaScript
 * Passed
-* 15. Multiply Two Decimals with JavaScript
+* Multiply Two Decimals with JavaScript
 * Passed
-* 16. Divide One Decimal by Another with JavaScript
+* Divide One Decimal by Another with JavaScript
 * Passed
-* 17. Finding a Remainder in JavaScript
+* Finding a Remainder in JavaScript
 * Passed
 * Compound Assignment With Augmented Addition
 * Passed
@@ -91,7 +91,7 @@
 * Passed
 * Shopping List
 * Passed
-* * Write Reusable JavaScript with Functions
+* Write Reusable JavaScript with Functions
 * Passed
 * Passing Values to Functions with Arguments
 * Passed
@@ -223,6 +223,7 @@
 * Passed
 
 Course 2 ES6 - JavaScript Algorithms and Data Structures - 31 Questions
+
 * Explore Differences Between the var and let Keywords
 * Passed
 * Compare Scopes of the var and let Keywords
@@ -295,7 +296,8 @@ Course 4 - JavaScript Algorithms and Data Structures - Functional Programming - 
 Course 5 - JavaScript Algorithms and Data Structures - Intermediate Algorithm Scripting - 21 Questions
 * Course Passed!
 
-JavaScript Algorithms and Data Structures - 5 JavaScript Certification Projects
+Final Certification - JavaScript Algorithms and Data Structures - Complete 5 Projects
+
 Intermediate Algorithm Scripting Projects = Project 1/5 -  Palindrome Cheaker
 * Course Passed!
 
@@ -312,7 +314,7 @@ Intermediate Algorithm Scripting Projects = Project 5/5 -  Cash Register
 * Course Passed!
 
 Student Name
- Raymond Colin Turner
+* Raymond Colin Turner
 
 Date of Exam Pass
- 27-11-2021
+* 27-11-2021
