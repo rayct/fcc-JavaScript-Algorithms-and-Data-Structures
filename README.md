@@ -1,315 +1,315 @@
 * Course 1 - JavaScript-Algorithms-and-Data-Structures - Basic JavaScript - 111 Questions -->
 * 1. Comment Your JavaScript Code
-Passed
+* Passed
 * 2. Declare JavaScript Variables
-Passed
+* Passed
 * 3. Storing Values with the Assignment Operator
-Passed
+* Passed
 * 4. Assigning the Value of One Variable to Another
-Passed
+* Passed
 * 5. Initializing Variables with the Assignment Operator
-Passed
+* Passed
 * 6. Understanding Uninitialized Variables
-Passed
+* Passed
 * 7. Understanding Case Sensitivity in Variables
-Passed
+* Passed
 * 8. Add Two Numbers with JavaScript
-Passed
+* Passed
 * 9. Subtract One Number from Another with JavaScript
-Passed
+* Passed
 * 10. Multiply Two Numbers with JavaScript
-Passed
+* Passed
 * 11. Divide One Number by Another with JavaScript
-Passed
+* Passed
 * 12. Increment a Number with JavaScript
-Passed
+* Passed
 * 13. Decrement a Number with JavaScript
-Passed
+* Passed
 * 14. Create Decimal Numbers with JavaScript
-Passed
+* Passed
 * 15. Multiply Two Decimals with JavaScript
-Passed
+* Passed
 * 16. Divide One Decimal by Another with JavaScript
-Passed
+* Passed
 * 17. Finding a Remainder in JavaScript
-Passed
+* Passed
 * Compound Assignment With Augmented Addition
-Passed
+* Passed
 * Compound Assignment With Augmented Subtraction
-Passed
+* Passed
 * Compound Assignment With Augmented Multiplication
-Passed
+* Passed
 * Compound Assignment With Augmented Division
-Passed
+* Passed
 * Declare String Variables
-Passed
+* Passed
 * Escaping Literal Quotes in Strings
-Passed
+* Passed
 * Quoting Strings with Single Quotes
-Passed
+* Passed
 * Escape Sequences in Strings
-Passed
+* Passed
 * Concatenating Strings with Plus Operator
-Passed
+* Passed
 * Concatenating Strings with the Plus Equals Operator
-Passed
+* Passed
 * Constructing Strings with Variables
-Passed
+* Passed
 * Appending Variables to Strings
-Passed
+* Passed
 * Find the Length of a String
-Passed
+* Passed
 * Use Bracket Notation to Find the First Character in a String
-Passed
+* Passed
 * Understand String Immutability
-Passed
+* Passed
 * Use Bracket Notation to Find the Nth Character in a String
-Passed
+* Passed
 * Use Bracket Notation to Find the Last Character in a String
-Passed
+* Passed
 * Use Bracket Notation to Find the Nth-to-Last Character in a String
-Passed
+* Passed
 * Word Blanks
-Passed
+* Passed
 * Store Multiple Values in one Variable using JavaScript Arrays
-Passed
+* Passed
 * Nest one Array within Another Array
-Passed
+* Passed
 * Access Array Data with Indexes
-Passed
+* Passed
 * Modify Array Data With Indexes
-Passed
+* Passed
 * Access Multi-Dimensional Arrays With Indexes
-Passed
+* Passed
 * Manipulate Arrays With push
-Passed
+* Passed
 * Manipulate Arrays With pop
-Passed
+* Passed
 * Manipulate Arrays With shift
-Passed
+* Passed
 * Manipulate Arrays With unshift
-Passed
+* Passed
 * Shopping List
-Passed
+* Passed
 * * Write Reusable JavaScript with Functions
-Passed
+* Passed
 * Passing Values to Functions with Arguments
-Passed
+* Passed
 * Global Scope and Functions
-Passed
+* Passed
 * Local Scope and Functions
-Passed
+* Passed
 * Global vs. Local Scope in Functions
-Passed
+* Passed
 * Return a Value from a Function with Return
-Passed
+* Passed
 * Understanding Undefined Value returned from a Function
-Passed
+* Passed
 * Assignment with a Returned Value
-Passed
+* Passed
 * Stand in Line
-Passed
+* Passed
 * Understanding Boolean Values
-Passed
+* Passed
 * Use Conditional Logic with If Statements
-Passed
+* Passed
 * Comparison with the Equality Operator
-Passed
+* Passed
 * Comparison with the Strict Equality Operator
-Passed
+* Passed
 * Practice comparing different values
-Passed
+* Passed
 * Comparison with the Inequality Operator
-Passed
+* Passed
 * Comparison with the Strict Inequality Operator
-Passed
+* Passed
 * Comparison with the Greater Than Operator
-Passed
+* Passed
 * Comparison with the Greater Than Or Equal To Operator
-Passed
+* Passed
 * Comparison with the Less Than Operator
-Passed
+* Passed
 * Comparison with the Less Than Or Equal To Operator
-Passed
+* Passed
 * Comparisons with the Logical And Operator
-Passed
+* Passed
 * Comparisons with the Logical Or Operator
-Passed
+* Passed
 * Introducing Else Statements
-Passed
+* Passed
 * Introducing Else If Statements
-Passed
+* Passed
 * Logical Order in If Else Statements
-Passed
+* Passed
 * Chaining If Else Statements
-Passed
+* Passed
 * Golf Code
-Passed
+* Passed
 * Selecting from Many Options with Switch Statements
-Passed
+* Passed
 * Adding a Default Option in Switch Statements
-Passed
+* Passed
 * Multiple Identical Options in Switch Statements
-Passed
+* Passed
 * Replacing If Else Chains with Switch
-Passed
+* Passed
 * Returning Boolean Values from Functions
-Passed
+* Passed
 * Return Early Pattern for Functions
-Passed
+* Passed
 * Counting Cards
-Passed
+* Passed
 * Build JavaScript Objects
-Passed
+* Passed
 * Accessing Object Properties with Dot Notation
-Passed
+* Passed
 * Accessing Object Properties with Bracket Notation
-Passed
+* Passed
 * Accessing Object Properties with Variables
-Passed
+* Passed
 * Updating Object Properties
-Passed
+* Passed
 * Add New Properties to a JavaScript Object
-Passed
+* Passed
 * Delete Properties from a JavaScript Object
-Passed
+* Passed
 * Using Objects for Lookups
-Passed
+* Passed
 * Testing Objects for Properties
-Passed
+* Passed
 * Manipulating Complex Objects
-Passed
+* Passed
 * Accessing Nested Objects
-Passed
+* Passed
 * Accessing Nested Arrays
-Passed
+* Passed
 * Record Collection
-Passed
+* Passed
 * Iterate with JavaScript While Loops
-Passed
+* Passed
 * Iterate with JavaScript For Loops
-Passed
+* Passed
 * Iterate Odd Numbers With a For Loop
-Passed
+* Passed
 * Count Backwards With a For Loop
-Passed
+* Passed
 * Iterate Through an Array with a For Loop
-Passed
+* Passed
 * Nesting For Loops
-Passed
+* Passed
 * Iterate with JavaScript Do...While Loops
-Passed
+* Passed
 * Replace Loops using Recursion
-Passed
+* Passed
 * Profile Lookup
-Passed
+* Passed
 * Generate Random Fractions with JavaScript
-Passed
+* Passed
 * Generate Random Whole Numbers with JavaScript
-Passed
+* Passed
 * Generate Random Whole Numbers within a Range
-Passed
+* Passed
 * Use the parseInt Function
-Passed
+* Passed
 * Use the parseInt Function with a Radix
-Passed
+* Passed
 * Use the Conditional (Ternary) Operator
-Passed
+* Passed
 * Use Multiple Conditional (Ternary) Operators
-Passed
+* Passed
 * Use Recursion to Create a Countdown
-Passed
+* Passed
 * Use Recursion to Create a Range of Numbers
-Passed
+* Passed
 
 Course 2 ES6 - JavaScript Algorithms and Data Structures - 31 Questions
 * Explore Differences Between the var and let Keywords
-Passed
+* Passed
 * Compare Scopes of the var and let Keywords
-Passed
+* Passed
 * Declare a Read-Only Variable with the const Keyword
-Passed
+* Passed
 * Mutate an Array Declared with const
-Passed
+* Passed
 * Prevent Object Mutation
-Passed
+* Passed
 * Use Arrow Functions to Write Concise Anonymous Functions
-Passed
+* Passed
 * Write Arrow Functions with Parameters
-Passed
+* Passed
 * Set Default Parameters for Your Functions
-Passed
+* Passed
 * Use the Rest Parameter with Function Parameters
-Passed
+* Passed
 * Use the Spread Operator to Evaluate Arrays In-Place
-Passed
+* Passed
 * Use Destructuring Assignment to Extract Values from Objects
-Passed
+* Passed
 * Use Destructuring Assignment to Assign Variables from Objects
-Passed
+* Passed
 * Use Destructuring Assignment to Assign Variables from Nested Objects
-Passed
+* Passed
 * Use Destructuring Assignment to Assign Variables from Arrays
-Passed
+* Passed
 * Use Destructuring Assignment with the Rest Parameter to Reassign Array Elements
-Passed
+* Passed
 * Use Destructuring Assignment to Pass an Object as a Function's Parameters
-Passed
+* Passed
 * Create Strings using Template Literals
-Passed
+* Passed
 * Write Concise Object Literal Declarations Using Object Property Shorthand
-Passed
+* Passed
 * Write Concise Declarative Functions with ES6
-Passed
+* Passed
 * Use class Syntax to Define a Constructor Function
-Passed
+* Passed
 * Use getters and setters to Control Access to an Object
-Passed
+* Passed
 * Create a Module Script
-Passed
+* Passed
 * Use export to Share a Code Block
-Passed
+* Passed
 * Use JavaScript Code Using import
-Passed
+* Passed
 * Use * to Import Everything from a File
-Passed
+* Passed
 * Create an Export Fallback with export default
-Passed
+* Passed
 * Import a Default Export
-Passed
+* Passed
 * Create a JavaScript Promise
-Passed
+* Passed
 * Complete a Promise with resolve and reject
-Passed
+* Passed
 * Handle a Fulfilled Promise with then
-Passed
+* Passed
 * Handle a Rejected Promise with catch
-Passed
+* Passed
 
 Course 3 - JavaScript Algorithms and Data Structures - Regular Expressions - 33 Questions
-Course Passed!
+Course * Passed!
 
 Course 4 - JavaScript Algorithms and Data Structures - Functional Programming - 26 Questions
-Course Passed!
+Course * Passed!
 
 Course 5 - JavaScript Algorithms and Data Structures - Intermediate Algorithm Scripting - 21 Questions
-Course Passed!
+Course * Passed!
 
 JavaScript Algorithms and Data Structures - 5 JavaScript Certification Projects
 Intermediate Algorithm Scripting Projects = Project 1/5 -  Palindrome Cheaker
-Course Passed!
+Course * Passed!
 
 Intermediate Algorithm Scripting Projects = Project 2/5 -  Roman Numeral Converter
-Course Passed!
+Course * Passed!
 
 Intermediate Algorithm Scripting Projects = Project 3/5 -  Ceasers Cipher
-Course Passed!
+Course * Passed!
 
 Intermediate Algorithm Scripting Projects = Project 4/5 -  Telephone Number Validator
-Course Passed!
+Course * Passed!
 
 Intermediate Algorithm Scripting Projects = Project 5/5 -  Cash Register
-Course Passed!
+Course * Passed!
 
 Student Name
  Raymond Colin Turner
