@@ -287,29 +287,29 @@ Course 2 ES6 - JavaScript Algorithms and Data Structures - 31 Questions
 * Passed
 
 Course 3 - JavaScript Algorithms and Data Structures - Regular Expressions - 33 Questions
-Course * Passed!
+* Course Passed!
 
 Course 4 - JavaScript Algorithms and Data Structures - Functional Programming - 26 Questions
-Course * Passed!
+* Course Passed!
 
 Course 5 - JavaScript Algorithms and Data Structures - Intermediate Algorithm Scripting - 21 Questions
-Course * Passed!
+* Course Passed!
 
 JavaScript Algorithms and Data Structures - 5 JavaScript Certification Projects
 Intermediate Algorithm Scripting Projects = Project 1/5 -  Palindrome Cheaker
-Course * Passed!
+* Course Passed!
 
 Intermediate Algorithm Scripting Projects = Project 2/5 -  Roman Numeral Converter
-Course * Passed!
+* Course Passed!
 
 Intermediate Algorithm Scripting Projects = Project 3/5 -  Ceasers Cipher
-Course * Passed!
+* Course Passed!
 
 Intermediate Algorithm Scripting Projects = Project 4/5 -  Telephone Number Validator
-Course * Passed!
+* Course Passed!
 
 Intermediate Algorithm Scripting Projects = Project 5/5 -  Cash Register
-Course * Passed!
+* Course Passed!
 
 Student Name
  Raymond Colin Turner
