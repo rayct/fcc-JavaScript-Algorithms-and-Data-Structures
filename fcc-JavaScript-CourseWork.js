@@ -240,7 +240,7 @@ console.log(result);
 
 
 // Solution: 3
-// Long RegEx Version, but does run alot faster than the above.
+// Long RegEx Version, but will run alot faster than the above.
 function telephoneCheck(str) {
   const regex = /^1? ?(( ?\d{3}[- ]*)|(\( ?\d{3}[- ]*\) *))\d{3}[- ]?\d{4}$/; // <= A load of conditionals inside of one statement Eg: ? means optional
 
